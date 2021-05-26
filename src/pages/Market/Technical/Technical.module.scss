@@ -1,0 +1,52 @@
+@import "../../../variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  @include lg {
+    flex-direction: row;
+  }
+}
+
+.card__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__header {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.logo__wrapper {
+  height: 36px;
+  width: 36px;
+
+  img {
+    height: 100%;
+  }
+}
+
+.row__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.text__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.resource__link {
+  text-align: left;
+}
+
+.description {
+  text-align: left;
+}
+
+.text {
+  text-align: left;
+}
