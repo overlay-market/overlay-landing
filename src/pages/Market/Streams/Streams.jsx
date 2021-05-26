@@ -38,12 +38,12 @@ const data = {
 const Streams = () => {
   return (
     <div>
-      <div>Streams</div>
+      <div className={styles["header"]}>Streams</div>
       <div className={styles["pairs__container"]}>
         {data.Streams.map((pair) => (
           <div className={styles["pair__container"]}>
             <div className={styles["name-amt__container"]}>
-              <div>{pair.pair_name}</div>
+              <div className={styles["name"]}>{pair.pair_name}</div>
               <div>- ETH</div>
             </div>
 

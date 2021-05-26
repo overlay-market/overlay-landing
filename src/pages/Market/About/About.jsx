@@ -58,7 +58,7 @@ const About = () => {
       </div>
 
       <div className={styles["card__container"]}>
-        <div className={styles["card__header--small"]}>Links</div>
+        <div className={styles["card__header--big"]}>Links</div>
         {data.Links.map((item) => (
           <div className={styles["row__container"]}>
             <div className={styles["icon__container"]}>
@@ -77,7 +77,7 @@ const About = () => {
       </div>
 
       <div className={styles["card__container"]}>
-        <div className={styles["card__header--small"]}>Stats</div>
+        <div className={styles["card__header--big"]}>Stats</div>
         <div className={styles["column__container"]}>
           <div className={styles["stat__header"]}>Total Supply</div>
           <div className={styles["stat__number"]}>- OVL</div>

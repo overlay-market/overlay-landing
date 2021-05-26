@@ -1,13 +1,35 @@
 @import "../../../variables";
 
+.header {
+  text-align: left;
+  position: relative;
+  color: #0b0f1c;
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 25px;
+
+  &:after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    bottom: -5px;
+    margin: 0 auto;
+    left: 0;
+    width: 100%;
+    background: black;
+  }
+}
+
 .pairs__container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 25px;
 }
 
 .pair__container {
   display: flex;
   flex-direction: row;
+  margin-bottom: 15px;
 }
 
 .token-img__container {
@@ -17,5 +39,32 @@
   img {
     height: 100%;
     width: 100%;
+  }
+}
+
+.name-amt__container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0b0f1c;
+  position: relative;
+  margin-bottom: 5px;
+
+  &:after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    bottom: -1px;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    width: 50%;
+    background: black;
   }
 }

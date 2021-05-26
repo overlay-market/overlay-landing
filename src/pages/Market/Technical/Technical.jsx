@@ -122,7 +122,7 @@ const Technical = () => {
       <div className={styles["card__container"]}>
         <div className={styles["card__header"]}>{data.Stakeholders.header}</div>
         {data.Stakeholders.content.map((stakeholder) => (
-          <div className={styles["text"]}>{stakeholder}</div>
+          <div className={styles["stakeholder"]}>{stakeholder}</div>
         ))}
       </div>
     </div>

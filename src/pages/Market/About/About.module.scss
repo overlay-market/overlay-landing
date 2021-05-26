@@ -12,6 +12,7 @@
 .card__container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
 
   @include lg {
     --oneThird: calc(1 / 3);
@@ -23,9 +24,25 @@
 
 .card__header--big {
   text-align: left;
+  position: relative;
   color: #0b0f1c;
   font-weight: 700;
   font-size: 36px;
+  margin-bottom: 25px;
+
+  &:after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    /* adjust this to move up and down. */
+    bottom: -5px;
+
+    /* center - use with adjusting width   */
+    margin: 0 auto;
+    left: 0;
+    width: 70%;
+    background: black;
+  }
 }
 
 .card__header--small {
@@ -38,12 +55,14 @@
 .row__container {
   display: flex;
   flex-direction: row;
+  margin-bottom: 15px;
 }
 
 .row__number {
   color: #e0e0e0;
   font-size: 24px;
   font-weight: 700;
+  margin: 0 14px 0 5px;
 }
 
 .row__text {
@@ -56,11 +75,14 @@
   display: flex;
   flex-direction: column;
   text-align: left;
+  margin-bottom: 15px;
+  padding-left: 10px;
 }
 
 .icon__container {
   height: 36px;
   width: 36px;
+  margin-right: 10px;
 
   img {
     height: 100%;
@@ -70,7 +92,40 @@
 
 .link {
   margin: auto 0;
+  color: #0b0f1c;
+  text-decoration: none;
+  position: relative;
+  font-size: 20px;
+
+  &:after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */
+    bottom: 1px;
+
+    /* center - (optional) use with adjusting width   */
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #0b0f1c;
+
+    /* optional animation */
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  &:hover:after {
+    width: 80%;
+    background: blue;
+  }
 }
 
 .stat__header {
+  text-decoration: underline;
+  font-size: 24px;
+  margin-bottom: 5px;
 }
