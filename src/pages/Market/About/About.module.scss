@@ -12,6 +12,13 @@
 .card__container {
   display: flex;
   flex-direction: column;
+
+  @include lg {
+    --oneThird: calc(1 / 3);
+    width: calc(var(--oneThird) * 100%);
+    max-width: 300px;
+    margin: 0 auto;
+  }
 }
 
 .card__header--big {
@@ -63,4 +70,7 @@
 
 .link {
   margin: auto 0;
+}
+
+.stat__header {
 }

@@ -1,0 +1,21 @@
+@import "../../../variables";
+
+.pairs__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.pair__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.token-img__container {
+  height: 160px;
+  width: 160px;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
