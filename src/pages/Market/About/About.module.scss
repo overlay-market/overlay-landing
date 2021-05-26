@@ -1,0 +1,66 @@
+@import "../../../variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  @include lg {
+    flex-direction: row;
+  }
+}
+
+.card__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__header--big {
+  text-align: left;
+  color: #0b0f1c;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.card__header--small {
+  text-align: left;
+  color: #0b0f1c;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.row__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.row__number {
+  color: #e0e0e0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.row__text {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.column__container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.icon__container {
+  height: 36px;
+  width: 36px;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.link {
+  margin: auto 0;
+}
