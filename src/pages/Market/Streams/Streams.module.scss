@@ -7,7 +7,8 @@
   margin: auto;
 
   @include lg {
-    width: 80%;
+    width: 100%;
+    padding-left: 30px;
   }
 }
 
@@ -28,6 +29,10 @@
     left: 0;
     width: 100%;
     background: black;
+
+    @include lg {
+      width: 80%;
+    }
   }
 }
 

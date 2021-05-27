@@ -1,0 +1,13 @@
+@import "../../variables";
+
+.nav__container {
+  display: block;
+  margin-bottom: 75px;
+  margin-top: 25px;
+}
+
+.nav__content {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+}
