@@ -1,5 +1,16 @@
 @import "../../../variables";
 
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: auto;
+
+  @include lg {
+    width: 80%;
+  }
+}
+
 .header {
   text-align: left;
   position: relative;
@@ -23,22 +34,33 @@
 .pairs__container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
+
+  @include lg {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 75px;
+  }
 }
 
 .pair__container {
   display: flex;
   flex-direction: row;
   margin-bottom: 15px;
+
+  @include lg {
+    width: 50%;
+  }
 }
 
 .token-img__container {
-  height: 160px;
-  width: 160px;
+  height: auto;
+  width: auto;
+  flex: 1;
 
   img {
-    height: 100%;
-    width: 100%;
+    height: 160px;
+    width: 160px;
   }
 }
 
@@ -47,6 +69,11 @@
   flex-direction: column;
   width: 50%;
   margin: auto;
+  padding-left: 10px;
+
+  @include lg {
+    width: 40%;
+  }
 }
 
 .name {
@@ -55,6 +82,7 @@
   color: #0b0f1c;
   position: relative;
   margin-bottom: 5px;
+  letter-spacing: 1px;
 
   &:after {
     position: absolute;
@@ -62,9 +90,8 @@
     height: 1px;
     bottom: -1px;
     margin: 0 auto;
-    right: 0;
     left: 0;
-    width: 50%;
+    width: 90%;
     background: black;
   }
 }

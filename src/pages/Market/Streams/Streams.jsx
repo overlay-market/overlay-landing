@@ -37,7 +37,7 @@ const data = {
 };
 const Streams = () => {
   return (
-    <div>
+    <div className={styles["container"]}>
       <div className={styles["header"]}>Streams</div>
       <div className={styles["pairs__container"]}>
         {data.Streams.map((pair) => (

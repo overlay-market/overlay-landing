@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./About.module.scss";
+import NotionIcon from "../../../images/icons/notion-icon.png";
+import WhitepaperIcon from "../../../images/icons/whitepaper-icon.png";
 import TwitterIcon from "../../../images/icons/twitter-icon.png";
 import TelegramIcon from "../../../images/icons/telegram-icon.png";
 import DiscordIcon from "../../../images/icons/discord-icon.png";
@@ -21,6 +23,16 @@ const data = {
     },
   ],
   Links: [
+    {
+      text: "Notion",
+      link: "https://www.notion.so/Overlay-Protocol-29da60fd11e9436ea69e2a5e0db28a74",
+      icon: `${NotionIcon}`,
+    },
+    {
+      text: "Whitepaper V2",
+      link: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/OverlayWPv3.pdf?alt=media",
+      icon: `${WhitepaperIcon}`,
+    },
     {
       text: "Twitter",
       link: "https://twitter.com/OverlayProtocol",
