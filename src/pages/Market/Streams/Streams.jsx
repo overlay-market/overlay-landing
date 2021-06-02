@@ -48,7 +48,7 @@ const Streams = () => {
             </div>
 
             <div className={styles["token-img__container"]}>
-              <img src={pair.img} />
+              <img src={pair.img} loading="lazy" />
             </div>
           </div>
         ))}

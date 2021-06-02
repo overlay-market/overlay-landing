@@ -74,7 +74,11 @@ const About = () => {
         {data.Links.map((item) => (
           <div className={styles["row__container"]}>
             <div className={styles["icon__container"]}>
-              <img src={item.icon} alt={`${item.text} Icon`}></img>
+              <img
+                src={item.icon}
+                alt={`${item.text} Icon`}
+                loading="lazy"
+              ></img>
             </div>
             <a
               href={item.link}

@@ -75,7 +75,7 @@ const Technical = () => {
           {data.Technical.content.map((resource) => (
             <div className={styles["row__container"]}>
               <div className={styles["logo__wrapper"]}>
-                <img src={resource.logo} />
+                <img src={resource.logo} loading="lazy" />
               </div>
               <div className={styles["text__container"]}>
                 <a

@@ -2,7 +2,7 @@
 
 .nav__container {
   display: block;
-  margin-bottom: 75px;
+  margin-bottom: 100px;
   margin-top: 25px;
 }
 
@@ -10,4 +10,16 @@
   display: flex;
   max-width: 1200px;
   margin: auto;
+}
+
+.nav__title--container {
+  display: flex;
+
+  img {
+    width: 180px;
+
+    @include lg {
+      width: 220px;
+    }
+  }
 }
