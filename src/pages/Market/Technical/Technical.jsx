@@ -122,12 +122,12 @@ const Technical = () => {
         ))}
       </div> */}
 
-      <div className={styles["card__container"]}>
+      {/* <div className={styles["card__container"]}>
         <div className={styles["card__header"]}>{data.Why.header}</div>
         {data.Why.content.map((text) => (
           <div className={styles["text"]}>{text}</div>
         ))}
-      </div>
+      </div> */}
 
       <div className={styles["card__container"]}>
         <div className={styles["card__header"]}>{data.Stakeholders.header}</div>
