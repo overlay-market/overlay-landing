@@ -1,0 +1,106 @@
+@import "../../../variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: auto;
+
+  @include lg {
+    width: 100%;
+    padding-left: 30px;
+  }
+}
+
+.header {
+  text-align: left;
+  position: relative;
+  color: #0b0f1c;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 25px;
+
+  @include lg {
+    font-size: 36px;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    bottom: -5px;
+    margin: 0 auto;
+    left: 0;
+    width: 100%;
+    background: black;
+
+    @include lg {
+      width: 80%;
+    }
+  }
+}
+
+.pairs__container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+
+  @include lg {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 75px;
+  }
+}
+
+.pair__container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+
+  @include lg {
+    width: 50%;
+  }
+}
+
+.token-img__container {
+  height: auto;
+  width: auto;
+  flex: 1;
+
+  img {
+    height: 160px;
+    width: 160px;
+  }
+}
+
+.name-amt__container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  padding-left: 10px;
+
+  @include lg {
+    width: 40%;
+  }
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0b0f1c;
+  position: relative;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+
+  &:after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    bottom: -1px;
+    margin: 0 auto;
+    left: 0;
+    width: 90%;
+    background: black;
+  }
+}
