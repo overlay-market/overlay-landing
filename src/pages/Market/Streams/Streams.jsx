@@ -48,7 +48,11 @@ const Streams = () => {
             </div>
 
             <div className={styles["token-img__container"]}>
-              <img src={pair.img} loading="lazy" />
+              <img
+                alt={`${pair.pair_name} Token`}
+                src={pair.img}
+                loading="lazy"
+              />
             </div>
           </div>
         ))}
