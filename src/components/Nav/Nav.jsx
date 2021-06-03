@@ -7,7 +7,7 @@ const Nav = () => {
     <div className={styles["nav__container"]}>
       <div className={styles["nav__content"]}>
         <div className={styles["nav__title--container"]}>
-          <img src={OverlayTitle}></img>
+          <img alt="Overlay Logo" src={OverlayTitle}></img>
         </div>
       </div>
     </div>
