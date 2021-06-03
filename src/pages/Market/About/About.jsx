@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./About.module.scss";
+import { Button } from "@material-ui/core";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import NotionIcon from "../../../images/icons/notion-icon.png";
 import WhitepaperIcon from "../../../images/icons/whitepaper-icon.png";
 import TwitterIcon from "../../../images/icons/twitter-icon.png";
@@ -71,6 +73,15 @@ const About = () => {
 
       <div className={styles["card__container"]}>
         <div className={styles["card__header--big"]}>Links</div>
+        <Button
+          variant="contained"
+          color="default"
+          href="https://kovan.overlay.exchange"
+          endIcon={<ExitToAppIcon />}
+          className={styles["exchange-button"]}
+        >
+          😸 Launch App
+        </Button>
         {data.Links.map((item) => (
           <div className={styles["row__container"]}>
             <div className={styles["icon__container"]}>
