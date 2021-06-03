@@ -62,7 +62,13 @@ const data = {
   },
   Stakeholders: {
     header: "Stakeholders",
-    content: ["Polychain", "1kx", "ParaFi", "The Lao", "Metacartel"],
+    content: [
+      { name: "Polychain", link: "https://polychain.capital/" },
+      { name: "1kx", link: "https://twitter.com/1kxnetwork?lang=en" },
+      { name: "ParaFi", link: "https://www.parafi.capital/" },
+      { name: "The Lao", link: "https://www.thelao.io/" },
+      { name: "Metacartel", link: "https://metacartel.xyz/" },
+    ],
   },
 };
 
@@ -126,7 +132,14 @@ const Technical = () => {
       <div className={styles["card__container"]}>
         <div className={styles["card__header"]}>{data.Stakeholders.header}</div>
         {data.Stakeholders.content.map((stakeholder) => (
-          <div className={styles["stakeholder"]}>{stakeholder}</div>
+          <a
+            href={stakeholder.link}
+            target="_blank"
+            rel="noreferrer"
+            className={styles["stakeholder"]}
+          >
+            {stakeholder.name}
+          </a>
         ))}
       </div>
     </div>
