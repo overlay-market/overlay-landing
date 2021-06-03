@@ -79,6 +79,7 @@
   position: relative;
   display: flex;
   text-decoration: none;
+  color: #0b0f1c;
 
   &:after {
     position: absolute;
@@ -102,7 +103,7 @@
   }
   &:hover:after {
     width: 80%;
-    background: blue;
+    background: black;
   }
 }
 
@@ -120,7 +121,7 @@
   text-align: left;
   font-size: 20px;
   margin-bottom: 10px;
-  color: black;
+  color: #0b0f1c;
   // margin-left: 10px;
   text-decoration: none;
 
