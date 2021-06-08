@@ -13,15 +13,15 @@ const data = {
   About: [
     {
       number: "01",
-      text: "A cryptocurrency that lets you buy and sell nearly any streaming data.",
+      text: "A cryptocurrency that lets you long or short DeFi data streams.",
     },
     {
       number: "02",
-      text: "Recreates the dynamics of trading, but without counterparties, (with the ability to hedge DeFi token price exposure).",
+      text: "Dynamically mints or burns to compensate traders for their profit or loss.",
     },
     {
       number: "03",
-      text: "Completely solves the liquidity problems which beset similar DeFi systems.",
+      text: "Governs the system so successful traders decide the trajectory of the protocol.",
     },
   ],
   Links: [
