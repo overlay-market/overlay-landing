@@ -67,7 +67,7 @@ const data = {
       { name: "Polychain", link: "https://polychain.capital/" },
       { name: "1kx", link: "https://twitter.com/1kxnetwork?lang=en" },
       { name: "ParaFi", link: "https://www.parafi.capital/" },
-      { name: "The Lao", link: "https://www.thelao.io/" },
+      { name: "The LAO", link: "https://www.thelao.io/" },
       { name: "Metacartel", link: "https://metacartel.xyz/" },
     ],
   },
