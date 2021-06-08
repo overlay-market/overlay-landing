@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Technical.module.scss";
 import GithubLogo from "../../../images/icons/github-logo.png";
 import OverlayLogo from "../../../images/icons/overlay-logo.png";
+import { EmailSignupForm } from "../../../components";
 
 const data = {
   Technical: {
@@ -128,6 +129,11 @@ const Technical = () => {
           <div className={styles["text"]}>{text}</div>
         ))}
       </div> */}
+
+      <div className={styles["card__container"]}>
+        <div className={styles["card__header"]}>Stay Updated</div>
+        <EmailSignupForm />
+      </div>
 
       <div className={styles["card__container"]}>
         <div className={styles["card__header"]}>{data.Stakeholders.header}</div>
