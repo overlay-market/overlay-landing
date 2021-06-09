@@ -1,7 +1,7 @@
 import styles from "./Nav.module.scss";
 import OverlayTitle from "../../images/icons/overlay-title.png";
 
-const Nav = () => {
+const Nav: React.FC = () => {
   return (
     <div className={styles["nav__container"]}>
       <div className={styles["nav__content"]}>

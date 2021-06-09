@@ -5,7 +5,7 @@ const url:string =
 
 const MailchimpForm = () => <MailchimpSubscribe url={url} />;
 
-const EmailSignupForm = () => {
+const EmailSignupForm: React.FC = () => {
   return (
     <MailchimpSubscribe
       url={url}

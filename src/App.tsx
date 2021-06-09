@@ -1,13 +1,12 @@
 import "./App.scss";
 import { Market } from "./pages";
-import { Nav, Footer } from "./components";
+import { Nav } from "./components";
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
       <Nav />
       <Market />
-      <Footer />
     </div>
   );
 }

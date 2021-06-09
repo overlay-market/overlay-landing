@@ -1,10 +1,8 @@
-import React from "react";
-
 import About from "./About/About";
 import Streams from "./Streams/Streams";
 import Technical from "./Technical/Technical";
 
-const Market = () => {
+const Market: React.FC = () => {
   return (
     <div>
       <About />
