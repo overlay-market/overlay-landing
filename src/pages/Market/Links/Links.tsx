@@ -1,6 +1,8 @@
 import React from "react";
-// import { Button } from "@material-ui/core";
-import { FeedCard, ListRow, Icon } from "../../../components";
+import { Button } from "@material-ui/core";
+import styles from "./Links.module.scss";
+import { FeedCard, ListRow, Icon, Link } from "../../../components";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import NotionIcon from "../../../assets/icons/notion-icon.png";
 import WhitepaperIcon from "../../../assets/icons/whitepaper-icon.png";
 import TwitterIcon from "../../../assets/icons/twitter-icon.png";
@@ -41,22 +43,36 @@ const data = [
   },
 ];
 
-
-export const Links: React.FC = () => {
+const Links: React.FC = () => {
   return (
     <FeedCard header="Links">
+        <Button
+          variant="contained"
+          color="default"
+          href="https://kovan.overlay.exchange"
+          endIcon={<ExitToAppIcon />}
+          className={styles["exchange-button"]}
+        >
+          😸 Launch App
+        </Button>
       {data.map((item) => (
           <ListRow>
-            <Icon height={36} width={36} margin={'0 10px 0 0'}src={item.icon} alt={`${item.text} Icon`} />
-            <a
-              href={item.link}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {item.text}
-            </a>
+            <Icon 
+              height={36} 
+              width={36} 
+              margin={'0 10px 0 0'} 
+              src={item.icon} 
+              alt={`${item.text} Icon`} 
+              />
+                <Link 
+                  href={item.link}
+                  >
+                    {item.text}
+                  </Link>
           </ListRow>
         ))}
     </FeedCard>
   )
 };
+
+export default Links;
