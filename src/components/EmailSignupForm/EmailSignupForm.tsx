@@ -5,7 +5,7 @@ const url:string =
 
 const MailchimpForm = () => <MailchimpSubscribe url={url} />;
 
-const EmailSignupForm: React.FC = () => {
+export const EmailSignupForm: React.FC = () => {
   return (
     <MailchimpSubscribe
       url={url}
@@ -31,5 +31,3 @@ const EmailSignupForm: React.FC = () => {
     />
   );
 };
-
-export default EmailSignupForm;

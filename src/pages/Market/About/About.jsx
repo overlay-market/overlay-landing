@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./About.module.scss";
 import { Button } from "@material-ui/core";
+import { FeedCard, ListRow } from "../../../components";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import NotionIcon from "../../../images/icons/notion-icon.png";
 import WhitepaperIcon from "../../../images/icons/whitepaper-icon.png";
@@ -70,6 +71,15 @@ const About = () => {
           </div>
         ))}
       </div>
+
+      <FeedCard header="About">
+        {data.About.map((current) => (
+          <ListRow marginBottom="30px">
+            <div className={styles["row__number"]}>{current.number}</div>
+            <div className={styles["row__text"]}>{current.text}</div>
+          </ListRow>
+        ))}
+      </FeedCard>
 
       <div className={styles["card__container"]}>
         <div className={styles["card__header--big"]}>Links</div>
