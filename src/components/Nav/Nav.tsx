@@ -1,5 +1,5 @@
 import styles from "./Nav.module.scss";
-import OverlayTitle from "../../images/icons/overlay-title.png";
+import OverlayTitle from "../../assets/icons/overlay-title.png";
 
 const Nav: React.FC = () => {
   return (
