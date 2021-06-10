@@ -62,27 +62,16 @@ const data = {
 const About = () => {
   return (
     <div className={styles["container"]}>
-      <div className={styles["card__container"]}>
-        <div className={styles["card__header--big"]}>About</div>
-        {data.About.map((current) => (
-          <div className={styles["row__container"]}>
-            <div className={styles["row__number"]}>{current.number}</div>
-            <div className={styles["row__text"]}>{current.text}</div>
-          </div>
-        ))}
-      </div>
-
       <FeedCard header="About">
         {data.About.map((current) => (
-          <ListRow marginBottom="30px">
+          <ListRow>
             <div className={styles["row__number"]}>{current.number}</div>
             <div className={styles["row__text"]}>{current.text}</div>
           </ListRow>
         ))}
       </FeedCard>
 
-      <div className={styles["card__container"]}>
-        <div className={styles["card__header--big"]}>Links</div>
+      <FeedCard header="Links">
         <Button
           variant="contained"
           color="default"
@@ -93,7 +82,7 @@ const About = () => {
           😸 Launch App
         </Button>
         {data.Links.map((item) => (
-          <div className={styles["row__container"]}>
+          <ListRow>
             <div className={styles["icon__container"]}>
               <img
                 src={item.icon}
@@ -109,12 +98,11 @@ const About = () => {
             >
               {item.text}
             </a>
-          </div>
+          </ListRow>
         ))}
-      </div>
+      </FeedCard>
 
-      <div className={styles["card__container"]}>
-        <div className={styles["card__header--big"]}>Stats</div>
+      <FeedCard header="Stats">
         <div className={styles["column__container"]}>
           <div className={styles["stat__header"]}>Total Supply</div>
           <div className={styles["stat__number"]}>- OVL</div>
@@ -131,7 +119,7 @@ const About = () => {
           <div className={styles["stat__header"]}>Treasury Staking</div>
           <div className={styles["stat__number"]}>- OVL</div>
         </div>
-      </div>
+      </FeedCard>
     </div>
   );
 };
