@@ -12,9 +12,9 @@ const Market: React.FC = () => {
       <About header="About"/>
       <Links header="Links"/>
       <Stats header="Stats"/>
-      <Streams />
+      <Streams header="Streams"/>
       <Email header="Stay Updated"/>
-      <Technical />
+      <Technical header="Technical"/>
       <Stakeholders header="Stakeholders"/>
     </div>
   );

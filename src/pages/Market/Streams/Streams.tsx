@@ -35,10 +35,15 @@ const data = {
     },
   ],
 };
-const Streams = () => {
+
+interface StreamsProps { 
+  header: string;
+}
+
+const Streams: React.FC<StreamsProps> = ({header}) => {
   return (
     <div className={styles["container"]}>
-      <div className={styles["header"]}>Streams</div>
+      <div className={styles["header"]}>{header}</div>
       <div className={styles["pairs__container"]}>
         {data.Streams.map((pair) => (
           <div className={styles["pair__container"]}>
