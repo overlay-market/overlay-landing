@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Technical.module.scss";
 import GithubLogo from "../../../images/icons/github-logo.png";
 import OverlayLogo from "../../../images/icons/overlay-logo.png";
-import { EmailSignupForm } from "../../../components";
+import { EmailSignupForm, FeedCard, ListRow } from "../../../components";
 
 const data = {
   Technical: {
@@ -53,14 +53,6 @@ const data = {
       },
     ],
   },
-  Why: {
-    header: "Why",
-    content: [
-      "We believe in open-source.",
-      "Free and fair internet.",
-      "Other things.",
-    ],
-  },
   Stakeholders: {
     header: "Stakeholders",
     content: [
@@ -76,11 +68,10 @@ const data = {
 const Technical = () => {
   return (
     <div className={styles["container"]}>
-      <div className={styles["card__container"]}>
-        <div className={styles["card__header"]}>{data.Technical.header}</div>
+      <FeedCard header={data.Technical.header}>
         <div className={styles["card__content"]}>
           {data.Technical.content.map((resource) => (
-            <div className={styles["row__container"]}>
+            <ListRow>
               <div className={styles["logo__wrapper"]}>
                 <img
                   alt={`${resource.name} Logo`}
@@ -101,42 +92,16 @@ const Technical = () => {
                   {resource.description}
                 </div>
               </div>
-            </div>
+            </ListRow>
           ))}
         </div>
-      </div>
+      </FeedCard>
 
-      {/* <div className={styles["card__container"]}>
-        <div className={styles["card__header"]}>{data.Writings.header}</div>
-        {data.Writings.content.map((writing) => (
-          <div className={styles["row__container"]}>
-            <div className={styles["number"]}>{writing.number}</div>
-            <a
-              className={styles["article__link"]}
-              href={writing.link}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {writing.title}
-            </a>
-          </div>
-        ))}
-      </div> */}
-
-      {/* <div className={styles["card__container"]}>
-        <div className={styles["card__header"]}>{data.Why.header}</div>
-        {data.Why.content.map((text) => (
-          <div className={styles["text"]}>{text}</div>
-        ))}
-      </div> */}
-
-      <div className={styles["card__container"]}>
-        <div className={styles["card__header"]}>Stay Updated</div>
+      <FeedCard header="Stay Updated">
         <EmailSignupForm />
-      </div>
+      </FeedCard>
 
-      <div className={styles["card__container"]}>
-        <div className={styles["card__header"]}>{data.Stakeholders.header}</div>
+      <FeedCard header={data.Stakeholders.header}>
         {data.Stakeholders.content.map((stakeholder) => (
           <a
             href={stakeholder.link}
@@ -147,7 +112,7 @@ const Technical = () => {
             {stakeholder.name}
           </a>
         ))}
-      </div>
+      </FeedCard>
     </div>
   );
 };
