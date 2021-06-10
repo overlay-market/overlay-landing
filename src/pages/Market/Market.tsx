@@ -1,5 +1,6 @@
 import About from "./About/About";
-import Links from "./Links/Links"
+import Links from "./Links/Links";
+import Stats from "./Stats/Stats";
 import Streams from "./Streams/Streams";
 import Technical from "./Technical/Technical";
 
@@ -8,6 +9,7 @@ const Market: React.FC = () => {
     <div>
       <About />
       <Links />
+      <Stats />
       <Streams />
       <Technical />
     </div>
