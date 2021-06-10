@@ -3,12 +3,12 @@ import styles from "./About.module.scss";
 import { Button } from "@material-ui/core";
 import { FeedCard, ListRow } from "../../../components";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import NotionIcon from "../../../images/icons/notion-icon.png";
-import WhitepaperIcon from "../../../images/icons/whitepaper-icon.png";
-import TwitterIcon from "../../../images/icons/twitter-icon.png";
-import TelegramIcon from "../../../images/icons/telegram-icon.png";
-import DiscordIcon from "../../../images/icons/discord-icon.png";
-import MediumIcon from "../../../images/icons/medium-icon.png";
+import NotionIcon from "../../../assets/icons/notion-icon.png";
+import WhitepaperIcon from "../../../assets/icons/whitepaper-icon.png";
+import TwitterIcon from "../../../assets/icons/twitter-icon.png";
+import TelegramIcon from "../../../assets/icons/telegram-icon.png";
+import DiscordIcon from "../../../assets/icons/discord-icon.png";
+import MediumIcon from "../../../assets/icons/medium-icon.png";
 
 const data = {
   About: [

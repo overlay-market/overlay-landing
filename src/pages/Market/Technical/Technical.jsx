@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Technical.module.scss";
-import GithubLogo from "../../../images/icons/github-logo.png";
-import OverlayLogo from "../../../images/icons/overlay-logo.png";
+import GithubLogo from "../../../assets/icons/github-logo.png";
+import OverlayLogo from "../../../assets/icons/overlay-logo.png";
 import { EmailSignupForm, FeedCard, ListRow } from "../../../components";
 
 const data = {
