@@ -4,6 +4,7 @@ import Stats from "./Stats/Stats";
 import Streams from "./Streams/Streams";
 import Technical from "./Technical/Technical";
 import Email from "./Email/Email";
+import Stakeholders from "./Stakeholders/Stakeholders";
 
 const Market: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const Market: React.FC = () => {
       <Streams />
       <Email header="Stay Updated"/>
       <Technical />
+      <Stakeholders header="Stakeholders"/>
     </div>
   );
 };

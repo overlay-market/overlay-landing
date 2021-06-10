@@ -67,7 +67,7 @@ const Technical = () => {
         </div>
       </FeedCard>
 
-      <FeedCard header={data.Stakeholders.header}>
+      {/* <FeedCard header={data.Stakeholders.header}>
         {data.Stakeholders.content.map((stakeholder) => (
           <a
             href={stakeholder.link}
@@ -78,7 +78,7 @@ const Technical = () => {
             {stakeholder.name}
           </a>
         ))}
-      </FeedCard>
+      </FeedCard> */}
     </div>
   );
 };
