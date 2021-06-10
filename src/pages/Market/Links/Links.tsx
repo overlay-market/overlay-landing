@@ -1,6 +1,6 @@
 import React from "react";
 // import { Button } from "@material-ui/core";
-import { FeedCard, ListRow } from "../../../components";
+import { FeedCard, ListRow, Icon } from "../../../components";
 import NotionIcon from "../../../assets/icons/notion-icon.png";
 import WhitepaperIcon from "../../../assets/icons/whitepaper-icon.png";
 import TwitterIcon from "../../../assets/icons/twitter-icon.png";
@@ -47,13 +47,7 @@ export const Links: React.FC = () => {
     <FeedCard header="Links">
       {data.map((item) => (
           <ListRow>
-            <div>
-              <img
-                src={item.icon}
-                alt={`${item.text} Icon`}
-                loading="lazy"
-              ></img>
-            </div>
+            <Icon height={36} width={36} margin={'0 10px 0 0'}src={item.icon} alt={`${item.text} Icon`} />
             <a
               href={item.link}
               target="_blank"
