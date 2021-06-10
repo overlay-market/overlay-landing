@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Technical.module.scss";
 import GithubLogo from "../../../assets/icons/github-logo.png";
 import OverlayLogo from "../../../assets/icons/overlay-logo.png";
-import { EmailSignupForm, FeedCard, ListRow } from "../../../components";
+import { FeedCard, ListRow } from "../../../components";
 
 const data = {
   Technical: {
@@ -20,36 +20,6 @@ const data = {
         description: "Where all us Noob-Noobs go.",
         logo: `${OverlayLogo}`,
         link: "https://github.com/overlay-market/",
-      },
-    ],
-  },
-  Writings: {
-    header: "Writings",
-    content: [
-      {
-        number: "01",
-        link: "",
-        title: "What is Overlay?",
-      },
-      {
-        number: "02",
-        link: "",
-        title: "A deep dive of our metrics",
-      },
-      {
-        number: "03",
-        link: "",
-        title: "Tokenomics of Overlay",
-      },
-      {
-        number: "04",
-        link: "",
-        title: "Our mission and values",
-      },
-      {
-        number: "05",
-        link: "",
-        title: "Another article link",
       },
     ],
   },
@@ -95,10 +65,6 @@ const Technical = () => {
             </ListRow>
           ))}
         </div>
-      </FeedCard>
-
-      <FeedCard header="Stay Updated">
-        <EmailSignupForm />
       </FeedCard>
 
       <FeedCard header={data.Stakeholders.header}>

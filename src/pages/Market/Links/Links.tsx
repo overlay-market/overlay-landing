@@ -43,9 +43,13 @@ const data = [
   },
 ];
 
-const Links: React.FC = () => {
+interface LinksProps { 
+  header: string;
+}
+
+const Links: React.FC<LinksProps> = ({header}) => {
   return (
-    <FeedCard header="Links">
+    <FeedCard header={header}>
         <Button
           variant="contained"
           color="default"

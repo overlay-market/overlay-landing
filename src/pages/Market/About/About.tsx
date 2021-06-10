@@ -19,9 +19,13 @@ const data = {
   ],
 };
 
-const About:React.FC = () => {
+interface AboutProps {
+  header: string;
+}
+
+const About:React.FC<AboutProps> = ({header}) => {
   return (
-    <FeedCard header="About">
+    <FeedCard header={header}>
       {data.About.map((current) => (
         <ListRow>
           <div className={styles["row__number"]}>{current.number}</div>

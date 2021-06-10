@@ -2,9 +2,13 @@ import React from 'react';
 import styles from './Stats.module.scss';
 import { FeedCard } from "../../../components";
 
-const Stats: React.FC = () => { 
+interface StatsProps {
+  header: string;
+}
+
+const Stats: React.FC<StatsProps> = ({header}) => { 
   return (
-    <FeedCard header="Stats">
+    <FeedCard header={header}>
       <div className={styles["column__container"]}>
         <div className={styles["stat__header"]}>Total Supply</div>
         <div className={styles["stat__number"]}>- OVL</div>

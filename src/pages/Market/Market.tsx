@@ -3,14 +3,16 @@ import Links from "./Links/Links";
 import Stats from "./Stats/Stats";
 import Streams from "./Streams/Streams";
 import Technical from "./Technical/Technical";
+import Email from "./Email/Email";
 
 const Market: React.FC = () => {
   return (
     <div>
-      <About />
-      <Links />
-      <Stats />
+      <About header="About"/>
+      <Links header="Links"/>
+      <Stats header="Stats"/>
       <Streams />
+      <Email header="Stay Updated"/>
       <Technical />
     </div>
   );
