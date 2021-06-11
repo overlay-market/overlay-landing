@@ -8,11 +8,11 @@ import Technical from "./Technical/Technical";
 import Email from "./Email/Email";
 import Stakeholders from "./Stakeholders/Stakeholders";
 
-interface TopContainerProps {
+interface ContainerProps {
   maxWidth: number;
 }
 
-const TopContainer = styled.div<TopContainerProps>`
+const Container = styled.div<ContainerProps>`
   display: flex;
   flex-direction: column;
   max-width: ${(props) => props.maxWidth}px;
@@ -21,21 +21,22 @@ const TopContainer = styled.div<TopContainerProps>`
     flex-direction: row;
     padding-left: 30px;
   }
-
 `
 const Market: React.FC = () => {
   return (
-    <div>
-    <TopContainer maxWidth={1400}>
-      <About header="About"/>
-      <Links header="Links"/>
-      <Stats header="Stats"/>
-    </TopContainer>
-      <Streams header="Streams"/>
-      <Email header="Stay Updated"/>
-      <Technical header="Technical"/>
-      <Stakeholders header="Stakeholders"/>
-    </div>
+    <>
+      <Container maxWidth={1400}>
+        <About header="About"/>
+        <Links header="Links"/>
+        <Stats header="Stats"/>
+      </Container>
+        <Streams header="Streams"/>
+      <Container maxWidth={1400}>
+        <Technical header="Technical"/>
+        <Email header="Stay Updated"/>
+        <Stakeholders header="Stakeholders"/>
+      </Container>
+    </>
   );
 };
 

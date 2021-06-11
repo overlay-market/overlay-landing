@@ -53,8 +53,11 @@ const Technical:React.FC<TechnicalProps> = ({ header }) => {
               />
             </div>
             <div className={styles["text__container"]}>
-              <Link href={resource.link}>{resource.name}</Link>
-
+              <Link 
+                href={resource.link} 
+                underline={true}>
+                  {resource.name}
+              </Link>
               <div className={styles["description"]}>
                 {resource.description}
               </div>
