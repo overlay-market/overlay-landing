@@ -44,6 +44,10 @@ const Header = styled.div<HeaderProps>`
       left: 0;
       width: 100%;
       background: black;
+
+      @media ${device.lg} {
+        width: 80%;
+      }
     }
 `
 

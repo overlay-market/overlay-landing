@@ -48,7 +48,7 @@
   @include lg {
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 75px;
+    margin-bottom: 100px;
   }
 }
 
@@ -60,14 +60,16 @@
   @include lg {
     --oneThird: calc(1 / 3);
     width: calc(var(--oneThird) * 100%);
-    flex-basis: 33.33%;
+    flex-basis: 27%;
+    margin-left: auto;
+    padding-right: 45px;
   }
 }
 
 .token-img__container {
   height: auto;
   width: auto;
-  flex: 1;
+  // flex: 1;
 
   img {
     height: 160px;
