@@ -6,7 +6,7 @@ const data = [
     { name: "1kx", link: "https://twitter.com/1kxnetwork?lang=en" },
     { name: "ParaFi", link: "https://www.parafi.capital/" },
     { name: "The LAO", link: "https://www.thelao.io/" },
-    { name: "Metacartel", link: "https://metacartel.xyz/" },
+    { name: "MetaCartel", link: "https://metacartel.xyz/" },
 ];
 
 interface StakeholdersProps {
@@ -19,6 +19,7 @@ const Stakeholders: React.FC<StakeholdersProps> = ({header}) => {
         {data.map((stakeholder) => (
           <Link
             href={stakeholder.link}
+            marginBottom={"10px"}
             >
             {stakeholder.name}
             </Link>

@@ -17,7 +17,7 @@ const data = [
     icon: `${NotionIcon}`,
   },
   {
-    text: "Whitepaper V2",
+    text: "Whitepaper V1",
     link: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/OverlayWPv3.pdf?alt=media",
     icon: `${WhitepaperIcon}`,
   },

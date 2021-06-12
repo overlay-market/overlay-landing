@@ -19,7 +19,6 @@ const Container = styled.div<ContainerProps>`
 
   @media ${device.lg} {
     flex-direction: row;
-    padding-left: 30px;
   }
 `
 const Market: React.FC = () => {

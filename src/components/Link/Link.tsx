@@ -5,6 +5,7 @@ interface LinkBaseProps {
   newWindow?: boolean;
   href: string;
   underline?: boolean;
+  marginBottom?: string;
 }
 
 const LinkBase = styled.a.attrs((props: LinkBaseProps) => ({
@@ -18,6 +19,7 @@ const LinkBase = styled.a.attrs((props: LinkBaseProps) => ({
   text-decoration-thickness: 1px;
   position: relative;
   font-size: 20px;
+  margin-bottom: ${(props) => props.marginBottom};
 
   :hover {
     text-decoration: underline;
@@ -29,11 +31,12 @@ interface LinkProps {
   href: string;
   children: React.ReactChild;
   underline?: boolean;
+  marginBottom?: string;
 }
 
-export const Link: React.FC<LinkProps> = ({newWindow, href, children, underline}) => {
+export const Link: React.FC<LinkProps> = ({newWindow, href, children, underline, marginBottom }) => {
     return (
-      <LinkBase href={href} newWindow={newWindow} underline={underline}>
+      <LinkBase href={href} newWindow={newWindow} underline={underline} marginBottom={marginBottom}>
         {children}
       </LinkBase>
     );

@@ -9,16 +9,16 @@ const data = {
     header: "Technical",
     content: [
       {
-        name: "OIP",
+        name: "OIPs",
         description:
           "OIPs are the place to contribute to the development of the protocol.",
-        logo: `${GithubLogo}`,
+        logo: `${OverlayLogo}`,
         link: "https://oips.overlay.market/",
       },
       {
         name: "GitHub",
         description: "Where all us Noob-Noobs go.",
-        logo: `${OverlayLogo}`,
+        logo: `${GithubLogo}`,
         link: "https://github.com/overlay-market/",
       },
     ],

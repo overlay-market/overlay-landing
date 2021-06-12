@@ -2,25 +2,23 @@
 
 .nav__container {
   display: block;
-  margin-bottom: 100px;
-  margin-top: 25px;
+  margin-bottom: 50px;
+
+  @include lg {
+    margin-bottom: 75px;
+  }
 }
 
 .nav__content {
   display: flex;
   max-width: 1200px;
-  margin: auto;
 }
 
 .nav__title--container {
   display: flex;
 
   img {
-    width: 180px;
+    width: 144px;
     height: 100%;
-
-    @include lg {
-      width: 220px;
-    }
   }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Streams.module.scss";
+import { StreamsHeader } from "./StreamsHeader";
 
 const data = {
   Streams: [
@@ -43,7 +44,8 @@ interface StreamsProps {
 const Streams: React.FC<StreamsProps> = ({header}) => {
   return (
     <div className={styles["container"]}>
-      <div className={styles["header"]}>{header}</div>
+      {/* <div className={styles["header"]}>{header}</div> */}
+      <StreamsHeader>{header}</StreamsHeader>
       <div className={styles["pairs__container"]}>
         {data.Streams.map((pair) => (
           <div className={styles["pair__container"]}>
