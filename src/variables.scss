@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:900,400,700");
+
 $primary-color: #282c34;
 $secondary-color: #61dafb;
 
 // Fonts
-$primary-font: "Roboto", sans-serif;
+$primary-font: "Roboto", Helvetica, Arial, serif;
 
 // Small tablets and large smartphones (landscape view)
 $screen-sm-min: 576px;

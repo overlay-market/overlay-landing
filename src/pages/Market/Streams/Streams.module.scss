@@ -3,12 +3,12 @@
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1400px;
+  // margin: auto;
 
   @include lg {
     width: 100%;
-    padding-left: 30px;
+    // padding-left: 30px;
   }
 }
 
@@ -48,7 +48,7 @@
   @include lg {
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 75px;
+    margin-bottom: 100px;
   }
 }
 
@@ -58,14 +58,18 @@
   margin-bottom: 15px;
 
   @include lg {
-    width: 50%;
+    --oneThird: calc(1 / 3);
+    width: calc(var(--oneThird) * 100%);
+    flex-basis: 27%;
+    margin-left: auto;
+    padding-right: 45px;
   }
 }
 
 .token-img__container {
   height: auto;
   width: auto;
-  flex: 1;
+  // flex: 1;
 
   img {
     height: 160px;
@@ -87,8 +91,8 @@
 
 .name {
   font-size: 16px;
-  font-weight: 600;
-  color: #0b0f1c;
+  font-weight: 900;
+  color: #333;
   position: relative;
   margin-bottom: 5px;
   letter-spacing: 1px;
