@@ -16,14 +16,16 @@ const Stats: React.FC<StatsProps> = ({header}) => {
       <div className={styles["column__container"]}>
         <div className={styles["stat__header"]}>TVL</div>
         <div className={styles["stat__number"]}>- OVL</div>
+        <div className={[styles["stat__number"], [styles["lighten"]]].join(' ')}>- USD</div>
       </div>
       <div className={styles["column__container"]}>
         <div className={styles["stat__header"]}>Spot Liquidity</div>
         <div className={styles["stat__number"]}>- OVL</div>
+        <div className={[styles["stat__number"], [styles["lighten"]]].join(' ')}>- USD</div>
       </div>
       <div className={styles["column__container"]}>
         <div className={styles["stat__header"]}>Treasury Staking</div>
-        <div className={styles["stat__number"]}>- OVL</div>
+        <div className={styles["stat__number"]}>APY: - %</div>
       </div>
   </FeedCard>
   )
