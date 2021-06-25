@@ -23,7 +23,7 @@ const LinkBase = styled.a.attrs((props: LinkBaseProps) => ({
 
   :hover {
     text-decoration: underline;
-    font-weight: 700;
+    font-weight: 7w00;
   }
 `
 

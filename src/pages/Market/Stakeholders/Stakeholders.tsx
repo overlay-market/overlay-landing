@@ -20,6 +20,7 @@ const Stakeholders: React.FC<StakeholdersProps> = ({header}) => {
           <Link
             href={stakeholder.link}
             marginBottom={"10px"}
+            newWindow={true}
             >
             {stakeholder.name}
             </Link>
