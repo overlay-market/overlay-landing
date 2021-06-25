@@ -55,6 +55,7 @@ const Technical:React.FC<TechnicalProps> = ({ header }) => {
             <div className={styles["text__container"]}>
               <Link 
                 href={resource.link} 
+                newWindow={true}
                 underline={true}>
                   {resource.name}
               </Link>

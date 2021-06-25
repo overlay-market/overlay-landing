@@ -71,6 +71,7 @@ const Links: React.FC<LinksProps> = ({header}) => {
                 <Link 
                   href={item.link}
                   underline={true}
+                  newWindow={true}
                   >
                     {item.text}
                   </Link>
