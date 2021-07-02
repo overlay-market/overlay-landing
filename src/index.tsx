@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { transitions, positions, Provider  } from 'react-alert';
+import AlertMUITemplate from "react-alert-template-mui";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const options = {
+  position: positions.BOTTOM_CENTER,
+  timeout: 5000,
+  offset: '30px',
+  transition: transitions.SCALE
+}
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* @ts-ignore */}
+    <Provider template={AlertMUITemplate} {...options}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
