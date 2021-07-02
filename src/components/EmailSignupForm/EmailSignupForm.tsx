@@ -1,5 +1,5 @@
 import { Button } from '@material-ui/core';
-import {Alert, AlertTitle }  from '@material-ui/lab';
+import { Alert, AlertTitle }  from '@material-ui/lab';
 import styled from 'styled-components/macro';
 
 const Container = styled.div`
@@ -13,6 +13,13 @@ const FormWrapper = styled.div`
 
 const FormButton = styled(Button)`
   text-transform: capitalize !important;
+`
+
+const StyledAlert = styled(Alert)`
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 888;
 `
 
 const ErrorMessage = styled.div`
@@ -40,21 +47,21 @@ export const EmailSignupForm = ({ status, message, onValidated }: EmailSignupFor
   return (
     <Container>
       {status === "sending" && 
-        <Alert severity="success">
+        <StyledAlert id="hello" severity="info">
           <AlertTitle>In Progress</AlertTitle>
-          Sending...
-        </Alert>}
+            Sending...
+        </StyledAlert>}
       {status === "error" && (
-        <Alert severity="error"> 
+        <StyledAlert id="bye" severity="error"> 
           <AlertTitle>Error</AlertTitle>
-          <ErrorMessage dangerouslySetInnerHTML={{__html: message}}></ErrorMessage>
-          </Alert>
+            <ErrorMessage dangerouslySetInnerHTML={{__html: message}}></ErrorMessage>
+          </StyledAlert>
       )}
       {status === "success" && (
-        <Alert severity="success">
+        <StyledAlert severity="success">
           <AlertTitle>Success!</AlertTitle>
-          Thanks for subscribing!
-        </Alert>
+            Thanks for subscribing!
+        </StyledAlert>
       )}
       <FormWrapper>
         <input
