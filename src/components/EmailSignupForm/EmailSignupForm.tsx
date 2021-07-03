@@ -36,8 +36,11 @@ interface EmailSignupFormProps {
 
 export const EmailSignupForm = ({ status, message, onValidated }: EmailSignupFormProps ) => {
   let email: any;
+  let updateMessage: any;
 
-  let updateMessage = message.replace('your profile', 'preferences');
+  if (message) {
+    updateMessage = message.replace('your profile', 'preferences');
+  }
 
   // when user submits email
   const onSubmit = () => {
