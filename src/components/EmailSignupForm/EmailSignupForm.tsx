@@ -37,6 +37,8 @@ interface EmailSignupFormProps {
 export const EmailSignupForm = ({ status, message, onValidated }: EmailSignupFormProps ) => {
   let email: any;
 
+  let updateMessage = message.replace('your profile', 'preferences');
+
   // when user submits email
   const onSubmit = () => {
     email &&
@@ -60,7 +62,7 @@ export const EmailSignupForm = ({ status, message, onValidated }: EmailSignupFor
             severity={'error'}
             title={'Error'}
             >
-              <ErrorMessage dangerouslySetInnerHTML={{__html: message}}></ErrorMessage>
+              <ErrorMessage dangerouslySetInnerHTML={{__html: updateMessage}}></ErrorMessage>
             </TransitionAlert>
       )}
       {status === "success" && (
