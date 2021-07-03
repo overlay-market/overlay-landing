@@ -1,6 +1,6 @@
 import { Button } from '@material-ui/core';
-import { Alert, AlertTitle }  from '@material-ui/lab';
 import styled from 'styled-components/macro';
+import { TransitionAlert } from '../TransitionAlert/TransitionAlert';
 
 const Container = styled.div`
   display: flex;
@@ -13,13 +13,6 @@ const FormWrapper = styled.div`
 
 const FormButton = styled(Button)`
   text-transform: capitalize !important;
-`
-
-const StyledAlert = styled(Alert)`
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  z-index: 888;
 `
 
 const ErrorMessage = styled.div`
@@ -47,21 +40,26 @@ export const EmailSignupForm = ({ status, message, onValidated }: EmailSignupFor
   return (
     <Container>
       {status === "sending" && 
-        <StyledAlert id="hello" severity="info">
-          <AlertTitle>In Progress</AlertTitle>
-            Sending...
-        </StyledAlert>}
+        <TransitionAlert
+          severity={'info'}
+          title={'In Progress'}
+          message={'Sending...'}
+          />
+          }
       {status === "error" && (
-        <StyledAlert id="bye" severity="error"> 
-          <AlertTitle>Error</AlertTitle>
-            <ErrorMessage dangerouslySetInnerHTML={{__html: message}}></ErrorMessage>
-          </StyledAlert>
+          <TransitionAlert
+            severity={'error'}
+            title={'Error'}
+            >
+              <ErrorMessage dangerouslySetInnerHTML={{__html: message}}></ErrorMessage>
+            </TransitionAlert>
       )}
       {status === "success" && (
-        <StyledAlert severity="success">
-          <AlertTitle>Success!</AlertTitle>
-            Thanks for subscribing!
-        </StyledAlert>
+        <TransitionAlert 
+          severity={'success'} 
+          title={'Success!'} 
+          message={'Thanks for subscribing!'}
+          />
       )}
       <FormWrapper>
         <input
