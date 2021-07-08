@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { device } from '../../theme/theme';
 
-const CardContainer = styled.div`
+export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
@@ -18,7 +18,12 @@ const CardContainer = styled.div`
   }
 `
 
-const CardHeader = styled.div`
+export const EmptyCardContainer = styled(CardContainer)`
+  min-height: 0px;
+  margin-bottom: 0px;
+`
+
+export const CardHeader = styled.div`
   text-align: left;
   position: relative;
   color: #0b0f1c;
