@@ -1,15 +1,30 @@
-import styles from "./Nav.module.scss";
-import OverlayTitle from "../../assets/icons/overlay-title.png";
+import styled from 'styled-components';
+import OverlayLogo from "../../assets/icons/overlay-logo.png";
+import { Icon } from "../Icon/Icon";
+
+export const NavContainer = styled.div`
+  display: block;
+  margin-bottom: 64px;
+`
+
+export const NavContent = styled.div`
+  display: flex;
+  max-width: 1200px;
+`
 
 const Nav: React.FC = () => {
   return (
-    <div className={styles["nav__container"]}>
-      <div className={styles["nav__content"]}>
-        <div className={styles["nav__title--container"]}>
-          <img alt="Overlay Logo" src={OverlayTitle}></img>
-        </div>
-      </div>
-    </div>
+      <NavContainer>
+        <NavContent>
+          <Icon 
+            height={100} 
+            width={100} 
+            src={OverlayLogo} 
+            alt="Overlay Logo" 
+            margin={'auto'} 
+            />
+        </NavContent>
+      </NavContainer>
   );
 };
 

@@ -28,8 +28,9 @@ export const CardHeader = styled.div`
   position: relative;
   color: #0b0f1c;
   font-weight: 900;
-  font-size: 36px;
-  margin-bottom: 23px;
+  font-size: 24px;
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 27px;
   opacity: 88%;
 
   &:after {
@@ -37,12 +38,12 @@ export const CardHeader = styled.div`
     content: "";
     height: 2px;
     /* adjust this to move up and down. */
-    bottom: -4px;
+    bottom: -8px;
 
     /* center - use with adjusting width   */
     margin: 0 auto;
     left: 0;
-    width: 85%;
+    width: 93%;
     background: black;
   }
 

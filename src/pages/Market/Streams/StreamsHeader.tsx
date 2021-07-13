@@ -13,7 +13,8 @@ const Header = styled.div<HeaderProps>`
     color: #0b0f1c;
     font-weight: 700;
     font-size: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 27px;
+    font-family: 'Press Start 2P', cursive;
 
     @media ${device.lg} {
       font-size: 36px;
@@ -23,6 +24,7 @@ const Header = styled.div<HeaderProps>`
       --margin: calc(var(--negativeSpace) / 6);
       margin-left: var(--margin);
       margin-right: var(--margin);
+      margin-bottom: 40px;
     }
 
     @media ${device.xl} {
@@ -39,15 +41,12 @@ const Header = styled.div<HeaderProps>`
       position: absolute;
       content: "";
       height: 2px;
-      bottom: -5px;
+      bottom: -8px;
       margin: 0 auto;
       left: 0;
-      width: 100%;
+      width: 93%;
       background: black;
 
-      @media ${device.lg} {
-        width: 80%;
-      }
     }
 `
 
