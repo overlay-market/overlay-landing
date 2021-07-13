@@ -26,12 +26,10 @@ interface IconProps {
   margin: string;
 }
 
-const Icon: React.FC<IconProps> = ({src, alt, height, width, margin}) => {
+export const Icon: React.FC<IconProps> = ({src, alt, height, width, margin}) => {
     return (
       <IconContainer height={height} width={width} margin={margin}>
         <img src={src} alt={alt} loading="lazy"/>
       </IconContainer>
     );
 }
-
-export default Icon;
