@@ -29,6 +29,7 @@ export const CardHeader = styled.div`
   color: #0b0f1c;
   font-weight: 900;
   font-size: 36px;
+  font-family: 'Press Start 2P', cursive;
   margin-bottom: 23px;
   opacity: 88%;
 
