@@ -26,7 +26,7 @@ const Market: React.FC = () => {
   return (
     <>
       <Container maxWidth={1400}>
-        <About header="About"/>
+        <About header="Overlay"/>
         <Links header="Links"/>
         <Stats header="Stats"/>
       </Container>
