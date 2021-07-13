@@ -5,6 +5,7 @@ import styled, {
   DefaultTheme,
   ThemeProvider as StyledComponentsThemeProvider
 } from 'styled-components';
+import { useIsDarkMode } from "../state/user/hooks";
 import { Colors } from "./styled";
 
 // remove screenSize once 
@@ -46,7 +47,7 @@ const mediaWidthTemplates: { [width in keyof typeof MEDIA_WIDTHS]: typeof css } 
 export function colors(darkMode: boolean): Colors {
   return {
     // background
-    background: '#0B0F1C',
+    background: darkMode ? '#0B0F1C' : '#fff',
 
     // blues
     ovl_blue_lgt: '#56CCF2',
@@ -88,25 +89,22 @@ const TextWrapper = styled(Text)<{ color: keyof Colors }>`
 type TextProps = Omit<TextPropsOriginal, 'css'>
 
 export const TEXT = {
-  Main(props: TextProps) {
-    return <TextWrapper fontWeight={500} color={'text2'} {...props} />
+  Header1(props: TextProps) {
+    return <TextWrapper fontWeight={400} fontSize={24} fontFamily={'Press Start 2P'} {...props} />
   },
-  Link(props: TextProps) {
-    return <TextWrapper fontWeight={500} color={'primary1'} {...props} />
+  Header2(props: TextProps) {
+    return <TextWrapper fontWeight={700} fontSize={24} fontFamily={'Roboto'} {...props} />
   },
   Body(props: TextProps) {
-    return <TextWrapper fontWeight={400} fontSize={16} color={'text1'} {...props} />
+    return <TextWrapper fontWeight={400} fontSize={16} fontFamily={'Roboto'} {...props} />
   },
-  LargeHeader(props: TextProps) {
-    return <TextWrapper fontWeight={600} fontSize={24} {...props} />
+  BodyBold(props: TextProps) {
+    return <TextWrapper fontWeight={700} fontSize={16} fontFamily={'Roboto'} {...props} />
   },
-  MediumHeader(props: TextProps) {
-    return <TextWrapper fontWeight={500} fontSize={20} {...props} />
+  BodySmall(props: TextProps) {
+    return <TextWrapper fontWeight={400} fontSize={14} fontFamily={'Roboto'} {...props} />
   },
-  SubHeader(props: TextProps) {
-    return <TextWrapper fontWeight={400} fontSize={14} {...props} />
-  },
-  Small(props: TextProps) {
-    return <TextWrapper fontWeight={500} fontSize={11} {...props} />
+  BodyXSmall(props: TextProps) {
+    return <TextWrapper fontWeight={400} fontSize={12} fontFamily={'Roboto'} {...props} />
   },
 }
