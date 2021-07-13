@@ -1,38 +1,27 @@
 import React from "react";
 import styles from "./Streams.module.scss";
 import { StreamsHeader } from "./StreamsHeader";
+import ETH_DAI_NFT from "../../../assets/nft/eth-dai.png";
+import OVL_DAI_NFT from "../../../assets/nft/ovl-dai.png";
+import OVL_ETH_NFT from "../../../assets/nft/ovl-eth.png";
+
 
 const data = {
   Streams: [
     {
-      pair_name: "OVL-ETH",
+      pair_name: "ETH-DAI",
       address: "",
-      img: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-20.png?alt=media",
+      img: ETH_DAI_NFT,
     },
     {
-      pair_name: "AAVE-ETH",
+      pair_name: "OVL-DAI",
       address: "0xDFC14d2Af169B0D36C4EFF567Ada9b2E0CAE044f",
-      img: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-15.png?alt=media",
+      img: OVL_DAI_NFT,
     },
     {
-      pair_name: "YFI-ETH",
+      pair_name: "OVL-ETH",
       address: "0x2fDbAdf3C4D5A8666Bc06645B8358ab803996E28",
-      img: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-17.png?alt=media",
-    },
-    {
-      pair_name: "UNI-ETH",
-      address: "0xd3d2E2692501A5c9Ca623199D38826e513033a17",
-      img: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-16.png?alt=media",
-    },
-    {
-      pair_name: "SNX-ETH",
-      address: "0x43AE24960e5534731Fc831386c07755A2dc33D47",
-      img: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-19.png?alt=media",
-    },
-    {
-      pair_name: "SUSHI-ETH",
-      address: "0xCE84867c3c02B05dc570d0135103d3fB9CC19433",
-      img: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/Rectangle-18.png?alt=media",
+      img: OVL_ETH_NFT,
     },
   ],
 };

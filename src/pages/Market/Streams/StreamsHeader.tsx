@@ -24,6 +24,7 @@ const Header = styled.div<HeaderProps>`
       --margin: calc(var(--negativeSpace) / 6);
       margin-left: var(--margin);
       margin-right: var(--margin);
+      margin-bottom: 40px;
     }
 
     @media ${device.xl} {
@@ -46,9 +47,6 @@ const Header = styled.div<HeaderProps>`
       width: 93%;
       background: black;
 
-      @media ${device.lg} {
-        width: 80%;
-      }
     }
 `
 
