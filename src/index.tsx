@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { transitions, positions, Provider  } from 'react-alert';
+import { Provider } from 'react-redux';
+import ThemeProvider from './theme/theme';
+import store from './state/state';
+import { transitions, positions, Provider as ReactAlertProvider } from 'react-alert';
 import AlertMUITemplate from "react-alert-template-mui";
 import './index.css';
 import App from './App';
@@ -16,9 +19,13 @@ const options = {
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* @ts-ignore */}
-    <Provider template={AlertMUITemplate} {...options}>
-      <App />
+    <Provider store={store}>
+      {/* @ts-ignore */}  
+      <ReactAlertProvider template={AlertMUITemplate} {...options}>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </ReactAlertProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

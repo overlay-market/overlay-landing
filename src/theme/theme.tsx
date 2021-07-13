@@ -64,7 +64,8 @@ export function colors(darkMode: boolean): Colors {
 
     // yellow
     yellow: '#F2C94C'
-}
+  }
+};
 
 export function theme(darkMode: boolean): DefaultTheme {
   return {
