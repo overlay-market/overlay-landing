@@ -13,7 +13,7 @@ const Header = styled.div<HeaderProps>`
     color: #0b0f1c;
     font-weight: 700;
     font-size: 30px;
-    margin-bottom: 27px;
+    margin-bottom: 40px;
     font-family: 'Press Start 2P', cursive;
 
     @media ${device.lg} {

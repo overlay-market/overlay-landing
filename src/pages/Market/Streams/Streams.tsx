@@ -31,8 +31,8 @@ export const PairsContainer = styled.div`
 
 export const PairContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  margin-bottom: 15px;
+  flex-direction: column;
+  margin-bottom: 32px;
 
   ${({ theme }) => theme.mediaWidth.lg`
       --oneThird: calc(1 / 3);
@@ -47,8 +47,7 @@ export const PairContent = styled.div`
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin: auto;
-    padding-left: 10px;
+    margin-bottom: 16px;
 
     ${({theme}) => theme.mediaWidth.sm`
       margin: auto 0;
@@ -107,7 +106,7 @@ const Streams: React.FC<StreamsProps> = ({header}) => {
           <PairContainer>
             <PairContent>
               <Name mb={'5px'}>{pair.pair_name}</Name>
-              <div>- ETH</div>
+              <div>N/A ETH</div>
             </PairContent>
 
             <div className={styles["token-img__container"]}>
