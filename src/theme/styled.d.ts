@@ -28,10 +28,10 @@ declare module 'styled-components' {
   export interface DefaultTheme extends Colors { 
     // media queries
     mediaWidth: {
-      minExtraSmall: ThemedCssFunction<DefaultTheme>
-      minSmall: ThemedCssFunction<DefaultTheme>
-      minMedium: ThemedCssFunction<DefaultTheme>
-      minLarge: ThemedCssFunction<DefaultTheme>
+      sm: ThemedCssFunction<DefaultTheme>
+      md: ThemedCssFunction<DefaultTheme>
+      lg: ThemedCssFunction<DefaultTheme>
+      xl: ThemedCssFunction<DefaultTheme>
     }
   };
 };

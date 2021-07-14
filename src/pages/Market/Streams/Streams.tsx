@@ -1,10 +1,78 @@
 import React from "react";
 import styles from "./Streams.module.scss";
 import { StreamsHeader } from "./StreamsHeader";
+import { TEXT } from "../../../theme/theme";
+import styled from 'styled-components/macro';
 import ETH_DAI_NFT from "../../../assets/nft/eth-dai.png";
 import OVL_DAI_NFT from "../../../assets/nft/ovl-dai.png";
 import OVL_ETH_NFT from "../../../assets/nft/ovl-eth.png";
 
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+
+  ${({theme}) => theme.mediaWidth.lg`
+    width: 100%;
+  `}
+`;
+
+export const PairsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+
+  ${({theme}) => theme.mediaWidth.lg`
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+  `};
+`;
+
+export const PairContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+
+  ${({ theme }) => theme.mediaWidth.lg`
+      --oneThird: calc(1 / 3);
+      width: calc(var(--oneThird) * 100%);
+      flex-basis: 27%;
+      padding-right: 45px;
+      margin-left: auto;
+  `};
+`;
+
+export const PairContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    padding-left: 10px;
+
+    ${({theme}) => theme.mediaWidth.sm`
+      margin: auto 0;
+    `};
+    ${({theme}) => theme.mediaWidth.lg`
+      width: 40%;
+    `};
+`;
+
+export const Name = styled(TEXT.BodyBold)`
+  color: #333;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    bottom: -1px;
+    margin: 0 auto;
+    left: 0;
+    width: 90%;
+    background: black;
+  }
+`
 
 const data = {
   Streams: [
@@ -32,16 +100,15 @@ interface StreamsProps {
 
 const Streams: React.FC<StreamsProps> = ({header}) => {
   return (
-    <div className={styles["container"]}>
-      {/* <div className={styles["header"]}>{header}</div> */}
+    <Container>
       <StreamsHeader>{header}</StreamsHeader>
-      <div className={styles["pairs__container"]}>
+      <PairsContainer>
         {data.Streams.map((pair) => (
-          <div className={styles["pair__container"]}>
-            <div className={styles["name-amt__container"]}>
-              <div className={styles["name"]}>{pair.pair_name}</div>
+          <PairContainer>
+            <PairContent>
+              <Name mb={'5px'}>{pair.pair_name}</Name>
               <div>- ETH</div>
-            </div>
+            </PairContent>
 
             <div className={styles["token-img__container"]}>
               <img
@@ -50,10 +117,10 @@ const Streams: React.FC<StreamsProps> = ({header}) => {
                 loading="lazy"
               />
             </div>
-          </div>
+          </PairContainer>
         ))}
-      </div>
-    </div>
+      </PairsContainer>
+    </Container>
   );
 };
 
