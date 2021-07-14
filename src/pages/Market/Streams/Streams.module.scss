@@ -32,5 +32,10 @@
     height: 160px;
     width: 160px;
     border-radius: 8px;
+
+    @include lg {
+      height: 200px;
+      width: 200px;
+    }
   }
 }

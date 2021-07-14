@@ -37,7 +37,7 @@ export const PairsContainer = styled.div<PairsContainerProps>`
     --margin: calc(var(--negativeSpace) / 6);
     margin-left: var(--margin);
     margin-right: var(--margin);
-    margin-bottom: 75px;
+    margin-bottom: 90px;
   };
 
   @media ${device.xl} {
@@ -55,7 +55,7 @@ export const PairContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 32px;
-  max-width: 200px;
+  max-width: 250px;
 
   ${({ theme }) => theme.mediaWidth.lg`
       --oneThird: calc(1 / 3);
