@@ -12,12 +12,11 @@ const Header = styled.div<HeaderProps>`
     position: relative;
     color: #0b0f1c;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 24px;
     margin-bottom: 40px;
     font-family: 'Press Start 2P', cursive;
 
     @media ${device.lg} {
-      font-size: 36px;
       --cardWidth: 300px;
       --currentWidth: ${(props) => props.currentWidth - 96}px;
       --negativeSpace: calc(var(--currentWidth) - 900px);
@@ -28,7 +27,6 @@ const Header = styled.div<HeaderProps>`
     }
 
     @media ${device.xl} {
-      font-size: 36px;
       --cardWidth: 300px;
       --currentWidth: 1400px;
       --negativeSpace: calc(var(--currentWidth) - 900px);
