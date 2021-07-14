@@ -37,7 +37,7 @@ export const PairsContainer = styled.div<PairsContainerProps>`
     --margin: calc(var(--negativeSpace) / 6);
     margin-left: var(--margin);
     margin-right: var(--margin);
-    margin-bottom: 40px;
+    margin-bottom: 75px;
   };
 
   @media ${device.xl} {
@@ -55,12 +55,12 @@ export const PairContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 32px;
+  max-width: 200px;
 
   ${({ theme }) => theme.mediaWidth.lg`
       --oneThird: calc(1 / 3);
       width: calc(var(--oneThird) * 100%);
       flex-basis: 27%;
-      max-width: 200px;
   `};
 `;
 
@@ -71,7 +71,7 @@ export const PairContent = styled.div`
     margin-bottom: 16px;
 
     ${({theme}) => theme.mediaWidth.lg`
-      width: 40%;
+      width: 60%;
     `};
 `;
 
