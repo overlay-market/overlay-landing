@@ -6,6 +6,8 @@ import styled from 'styled-components/macro';
 import ETH_DAI_NFT from "../../../assets/nft/eth-dai.png";
 import OVL_DAI_NFT from "../../../assets/nft/ovl-dai.png";
 import OVL_ETH_NFT from "../../../assets/nft/ovl-eth.png";
+import useWindowDimensions from '../../../hooks/useWindowDimensions';
+import { device } from '../../../theme/theme';
 
 export const Container = styled.div`
   display: flex;
@@ -17,16 +19,36 @@ export const Container = styled.div`
   `}
 `;
 
-export const PairsContainer = styled.div`
+interface PairsContainerProps {
+  currentWidth: number;
+}
+
+export const PairsContainer = styled.div<PairsContainerProps>`
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
 
-  ${({theme}) => theme.mediaWidth.lg`
+  @media ${device.lg} {
+    font-size: 36px;
     flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 100px;
-  `};
+    --cardWidth: 300px;
+    --currentWidth: ${(props) => props.currentWidth - 96}px;
+    --negativeSpace: calc(var(--currentWidth) - 900px);
+    --margin: calc(var(--negativeSpace) / 6);
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+    margin-bottom: 40px;
+  };
+
+  @media ${device.xl} {
+    font-size: 36px;
+    --cardWidth: 300px;
+    --currentWidth: 1400px;
+    --negativeSpace: calc(var(--currentWidth) - 900px);
+    --margin: calc(var(--negativeSpace) / 6);
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+  }
 `;
 
 export const PairContainer = styled.div`
@@ -38,8 +60,7 @@ export const PairContainer = styled.div`
       --oneThird: calc(1 / 3);
       width: calc(var(--oneThird) * 100%);
       flex-basis: 27%;
-      padding-right: 45px;
-      margin-left: auto;
+      max-width: 200px;
   `};
 `;
 
@@ -49,9 +70,6 @@ export const PairContent = styled.div`
     width: 50%;
     margin-bottom: 16px;
 
-    ${({theme}) => theme.mediaWidth.sm`
-      margin: auto 0;
-    `};
     ${({theme}) => theme.mediaWidth.lg`
       width: 40%;
     `};
@@ -68,8 +86,12 @@ export const Name = styled(TEXT.BodyBold)`
     bottom: -1px;
     margin: 0 auto;
     left: 0;
-    width: 90%;
+    width: 100%;
     background: black;
+
+    ${({theme}) => theme.mediaWidth.sm`
+      max-width: 140px;
+    `}
   }
 `
 
@@ -98,15 +120,17 @@ interface StreamsProps {
 }
 
 const Streams: React.FC<StreamsProps> = ({header}) => {
+  const { width } = useWindowDimensions();
+
   return (
     <Container>
       <StreamsHeader>{header}</StreamsHeader>
-      <PairsContainer>
+      <PairsContainer currentWidth={width}>
         {data.Streams.map((pair) => (
           <PairContainer>
             <PairContent>
               <Name mb={'5px'}>{pair.pair_name}</Name>
-              <div>N/A ETH</div>
+              <TEXT.BodySmall>N/A ETH</TEXT.BodySmall>
             </PairContent>
 
             <div className={styles["token-img__container"]}>
