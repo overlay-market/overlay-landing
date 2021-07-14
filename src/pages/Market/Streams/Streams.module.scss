@@ -5,12 +5,8 @@
   position: relative;
   color: #0b0f1c;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 24px;
   margin-bottom: 25px;
-
-  @include lg {
-    font-size: 36px;
-  }
 
   &:after {
     position: absolute;

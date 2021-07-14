@@ -9,7 +9,7 @@ export const NavContainer = styled.div`
 
 export const NavContent = styled.div`
   display: flex;
-  max-width: 1200px;
+  max-width: 1400px;
 `
 
 const Nav: React.FC = () => {
