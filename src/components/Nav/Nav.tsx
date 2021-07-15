@@ -15,7 +15,6 @@ export const NavContent = styled.div`
 
 const StyledIconContainer = styled(IconContainer)`
   @media ${device.lg} {
-    padding-right: 150px;
   }
 `;
 
