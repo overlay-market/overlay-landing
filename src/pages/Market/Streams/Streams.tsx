@@ -12,7 +12,6 @@ import { device } from '../../../theme/theme';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 1400px;
 
   ${({theme}) => theme.mediaWidth.lg`
     width: 100%;
@@ -43,7 +42,7 @@ export const PairsContainer = styled.div<PairsContainerProps>`
   @media ${device.xl} {
     font-size: 36px;
     --cardWidth: 300px;
-    --currentWidth: 1400px;
+    --currentWidth: 1500px;
     --negativeSpace: calc(var(--currentWidth) - 900px);
     --margin: calc(var(--negativeSpace) / 6);
     margin-left: var(--margin);

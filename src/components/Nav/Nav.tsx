@@ -10,7 +10,6 @@ export const NavContainer = styled.div`
 
 export const NavContent = styled.div`
   display: flex;
-  max-width: 1400px;
 `;
 
 const StyledIconContainer = styled(IconContainer)`
