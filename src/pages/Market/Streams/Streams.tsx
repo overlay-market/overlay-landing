@@ -42,7 +42,7 @@ export const PairsContainer = styled.div<PairsContainerProps>`
   @media ${device.xl} {
     font-size: 36px;
     --cardWidth: 300px;
-    --currentWidth: 1400px;
+    --currentWidth: 1500px;
     --negativeSpace: calc(var(--currentWidth) - 900px);
     --margin: calc(var(--negativeSpace) / 6);
     margin-left: var(--margin);

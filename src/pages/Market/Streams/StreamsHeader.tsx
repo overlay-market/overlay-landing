@@ -29,7 +29,7 @@ const Header = styled.div<HeaderProps>`
 
     @media ${device.xl} {
       --cardWidth: 300px;
-      --currentWidth: 1400px;
+      --currentWidth: 1500px;
       --negativeSpace: calc(var(--currentWidth) - 900px);
       --margin: calc(var(--negativeSpace) / 6);
       margin-left: var(--margin);
