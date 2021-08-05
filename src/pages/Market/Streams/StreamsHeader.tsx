@@ -15,6 +15,7 @@ const Header = styled.div<HeaderProps>`
     font-size: 24px;
     margin-bottom: 40px;
     font-family: 'Press Start 2P', cursive;
+    letter-spacing: 2px;
 
     @media ${device.lg} {
       --cardWidth: 300px;

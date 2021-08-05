@@ -32,6 +32,7 @@ export const CardHeader = styled.div`
   font-family: 'Press Start 2P', cursive;
   margin-bottom: 27px;
   opacity: 88%;
+  letter-spacing: 2px;
 
   &:after {
     position: absolute;
@@ -43,7 +44,7 @@ export const CardHeader = styled.div`
     /* center - use with adjusting width   */
     margin: 0 auto;
     left: 0;
-    width: 93%;
+    width: 100%;
     background: black;
   }
 
