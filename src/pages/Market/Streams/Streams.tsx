@@ -12,7 +12,6 @@ import { device } from '../../../theme/theme';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 1400px;
 
   ${({theme}) => theme.mediaWidth.lg`
     width: 100%;

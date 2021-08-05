@@ -9,7 +9,7 @@ import Stakeholders from "./Stakeholders/Stakeholders";
 import { EmptyCardContainer } from '../../components/FeedCard/FeedCard';
 
 interface ContainerProps {
-  maxWidth: number;
+  maxWidth?: number;
 }
 
 const Container = styled.div<ContainerProps>`
@@ -25,13 +25,13 @@ const Container = styled.div<ContainerProps>`
 const Market: React.FC = () => {
   return (
     <>
-      <Container maxWidth={1400}>
+      <Container>
         <About header="Overlay"/>
         <Links header="Links"/>
         <Stats header="Stats"/>
       </Container>
         <Streams header="Streams"/>
-      <Container maxWidth={1400}>
+      <Container>
         <Technical header="Technical"/>
         <Stakeholders header="Stakeholders"/>
         <EmptyCardContainer />
