@@ -26,10 +26,10 @@ export const device = {
 
 // updated
 export const MEDIA_WIDTHS = {
-  minExtraSmall: 576,
-  minSmall: 768,
-  minMedium: 992,
-  minLarge: 1400
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1400
 };
 
 const mediaWidthTemplates: { [width in keyof typeof MEDIA_WIDTHS]: typeof css } = Object.keys(MEDIA_WIDTHS).reduce(

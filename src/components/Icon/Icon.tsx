@@ -5,9 +5,10 @@ interface IconContainerProps {
   height: number;
   width: number;
   margin: string;
+  children?: React.ReactNode;
 }
 
-const IconContainer = styled.div<IconContainerProps>`
+export const IconContainer = styled.div<IconContainerProps>`
   height: ${(props) => props.height}px;
   width: ${(props) => props.width}px;
   margin: ${(props) => props.margin};

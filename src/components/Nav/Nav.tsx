@@ -1,28 +1,30 @@
 import styled from 'styled-components';
 import OverlayLogo from "../../assets/icons/overlay-logo.png";
-import { Icon } from "../Icon/Icon";
+import { device } from '../../theme/theme';
+import { IconContainer } from '../Icon/Icon';
 
 export const NavContainer = styled.div`
   display: block;
   margin-bottom: 64px;
-`
+`;
 
 export const NavContent = styled.div`
   display: flex;
-  max-width: 1200px;
-`
+  max-width: 1400px;
+`;
+
+const StyledIconContainer = styled(IconContainer)`
+  @media ${device.lg} {
+  }
+`;
 
 const Nav: React.FC = () => {
   return (
       <NavContainer>
         <NavContent>
-          <Icon 
-            height={100} 
-            width={100} 
-            src={OverlayLogo} 
-            alt="Overlay Logo" 
-            margin={'auto'} 
-            />
+          <StyledIconContainer height={100} width={100} margin={'auto'}>
+            <img src={OverlayLogo} alt={'Overlay Logo'} loading="lazy"/>
+          </StyledIconContainer>
         </NavContent>
       </NavContainer>
   );
