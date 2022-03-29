@@ -24,7 +24,7 @@ const data = [
   },
   {
     text: "Whitepaper V1",
-    link: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/OverlayWPv3.pdf?alt=media",
+    link: "https://planckcat.mypinata.cloud/ipfs/QmVMX7DH8Kh22kxMyDFGUJcw1a3irNPvyZBtAogkyJYJEv",
     icon: `${WhitepaperIcon}`,
   },
   {
