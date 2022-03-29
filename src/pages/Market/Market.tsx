@@ -3,7 +3,6 @@ import { device } from '../../theme/theme';
 import About from "./About/About";
 import Links from "./Links/Links";
 import Stats from "./Stats/Stats";
-import Streams from "./Streams/Streams";
 import Technical from "./Technical/Technical";
 import Stakeholders from "./Stakeholders/Stakeholders";
 import Auditors from './Auditors/Auditors';
@@ -30,7 +29,7 @@ const Market: React.FC = () => {
         <Links header="Links"/>
         <Stats header="Stats"/>
       </Container>
-        <Streams header="Streams"/>
+        {/* <Streams header="Streams"/> */}
       <Container>
         <Technical header="Technical"/>
         <Stakeholders header="Stakeholders"/>
