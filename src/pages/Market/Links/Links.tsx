@@ -14,7 +14,7 @@ import CatEmojiIcon from "../../../assets/icons/cat-emoji.png";
 const data = [
   {
     text: "Launch app",
-    link: "https://kovan.overlay.exchange",
+    link: "https://overlay-interface.vercel.app/",
     icon: `${CatEmojiIcon}`,
   },
   {
