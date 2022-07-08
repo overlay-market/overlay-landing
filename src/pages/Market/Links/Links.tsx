@@ -14,7 +14,7 @@ import CatEmojiIcon from "../../../assets/icons/cat-emoji.png";
 const data = [
   {
     text: "Launch app",
-    link: "https://kovan.overlay.exchange",
+    link: "https://overlay-interface.vercel.app/",
     icon: `${CatEmojiIcon}`,
   },
   {
@@ -24,7 +24,7 @@ const data = [
   },
   {
     text: "Whitepaper V1",
-    link: "https://firebasestorage.googleapis.com/v0/b/overlay-landing.appspot.com/o/OverlayWPv3.pdf?alt=media",
+    link: "https://planckcat.mypinata.cloud/ipfs/QmVMX7DH8Kh22kxMyDFGUJcw1a3irNPvyZBtAogkyJYJEv",
     icon: `${WhitepaperIcon}`,
   },
   {
