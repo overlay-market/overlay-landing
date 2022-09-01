@@ -1,5 +1,5 @@
 import {Route, Switch} from 'react-router-dom'
-import {Market} from './pages'
+import {Market, TermsOfService} from './pages'
 import {Nav} from './components'
 import './App.scss'
 
@@ -9,6 +9,7 @@ const App: React.FC = () => {
       <Nav />
       <Switch>
         <Route exact strict path="/" component={Market} />
+        <Route exact strict path="/ToS" component={TermsOfService} />
       </Switch>
     </div>
   )
