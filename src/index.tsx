@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import ThemeProvider from './theme/theme';
-import store from './state/state';
 import { transitions, positions, Provider as ReactAlertProvider } from 'react-alert';
+import { HashRouter } from 'react-router-dom';
+import ThemeProvider from './theme/theme';
 import AlertMUITemplate from "react-alert-template-mui";
-import './index.css';
 import App from './App';
+import store from './state/state';
 import reportWebVitals from './reportWebVitals';
+import './index.css';
 
 const options = {
   position: positions.BOTTOM_CENTER,
