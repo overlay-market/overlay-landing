@@ -6,7 +6,7 @@ import Stats from './Stats/Stats'
 import Technical from './Technical/Technical'
 import Stakeholders from './Stakeholders/Stakeholders'
 import Auditors from './Auditors/Auditors'
-import {CardContainer} from '../../components/FeedCard/FeedCard'
+// import {CardContainer} from '../../components/FeedCard/FeedCard'
 
 interface ContainerProps {
   maxWidth?: number
@@ -35,7 +35,7 @@ const Market: React.FC = () => {
         <Technical header="Technical" />
         <Stakeholders header="Stakeholders" />
         <Auditors header="Auditors" />
-        <CardContainer />
+        {/* <CardContainer /> */}
       </Container>
     </>
   )
