@@ -1,7 +1,13 @@
 import {FeedCard, ListRow, Icon, Link} from '../../../components'
 import Spearbit_Logo from '../../../assets/icons/spearbit-logo.png'
+import LeastAuthority_Logo from '../../../assets/icons/leastauthority-logo.png'
 
 const data = [
+  {
+    name: 'Least Authority',
+    link: 'https://github.com/overlay-market/v1-core/blob/main/audits/leastauthority/audit.pdf',
+    icon: `${LeastAuthority_Logo}`,
+  },
   {
     name: 'Spearbit',
     link: 'https://github.com/overlay-market/v1-core/blob/main/audits/spearbit/audit.pdf',
