@@ -25,14 +25,12 @@ const Section = styled.p`
 
 const Subsection = styled.p`
   margin-right: auto;
-  margin-left: 3rem;
-  width: 100%;
+  margin-left: 1rem;
 `
 
 const InnerSubsection = styled.p`
   margin-right: auto;
-  margin-left: 6rem;
-  width: 100%;
+  margin-left: 2rem;
 `
 
 const TermsOfService = () => {
@@ -44,6 +42,8 @@ const TermsOfService = () => {
       <Title>
         <TEXT.BodyBold>TERMS OF USE</TEXT.BodyBold>
       </Title>
+
+      <br />
 
       <Body>
         <TEXT.Body>Last Updated: October 4, 2022</TEXT.Body>
@@ -641,7 +641,6 @@ const TermsOfService = () => {
           resolve the Dispute.{' '}
         </TEXT.Body>
       </Subsection>
-
       <Subsection>
         <TEXT.Body>
           13.2. If the parties are unable to resolve the Dispute within ninety (90) days after the
@@ -657,7 +656,6 @@ const TermsOfService = () => {
           competent jurisdiction.
         </TEXT.Body>
       </Subsection>
-
       <Subsection>
         <TEXT.Body>
           13.3. The Notice must (a) include your name, residence address, email address, and
@@ -668,7 +666,6 @@ const TermsOfService = () => {
           accordance with Applicable Law.
         </TEXT.Body>
       </Subsection>
-
       <Subsection>
         <TEXT.Body>
           13.4. You and Autonomy agree that any dispute arising out of or related to these Terms or
@@ -678,7 +675,6 @@ const TermsOfService = () => {
           representative proceeding. This provision applies to class arbitration.
         </TEXT.Body>
       </Subsection>
-
       <Subsection>
         <TEXT.Body>
           13.5. Any claim arising out of or related to these Terms or the Interface must be filed
