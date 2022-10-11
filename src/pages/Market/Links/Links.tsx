@@ -8,17 +8,23 @@ import WhitepaperIcon from '../../../assets/icons/whitepaper-icon.png'
 import TwitterIcon from '../../../assets/icons/twitter-icon.png'
 import TelegramIcon from '../../../assets/icons/telegram-icon.png'
 import DiscordIcon from '../../../assets/icons/discord-icon.png'
-import MediumIcon from '../../../assets/icons/medium-icon.png'
 import CatEmojiIcon from '../../../assets/icons/cat-emoji.png'
+import MirrorIcon from '../../../assets/icons/mirror-logo.png'
+import GovernanceIcon from '../../../assets/icons/governance-emoji.png'
 
 const data = [
   {
-    text: 'Launch app',
+    text: 'Launch App',
     link: 'https://app.overlay.market/',
     icon: `${CatEmojiIcon}`,
   },
   {
-    text: 'Notion',
+    text: 'PlanckCatDAO',
+    link: 'https://planckcat.lol/',
+    icon: `${GovernanceIcon}`,
+  },
+  {
+    text: 'Docs',
     link: 'https://www.notion.so/Overlay-Protocol-29da60fd11e9436ea69e2a5e0db28a74',
     icon: `${NotionIcon}`,
   },
@@ -43,9 +49,9 @@ const data = [
     icon: `${DiscordIcon}`,
   },
   {
-    text: 'Medium',
-    link: 'https://medium.com/overlay-protocol',
-    icon: `${MediumIcon}`,
+    text: 'Mirror.xyz',
+    link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e',
+    icon: `${MirrorIcon}`,
   },
 ]
 
