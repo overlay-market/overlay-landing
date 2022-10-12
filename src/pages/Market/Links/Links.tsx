@@ -4,13 +4,13 @@ import React from 'react'
 import {FeedCard, ListRow, Icon, Link} from '../../../components'
 // import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import NotionIcon from '../../../assets/icons/notion-icon.png'
-import WhitepaperIcon from '../../../assets/icons/whitepaper-icon.png'
+// import WhitepaperIcon from '../../../assets/icons/whitepaper-icon.png'
 import TwitterIcon from '../../../assets/icons/twitter-icon.png'
-import TelegramIcon from '../../../assets/icons/telegram-icon.png'
+// import TelegramIcon from '../../../assets/icons/telegram-icon.png'
 import DiscordIcon from '../../../assets/icons/discord-icon.png'
 import CatEmojiIcon from '../../../assets/icons/cat-emoji.png'
 import MirrorIcon from '../../../assets/icons/mirror-logo.png'
-import GovernanceIcon from '../../../assets/icons/governance-emoji.png'
+// import GovernanceIcon from '../../../assets/icons/governance-emoji.png'
 
 const data = [
   {
@@ -18,31 +18,31 @@ const data = [
     link: 'https://app.overlay.market/',
     icon: `${CatEmojiIcon}`,
   },
-  {
-    text: 'PlanckCatDAO',
-    link: 'https://planckcat.lol/',
-    icon: `${GovernanceIcon}`,
-  },
+  // {
+  //   text: 'PlanckCat DAO',
+  //   link: 'https://planckcat.lol/',
+  //   icon: `${GovernanceIcon}`,
+  // },
   {
     text: 'Docs',
     link: 'https://www.notion.so/Overlay-Protocol-29da60fd11e9436ea69e2a5e0db28a74',
     icon: `${NotionIcon}`,
   },
-  {
-    text: 'Whitepaper V1',
-    link: 'https://planckcat.mypinata.cloud/ipfs/QmVMX7DH8Kh22kxMyDFGUJcw1a3irNPvyZBtAogkyJYJEv',
-    icon: `${WhitepaperIcon}`,
-  },
+  // {
+  //   text: 'Whitepaper V1',
+  //   link: 'https://planckcat.mypinata.cloud/ipfs/QmVMX7DH8Kh22kxMyDFGUJcw1a3irNPvyZBtAogkyJYJEv',
+  //   icon: `${WhitepaperIcon}`,
+  // },
   {
     text: 'Twitter',
     link: 'https://twitter.com/OverlayProtocol',
     icon: `${TwitterIcon}`,
   },
-  {
-    text: 'Telegram',
-    link: 'https://t.me/joinchat/Vh4ghHUTZI53z5OH',
-    icon: `${TelegramIcon}`,
-  },
+  // {
+  //   text: 'Telegram',
+  //   link: 'https://t.me/joinchat/Vh4ghHUTZI53z5OH',
+  //   icon: `${TelegramIcon}`,
+  // },
   {
     text: 'Discord',
     link: 'https://discord.gg/FgNhRNtQYv',
