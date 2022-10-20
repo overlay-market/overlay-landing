@@ -6,11 +6,11 @@ const data = {
   About: [
     {
       number: '01',
-      text: 'A cryptocurrency that lets you long or short DeFi data streams.',
+      text: 'A cryptocurrency that lets users long or short DeFi data streams.',
     },
     {
       number: '02',
-      text: 'Dynamically mints or burns to compensate traders for their profit or loss.',
+      text: 'Dynamically mints or burns to compensate users for their profit or loss.',
     },
     {
       number: '03',
