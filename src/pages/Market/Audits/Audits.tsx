@@ -15,7 +15,7 @@ const data = [
   },
 ]
 
-const Auditors = ({header}: {header: string}) => {
+const Audits = ({header}: {header: string}) => {
   return (
     <FeedCard header={header}>
       {data.map((auditor, key) => (
@@ -36,4 +36,4 @@ const Auditors = ({header}: {header: string}) => {
   )
 }
 
-export default Auditors
+export default Audits
