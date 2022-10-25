@@ -10,6 +10,7 @@ import TwitterIcon from '../../../assets/icons/twitter-icon.png'
 import DiscordIcon from '../../../assets/icons/discord-icon.png'
 import CatEmojiIcon from '../../../assets/icons/cat-emoji.png'
 import MirrorIcon from '../../../assets/icons/mirror-logo.png'
+import MemoIcon from '../../../assets/icons/memo-emoji.png'
 // import GovernanceIcon from '../../../assets/icons/governance-emoji.png'
 
 const data = [
@@ -31,7 +32,7 @@ const data = [
   {
     text: 'Docs',
     link: 'https://docs.overlay.market/',
-    icon: `${WhitepaperIcon}`,
+    icon: `${MemoIcon}`,
   },
   {
     text: 'Twitter',
