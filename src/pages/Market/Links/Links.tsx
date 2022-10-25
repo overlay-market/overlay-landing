@@ -33,11 +33,6 @@ const data = [
     link: 'https://docs.overlay.market/',
     icon: `${WhitepaperIcon}`,
   },
-  // {
-  //   text: 'Whitepaper V1',
-  //   link: 'https://planckcat.mypinata.cloud/ipfs/QmVMX7DH8Kh22kxMyDFGUJcw1a3irNPvyZBtAogkyJYJEv',
-  //   icon: `${WhitepaperIcon}`,
-  // },
   {
     text: 'Twitter',
     link: 'https://twitter.com/OverlayProtocol',
@@ -57,6 +52,11 @@ const data = [
     text: 'Mirror.xyz',
     link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e',
     icon: `${MirrorIcon}`,
+  },
+  {
+    text: 'Whitepaper',
+    link: 'https://planckcat.mypinata.cloud/ipfs/QmVMX7DH8Kh22kxMyDFGUJcw1a3irNPvyZBtAogkyJYJEv',
+    icon: `${WhitepaperIcon}`,
   },
 ]
 
