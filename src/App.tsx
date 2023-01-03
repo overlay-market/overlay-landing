@@ -8,7 +8,9 @@ const App: React.FC = () => {
     <div className="App">
       <Nav />
       <Switch>
-        <Route exact strict path="/" component={Market} />
+        {/* TO DO: add Landing Page components in / route */}
+        <Route path="/" exact></Route>
+        <Route exact strict path="/markets" component={Market} />
         <Route exact strict path="/ToS" component={TermsOfService} />
       </Switch>
     </div>
