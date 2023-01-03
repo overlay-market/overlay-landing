@@ -1,4 +1,4 @@
-import Nav from './NavBar/NavBar'
+import Nav from './Header/Header'
 import {EmailSignupForm} from './EmailSignupForm/EmailSignupForm'
 import {FeedCard} from './FeedCard/FeedCard'
 import {ListRow} from './Row/Row'

@@ -17,7 +17,7 @@ const StyledIconContainer = styled(IconContainer)`
   }
 `
 
-const NavBar = () => {
+const Header = () => {
   return (
     <NavContainer>
       <NavContent>
@@ -29,4 +29,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default Header
