@@ -1,15 +1,25 @@
 import styled from 'styled-components'
-import OverlayLogo from '../../assets/icons/overlay-logo.png'
 import {device} from '../../theme/theme'
 import {IconContainer} from '../Icon/Icon'
 
-export const NavContainer = styled.div`
-  display: block;
+export const HeaderContainer = styled.div`
+  display: flex;
   margin-bottom: 64px;
+  justify-content: space-evenly;
 `
 
-export const NavContent = styled.div`
+export const LogoContainer = styled.div`
   display: flex;
+`
+
+const LinksContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+const ButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
 `
 
 const StyledIconContainer = styled(IconContainer)`
@@ -19,13 +29,11 @@ const StyledIconContainer = styled(IconContainer)`
 
 const Header = () => {
   return (
-    <NavContainer>
-      <NavContent>
-        <StyledIconContainer height={100} width={100} margin={'auto'}>
-          <img src={OverlayLogo} alt={'Overlay Logo'} loading="lazy" />
-        </StyledIconContainer>
-      </NavContent>
-    </NavContainer>
+    <HeaderContainer>
+      <LogoContainer></LogoContainer>
+      <LinksContainer></LinksContainer>
+      <ButtonsContainer></ButtonsContainer>
+    </HeaderContainer>
   )
 }
 
