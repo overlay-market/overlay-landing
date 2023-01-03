@@ -1,10 +1,11 @@
 import styled from 'styled-components'
-import {device} from '../../theme/theme'
+import {Icon} from '../Icon/Icon'
+import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
 
 export const HeaderContainer = styled.div`
   display: flex;
   margin-bottom: 64px;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `
 
 export const LogoContainer = styled.div`
@@ -18,10 +19,11 @@ const LinksContainer = styled.div`
 `
 
 const Link = styled.a`
+  display: flex;
   color: black;
   text-decoration: none;
   font-weight: bold;
-  margin: 0 16px;
+  margin: auto 16px;
   cursor: pointer;
 `
 
@@ -36,6 +38,8 @@ const TokenFaucetButton = styled.button`
   box-shadow: none;
   padding: 8px 16px;
   margin-right: 48px;
+  font-weight: bold;
+  cursor: pointer;
 `
 
 const AppButton = styled.button`
@@ -44,12 +48,16 @@ const AppButton = styled.button`
   border: none;
   box-shadow: none;
   padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
 `
 
 const Header = () => {
   return (
     <HeaderContainer>
-      <LogoContainer>Overlay</LogoContainer>
+      <LogoContainer>
+        <Icon src={OverlayLogo} alt="Overlay Logo" width={140} margin={'auto'} />
+      </LogoContainer>
 
       <LinksContainer>
         <Link>Governance</Link>

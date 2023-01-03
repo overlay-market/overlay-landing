@@ -1,17 +1,17 @@
 import React from 'react'
-import styled from 'styled-components/macro';
+import styled from 'styled-components/macro'
 
 interface IconContainerProps {
-  height: number;
-  width: number;
-  margin: string;
-  children?: React.ReactNode;
+  height?: number
+  width?: number
+  margin: string
+  children?: React.ReactNode
 }
 
 export const IconContainer = styled.div<IconContainerProps>`
-  height: ${(props) => props.height}px;
-  width: ${(props) => props.width}px;
-  margin: ${(props) => props.margin};
+  height: ${props => (props.height ? props.height + 'px' : 'auto')};
+  width: ${props => (props.width ? props.width + 'px' : 'auto')};
+  margin: ${props => props.margin};
 
   img {
     height: 100%;
@@ -20,17 +20,17 @@ export const IconContainer = styled.div<IconContainerProps>`
 `
 
 interface IconProps {
-  src: string;
-  alt: string;
-  height: number;
-  width: number;
-  margin: string;
+  src: string
+  alt: string
+  height?: number
+  width?: number
+  margin: string
 }
 
 export const Icon: React.FC<IconProps> = ({src, alt, height, width, margin}) => {
-    return (
-      <IconContainer height={height} width={width} margin={margin}>
-        <img src={src} alt={alt} loading="lazy"/>
-      </IconContainer>
-    );
+  return (
+    <IconContainer height={height} width={width} margin={margin}>
+      <img src={src} alt={alt} loading="lazy" />
+    </IconContainer>
+  )
 }
