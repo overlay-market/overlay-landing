@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import {device} from '../../theme/theme'
-import {IconContainer} from '../Icon/Icon'
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -22,16 +21,22 @@ const ButtonsContainer = styled.div`
   flex-direction: row;
 `
 
-const StyledIconContainer = styled(IconContainer)`
-  @media ${device.lg} {
-  }
+const Link = styled.a`
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 16px;
+  cursor: pointer;
 `
 
 const Header = () => {
   return (
     <HeaderContainer>
       <LogoContainer></LogoContainer>
-      <LinksContainer></LinksContainer>
+      <LinksContainer>
+        <Link>Governance</Link>
+        <Link>Documentation</Link>
+      </LinksContainer>
       <ButtonsContainer></ButtonsContainer>
     </HeaderContainer>
   )
