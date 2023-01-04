@@ -6,13 +6,19 @@ import Hero from './components/Hero/Hero'
 import Investors from './components/Investors/Investors'
 import './App.scss'
 
-const MainContainer = styled.div``
+const MainContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`
 
 const DesktopSplitViewContainer = styled.div`
   display: flex;
+  margin: auto;
 `
 
-const PrimaryViewContainer = styled.div``
+const PrimaryViewContainer = styled.div`
+  width: 40%;
+`
 
 const SecondaryViewContainer = styled.div``
 
@@ -26,13 +32,19 @@ const Description = styled.div`
   font-size: 18px;
   font-weight: regular;
   color: #7b7b7b;
+  margin: 32px 0;
 `
 
 const LightArrowButton = styled.button`
+  font-size: 20px;
+  font-weight: bold;
+  padding: 16px;
   border: 1px solid #71ceff;
+  border-radius: 10px;
   background: white;
   box-shadow: none;
   outline: none;
+  cursor: pointer;
 `
 
 const ValueProposition = () => {
@@ -52,6 +64,7 @@ const ValueProposition = () => {
     </MainContainer>
   )
 }
+
 const App: React.FC = () => {
   return (
     <div className="App">
