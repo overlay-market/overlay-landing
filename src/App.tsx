@@ -23,11 +23,69 @@ const SecondaryViewContainer = styled.div`
   flex-direction: column;
 `
 
+const HeroTitleContainer = styled.div`
+  font-size: 69px;
+`
+
+const HeroDescriptionContainer = styled.div`
+  font-size: 20px;
+  color: #232323;
+`
+
+const DarkArrowButton = styled.button`
+  background: black;
+  color: #f9f9fb;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  padding: 16px 24px;
+  width: fit-content;
+  cursor: pointer;
+`
+
+const HeroStatsContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+const StatContainer = styled.div`
+  display: flex;
+`
+
+const StatNumber = styled.div`
+  font-size: 18px;
+  font-weight: semibold;
+`
+
+const StatDescription = styled.div`
+  font-size: 12px;
+  color: #7d7a76;
+`
+
 const Hero = () => {
   return (
     <HeroContainer>
       <SplitViewContainer>
-        <PrimaryViewContainer></PrimaryViewContainer>
+        <PrimaryViewContainer>
+          <HeroTitleContainer>Liquidity for the ILLiquid</HeroTitleContainer>
+          <HeroDescriptionContainer>
+            Explore Overlay - Endless data markets, built on Ethereum
+          </HeroDescriptionContainer>
+          <DarkArrowButton>Get Started</DarkArrowButton>
+          <HeroStatsContainer>
+            <StatContainer>
+              <StatNumber>1400+</StatNumber>
+              <StatDescription>Users Active</StatDescription>
+            </StatContainer>
+            |
+            <StatContainer>
+              <StatNumber>20+</StatNumber>
+              <StatDescription>Data Streams</StatDescription>
+            </StatContainer>
+          </HeroStatsContainer>
+        </PrimaryViewContainer>
         <SecondaryViewContainer></SecondaryViewContainer>
       </SplitViewContainer>
     </HeroContainer>
