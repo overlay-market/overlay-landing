@@ -3,16 +3,19 @@ import HeroChart from '../../assets/images/hero-chart.png'
 import HeroBackground from '../../assets/images/hero-background.png'
 
 const HeroContainer = styled.div`
+  display: flex;
   min-height: 625px;
   background: url(${HeroBackground});
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
 `
 
 const SplitViewContainer = styled.div`
   display: flex;
   flex-direction: row;
+  max-width: 1200px;
 `
 
 const PrimaryViewContainer = styled.div`
