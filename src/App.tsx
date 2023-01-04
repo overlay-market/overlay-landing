@@ -6,6 +6,26 @@ import Hero from './components/Hero/Hero'
 import Investors from './components/Investors/Investors'
 import './App.scss'
 
+const MainContainer = styled.div``
+
+const DesktopSplitViewContainer = styled.div`
+  display: flex;
+`
+
+const PrimaryViewContainer = styled.div``
+
+const SecondaryViewContainer = styled.div``
+
+const ValueProposition = () => {
+  return (
+    <MainContainer>
+      <DesktopSplitViewContainer>
+        <PrimaryViewContainer></PrimaryViewContainer>
+        <SecondaryViewContainer></SecondaryViewContainer>
+      </DesktopSplitViewContainer>
+    </MainContainer>
+  )
+}
 const App: React.FC = () => {
   return (
     <div className="App">
@@ -15,6 +35,7 @@ const App: React.FC = () => {
         <Route path="/" exact>
           <Hero />
           <Investors />
+          <ValueProposition />
         </Route>
         <Route exact strict path="/markets" component={Market} />
         <Route exact strict path="/ToS" component={TermsOfService} />
