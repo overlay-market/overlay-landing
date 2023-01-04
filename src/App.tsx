@@ -16,20 +16,24 @@ const SplitViewContainer = styled.div`
 const PrimaryViewContainer = styled.div`
   display: flex;
   flex-direction: column;
+  width: 50%;
 `
 
 const SecondaryViewContainer = styled.div`
   display: flex;
   flex-direction: column;
+  width: 50%;
 `
 
 const HeroTitleContainer = styled.div`
   font-size: 69px;
+  margin-bottom: 24px;
 `
 
 const HeroDescriptionContainer = styled.div`
   font-size: 20px;
   color: #232323;
+  margin-bottom: 36px;
 `
 
 const DarkArrowButton = styled.button`
@@ -43,20 +47,24 @@ const DarkArrowButton = styled.button`
   padding: 16px 24px;
   width: fit-content;
   cursor: pointer;
+  margin-bottom: 48px;
 `
 
 const HeroStatsContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 350px;
 `
 
 const StatContainer = styled.div`
   display: flex;
+  align-items: center;
 `
 
 const StatNumber = styled.div`
   font-size: 18px;
-  font-weight: semibold;
+  font-weight: bold;
+  margin-right: 8px;
 `
 
 const StatDescription = styled.div`
