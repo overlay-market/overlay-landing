@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import InvestorsPanelDesktop from '../../assets/images/investors-desktop.png'
+import InvestorsPanelDesktop from '../../assets/images/investors-list-desktop.png'
 
 const Wrapper = styled.div`
   padding-top: 90px;
