@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import HeroChart from '../../assets/images/hero-chart.png'
 
 const HeroContainer = styled.div`
   min-height: 625px;
@@ -19,6 +20,8 @@ const SecondaryViewContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+  max-width: 50%;
+  align-items: center;
 `
 
 const HeroTitleContainer = styled.div`
@@ -68,6 +71,10 @@ const StatDescription = styled.div`
   color: #7d7a76;
 `
 
+const MainImage = styled.img`
+  max-width: 450px;
+`
+
 const Hero = () => {
   return (
     <HeroContainer>
@@ -90,7 +97,10 @@ const Hero = () => {
             </StatContainer>
           </HeroStatsContainer>
         </PrimaryViewContainer>
-        <SecondaryViewContainer></SecondaryViewContainer>
+
+        <SecondaryViewContainer>
+          <MainImage src={HeroChart} />
+        </SecondaryViewContainer>
       </SplitViewContainer>
     </HeroContainer>
   )
