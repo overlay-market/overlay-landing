@@ -10,6 +10,7 @@ const HeroContainer = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
+  margin-bottom: 45px;
 `
 
 const SplitViewContainer = styled.div`
