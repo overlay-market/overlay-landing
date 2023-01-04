@@ -5,25 +5,8 @@ import {Nav} from './components'
 import Hero from './components/Hero/Hero'
 import Investors from './components/Investors/Investors'
 import ValueProposition from './components/ValueProposition/ValueProposition'
+import News from './components/News/News'
 import './App.scss'
-
-const MainContainer = styled.div`
-  padding: 45px 0;
-`
-
-const Title = styled.div`
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-`
-
-const News = () => {
-  return (
-    <MainContainer>
-      <Title>Overlay in the news</Title>
-    </MainContainer>
-  )
-}
 
 const App: React.FC = () => {
   return (
