@@ -1,8 +1,13 @@
 import styled from 'styled-components'
 import HeroChart from '../../assets/images/hero-chart.png'
+import HeroBackground from '../../assets/images/hero-background.png'
 
 const HeroContainer = styled.div`
   min-height: 625px;
+  background: url(${HeroBackground});
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 `
 
 const SplitViewContainer = styled.div`
