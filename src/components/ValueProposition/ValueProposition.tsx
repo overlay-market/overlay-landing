@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import ValuePropImage from '../../assets/images/value-proposition-image.png'
 
 const MainContainer = styled.div`
   display: flex;
@@ -8,13 +9,17 @@ const MainContainer = styled.div`
 const DesktopSplitViewContainer = styled.div`
   display: flex;
   margin: auto;
+  max-width: 1200px;
 `
 
 const PrimaryViewContainer = styled.div`
+  margin-top: auto;
   width: 40%;
 `
 
-const SecondaryViewContainer = styled.div``
+const SecondaryViewContainer = styled.div`
+  max-width: 60%;
+`
 
 const Title = styled.div`
   font-size: 36px;
@@ -41,6 +46,10 @@ const LightArrowButton = styled.button`
   cursor: pointer;
 `
 
+const ImageContainer = styled.img`
+  max-width: 680px;
+`
+
 const ValueProposition = () => {
   return (
     <MainContainer>
@@ -53,7 +62,9 @@ const ValueProposition = () => {
           </Description>
           <LightArrowButton>Learn More</LightArrowButton>
         </PrimaryViewContainer>
-        <SecondaryViewContainer></SecondaryViewContainer>
+        <SecondaryViewContainer>
+          <ImageContainer src={ValuePropImage} />
+        </SecondaryViewContainer>
       </DesktopSplitViewContainer>
     </MainContainer>
   )

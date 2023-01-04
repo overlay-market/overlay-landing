@@ -2,8 +2,7 @@ import styled from 'styled-components'
 import InvestorsPanelDesktop from '../../assets/images/investors-list-desktop.png'
 
 const Wrapper = styled.div`
-  padding-top: 90px;
-  padding-bottom: 60px;
+  padding: 90px 0;
 `
 
 const MainContainer = styled.div`
