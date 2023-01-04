@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import InvestorsPanelDesktop from '../../assets/images/investors-desktop.png'
 
 const Wrapper = styled.div`
   padding-top: 90px;
@@ -7,6 +8,7 @@ const Wrapper = styled.div`
 
 const MainContainer = styled.div`
   display: flex;
+  flex-direction: column;
   max-width: 1100px;
   margin: auto;
 `
@@ -17,6 +19,13 @@ const Breakline = styled.div`
   height: 1px;
 `
 
+const TextContainer = styled.div`
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin: 48px 0;
+`
+
 const DesktopInvestorsPanel = styled.img``
 
 const Investors = () => {
@@ -24,7 +33,8 @@ const Investors = () => {
     <Wrapper>
       <MainContainer>
         <Breakline />
-        <DesktopInvestorsPanel />
+        <TextContainer>Backed by the best</TextContainer>
+        <DesktopInvestorsPanel src={InvestorsPanelDesktop} />
       </MainContainer>
     </Wrapper>
   )
