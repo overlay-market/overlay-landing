@@ -43,7 +43,12 @@ const AuditorLogo = styled.div``
 
 const AuditorLink = styled.a``
 
-const Auditor = () => {
+interface AuditorProps {
+  logo_src: string
+  audit_external_link: string
+}
+
+const Auditor = ({logo_src, audit_external_link}: AuditorProps) => {
   return (
     <AuditorContainer>
       <AuditorLogo></AuditorLogo>
