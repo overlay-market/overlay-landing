@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import SpearbitDAOLogo from '../../assets/images/spearbit-dao-logo.png'
+import LeastAuthorityLogo from '../../assets/images/least-authority-logo.png'
+import ImmunefiLogo from '../../assets/images/immunefi-logo.png'
 
 const Wrapper = styled.div``
 
@@ -70,7 +72,20 @@ const auditorsList: Array<AuditorAsset> = [
     audit_external_link: `https://github.com/overlay-market/v1-core/blob/main/audits/spearbit/audit.pdf`,
     link_text: 'Spearbit DAO Audit',
   },
+  {
+    name: 'Least Authority',
+    logo_src: `${LeastAuthorityLogo}`,
+    audit_external_link: `https://github.com/overlay-market/v1-core/blob/main/audits/spearbit/audit.pdf`,
+    link_text: 'Least Authority Audit',
+  },
+  {
+    name: 'Immunefi',
+    logo_src: `${ImmunefiLogo}`,
+    audit_external_link: `https://github.com/overlay-market/v1-core/blob/main/audits/spearbit/audit.pdf`,
+    link_text: 'Immunefi Bounty',
+  },
 ]
+
 const Audits = () => {
   return (
     <Wrapper>
