@@ -86,45 +86,45 @@ const _AuditorLink = (text: string, href: string, useArrowIcon: boolean) => {
 }
 
 interface AuditorProps {
-  logo_src: string
-  audit_external_link: string
-  link_text: string
+  logoUrl: string
+  completedAuditHref: string
+  externalLinkText: string
+  useArrowIcon: boolean
 }
 
-const Auditor = ({logo_src, audit_external_link, link_text}: AuditorProps) => {
+const Auditor = ({logoUrl, completedAuditHref, externalLinkText}: AuditorProps) => {
   return (
     <AuditorContainer>
-      <AuditorLogo src={logo_src} />
-      <AuditorLink href={audit_external_link}>{link_text}</AuditorLink>
+      <AuditorLogo src={logoUrl} />
+      <AuditorLink href={completedAuditHref}>{externalLinkText}</AuditorLink>
     </AuditorContainer>
   )
 }
 
 interface AuditorAsset extends AuditorProps {
   name: string
-  useArrowIcon: boolean
 }
 
 const auditorsList: Array<AuditorAsset> = [
   {
     name: 'Spearbit DAO',
-    logo_src: `${SpearbitDAOLogo}`,
-    audit_external_link: `https://github.com/overlay-market/v1-core/blob/main/audits/spearbit/audit.pdf`,
-    link_text: 'Spearbit DAO Audit',
+    logoUrl: `${SpearbitDAOLogo}`,
+    completedAuditHref: `https://github.com/overlay-market/v1-core/blob/main/audits/spearbit/audit.pdf`,
+    externalLinkText: 'Spearbit DAO Audit',
     useArrowIcon: false,
   },
   {
     name: 'Least Authority',
-    logo_src: `${LeastAuthorityLogo}`,
-    audit_external_link: `https://github.com/overlay-market/v1-core/blob/main/audits/spearbit/audit.pdf`,
-    link_text: 'Least Authority Audit',
+    logoUrl: `${LeastAuthorityLogo}`,
+    completedAuditHref: `https://github.com/overlay-market/v1-core/blob/main/audits/spearbit/audit.pdf`,
+    externalLinkText: 'Least Authority Audit',
     useArrowIcon: false,
   },
   {
     name: 'Immunefi',
-    logo_src: `${ImmunefiLogo}`,
-    audit_external_link: `https://github.com/overlay-market/v1-core/blob/main/audits/spearbit/audit.pdf`,
-    link_text: 'Immunefi Bounty',
+    logoUrl: `${ImmunefiLogo}`,
+    completedAuditHref: `https://github.com/overlay-market/v1-core/blob/main/audits/spearbit/audit.pdf`,
+    externalLinkText: 'Immunefi Bounty',
     useArrowIcon: true,
   },
 ]
@@ -142,9 +142,10 @@ const Audits = () => {
       <AuditorsContainer>
         {auditorsList.map(current => (
           <Auditor
-            logo_src={current.logo_src}
-            audit_external_link={current.audit_external_link}
-            link_text={current.link_text}
+            logoUrl={current.logoUrl}
+            completedAuditHref={current.completedAuditHref}
+            externalLinkText={current.externalLinkText}
+            useArrowIcon={current.useArrowIcon}
           />
         ))}
       </AuditorsContainer>
