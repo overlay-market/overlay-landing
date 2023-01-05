@@ -10,9 +10,18 @@ import './App.scss'
 
 const MainContainer = styled.div``
 
-const Title = styled.div``
+const Title = styled.div`
+  font-size: 36px;
+  font-weight: bold;
+  width: 370px;
+`
 
-const Description = styled.div``
+const Description = styled.div`
+  font-size: 18px;
+  color: #808182;
+  margin: 24px 0;
+  width: 430px;
+`
 
 const ArrowIconLink = styled.a``
 
@@ -24,7 +33,7 @@ const Audits = () => {
         Overlay Protocol has gone through two rigorous audits with some of the best, and continues
         to have open bounties for smart contract security bugs.
       </Description>
-      <ArrowIconLink>Explore bounties</ArrowIconLink>
+      <ArrowIconLink href="#">Explore bounties</ArrowIconLink>
     </MainContainer>
   )
 }
