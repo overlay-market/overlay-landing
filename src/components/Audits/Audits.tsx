@@ -25,6 +25,33 @@ const Description = styled.div`
 
 const ArrowIconLink = styled.a``
 
+const AuditorsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #232323;
+  justify-content: space-between;
+`
+
+const AuditorContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #232323;
+  width: 300px;
+`
+
+const AuditorLogo = styled.div``
+
+const AuditorLink = styled.a``
+
+const Auditor = () => {
+  return (
+    <AuditorContainer>
+      <AuditorLogo></AuditorLogo>
+      <AuditorLink></AuditorLink>
+    </AuditorContainer>
+  )
+}
+
 const Audits = () => {
   return (
     <Wrapper>
@@ -35,6 +62,8 @@ const Audits = () => {
           to have open bounties for smart contract security bugs.
         </Description>
         <ArrowIconLink href="#">Explore bounties</ArrowIconLink>
+
+        <AuditorsContainer></AuditorsContainer>
       </MainContainer>
     </Wrapper>
   )
