@@ -102,6 +102,7 @@ const Auditor = ({logo_src, audit_external_link, link_text}: AuditorProps) => {
 
 interface AuditorAsset extends AuditorProps {
   name: string
+  useArrowIcon: boolean
 }
 
 const auditorsList: Array<AuditorAsset> = [
@@ -110,18 +111,21 @@ const auditorsList: Array<AuditorAsset> = [
     logo_src: `${SpearbitDAOLogo}`,
     audit_external_link: `https://github.com/overlay-market/v1-core/blob/main/audits/spearbit/audit.pdf`,
     link_text: 'Spearbit DAO Audit',
+    useArrowIcon: false,
   },
   {
     name: 'Least Authority',
     logo_src: `${LeastAuthorityLogo}`,
     audit_external_link: `https://github.com/overlay-market/v1-core/blob/main/audits/spearbit/audit.pdf`,
     link_text: 'Least Authority Audit',
+    useArrowIcon: false,
   },
   {
     name: 'Immunefi',
     logo_src: `${ImmunefiLogo}`,
     audit_external_link: `https://github.com/overlay-market/v1-core/blob/main/audits/spearbit/audit.pdf`,
     link_text: 'Immunefi Bounty',
+    useArrowIcon: true,
   },
 ]
 
