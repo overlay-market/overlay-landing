@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import {Icon} from '../Icon/Icon'
-import {ArrowRight} from 'react-feather'
+import {ExternalIcon} from '../Icon/Icon'
+import {ArrowRight, ExternalLink} from 'react-feather'
 import SpearbitDAOLogo from '../../assets/images/spearbit-dao-logo.png'
 import LeastAuthorityLogo from '../../assets/images/least-authority-logo.png'
 import ImmunefiLogo from '../../assets/images/immunefi-logo.png'
@@ -60,7 +60,25 @@ const LinkContainer = styled.div`
 `
 
 const _ArrowIconLink = (href: string, text: string) => {
-  return <LinkContainer></LinkContainer>
+  return (
+    <LinkContainer>
+      {text}
+      <ExternalIcon>
+        <ArrowRight />
+      </ExternalIcon>
+    </LinkContainer>
+  )
+}
+
+const _ExternalIconLink = (href: string, text: string) => {
+  return (
+    <LinkContainer>
+      {text}
+      <ExternalIcon>
+        <ExternalLink />
+      </ExternalIcon>
+    </LinkContainer>
+  )
 }
 
 const _AuditorLink = (text: string, href: string, useArrowIcon: boolean) => {
