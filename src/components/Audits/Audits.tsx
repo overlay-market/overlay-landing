@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import SpearbitDAOLogo from '../../assets/images/spearbit-dao-logo.png'
 
 const Wrapper = styled.div``
 
@@ -58,6 +59,18 @@ const Auditor = ({logo_src, audit_external_link, link_text}: AuditorProps) => {
   )
 }
 
+interface AuditorAsset extends AuditorProps {
+  name: string
+}
+
+const auditorsList: Array<AuditorAsset> = [
+  {
+    name: 'Spearbit DAO',
+    logo_src: `${SpearbitDAOLogo}`,
+    audit_external_link: `https://github.com/overlay-market/v1-core/blob/main/audits/spearbit/audit.pdf`,
+    link_text: 'Spearbit DAO Audit',
+  },
+]
 const Audits = () => {
   return (
     <Wrapper>
