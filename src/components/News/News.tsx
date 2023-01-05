@@ -3,12 +3,17 @@ import NewsBrandsLogos from '../../assets/images/news-brands-desktop.png'
 import CoindeskLogo from '../../assets/images/coindesk-brand-logo.png'
 import BloombergLogo from '../../assets/images/bloomberg-brand-logo.png'
 import MessariLogo from '../../assets/images/messari-brand-logo.png'
+import Background from '../../assets/images/news-background.png'
 
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 45px 0;
+  padding: 135px 0;
+  background: url(${Background});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 `
 
 const Title = styled.div`
