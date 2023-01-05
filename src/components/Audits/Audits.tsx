@@ -1,9 +1,9 @@
 import styled from 'styled-components'
+import {Icon} from '../Icon/Icon'
+import {ArrowRight} from 'react-feather'
 import SpearbitDAOLogo from '../../assets/images/spearbit-dao-logo.png'
 import LeastAuthorityLogo from '../../assets/images/least-authority-logo.png'
 import ImmunefiLogo from '../../assets/images/immunefi-logo.png'
-
-const Wrapper = styled.div``
 
 const MainContainer = styled.div`
   display: flex;
@@ -40,6 +40,7 @@ const AuditorContainer = styled.div`
   flex-direction: column;
   border-bottom: 1px solid #232323;
   width: 300px;
+  padding: 30px 0;
 `
 
 const AuditorLogo = styled.div<{src: string}>`
@@ -52,6 +53,19 @@ const AuditorLogo = styled.div<{src: string}>`
 `
 
 const AuditorLink = styled.a``
+
+const LinkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+const _ArrowIconLink = (href: string, text: string) => {
+  return <LinkContainer></LinkContainer>
+}
+
+const _AuditorLink = (text: string, href: string, useArrowIcon: boolean) => {
+  return <LinkContainer>{text}</LinkContainer>
+}
 
 interface AuditorProps {
   logo_src: string
@@ -95,26 +109,24 @@ const auditorsList: Array<AuditorAsset> = [
 
 const Audits = () => {
   return (
-    <Wrapper>
-      <MainContainer>
-        <Title>Security at the heart of production</Title>
-        <Description>
-          Overlay Protocol has gone through two rigorous audits with some of the best, and continues
-          to have open bounties for smart contract security bugs.
-        </Description>
-        <ArrowIconLink href="#">Explore bounties</ArrowIconLink>
+    <MainContainer>
+      <Title>Security at the heart of production</Title>
+      <Description>
+        Overlay Protocol has gone through two rigorous audits with some of the best, and continues
+        to have open bounties for smart contract security bugs.
+      </Description>
+      <ArrowIconLink href="#">Explore bounties</ArrowIconLink>
 
-        <AuditorsContainer>
-          {auditorsList.map(current => (
-            <Auditor
-              logo_src={current.logo_src}
-              audit_external_link={current.audit_external_link}
-              link_text={current.link_text}
-            />
-          ))}
-        </AuditorsContainer>
-      </MainContainer>
-    </Wrapper>
+      <AuditorsContainer>
+        {auditorsList.map(current => (
+          <Auditor
+            logo_src={current.logo_src}
+            audit_external_link={current.audit_external_link}
+            link_text={current.link_text}
+          />
+        ))}
+      </AuditorsContainer>
+    </MainContainer>
   )
 }
 
