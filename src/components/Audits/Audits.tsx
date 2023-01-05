@@ -42,7 +42,14 @@ const AuditorContainer = styled.div`
   width: 300px;
 `
 
-const AuditorLogo = styled.img``
+const AuditorLogo = styled.div<{src: string}>`
+  width: 200px;
+  height: 100px;
+  background: url(${({src}) => src});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+`
 
 const AuditorLink = styled.a``
 
@@ -97,7 +104,15 @@ const Audits = () => {
         </Description>
         <ArrowIconLink href="#">Explore bounties</ArrowIconLink>
 
-        <AuditorsContainer></AuditorsContainer>
+        <AuditorsContainer>
+          {auditorsList.map(current => (
+            <Auditor
+              logo_src={current.logo_src}
+              audit_external_link={current.audit_external_link}
+              link_text={current.link_text}
+            />
+          ))}
+        </AuditorsContainer>
       </MainContainer>
     </Wrapper>
   )
