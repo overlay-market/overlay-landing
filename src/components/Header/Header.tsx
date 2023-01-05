@@ -4,8 +4,7 @@ import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
 
 export const HeaderContainer = styled.div`
   display: flex;
-  margin: auto;
-  margin-bottom: 64px;
+  margin: 32px auto 64px;
   max-width: 1200px;
   justify-content: space-between;
   width: 100%;

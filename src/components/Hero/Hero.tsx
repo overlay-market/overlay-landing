@@ -10,13 +10,14 @@ const HeroContainer = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
+  padding-top: 60px;
   margin-bottom: 45px;
 `
 
 const SplitViewContainer = styled.div`
   display: flex;
   flex-direction: row;
-  max-width: 1200px;
+  max-width: 1115px;
 `
 
 const PrimaryViewContainer = styled.div`
