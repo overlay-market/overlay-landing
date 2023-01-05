@@ -39,20 +39,21 @@ const AuditorContainer = styled.div`
   width: 300px;
 `
 
-const AuditorLogo = styled.div``
+const AuditorLogo = styled.img``
 
 const AuditorLink = styled.a``
 
 interface AuditorProps {
   logo_src: string
   audit_external_link: string
+  link_text: string
 }
 
-const Auditor = ({logo_src, audit_external_link}: AuditorProps) => {
+const Auditor = ({logo_src, audit_external_link, link_text}: AuditorProps) => {
   return (
     <AuditorContainer>
-      <AuditorLogo></AuditorLogo>
-      <AuditorLink></AuditorLink>
+      <AuditorLogo src={logo_src} />
+      <AuditorLink href={audit_external_link}>{link_text}</AuditorLink>
     </AuditorContainer>
   )
 }
