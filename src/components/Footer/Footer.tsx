@@ -30,7 +30,22 @@ const LogoDescription = styled.div`
   font-size: 12px;
 `
 
-const LinksContainer = styled.div``
+const LinksContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+const LinksColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: (100/3) %;
+  text-align: left;
+`
+
+const ColumnTitle = styled.div`
+  font-size: 20px;
+  font-weight: bold;
+`
 
 const Line = styled.div`
   height: 1px;
@@ -44,12 +59,19 @@ const CopyrightText = styled.div`
   text-align: center;
 `
 
+const Link = styled.a`
+  display: flex;
+  font-size: 15px;
+  color: #232323;
+  text-decoration: none;
+`
+
 interface LinkAsset {
   label: string
   href: string
 }
 
-const Links = {
+const links = {
   protocol: [
     {label: 'Github', href: ''},
     {label: 'Documentation', href: ''},
@@ -68,6 +90,17 @@ const Links = {
   ] as Array<LinkAsset>,
 }
 
+const LinkSection = ({title, links}: {title: string; links: Array<LinkAsset>}) => {
+  return (
+    <LinksColumn>
+      <ColumnTitle>{title}</ColumnTitle>
+      {links.map(link => (
+        <Link href={link.href}>{link.label}</Link>
+      ))}
+    </LinksColumn>
+  )
+}
+
 const Footer = () => {
   return (
     <Wrapper>
@@ -82,8 +115,14 @@ const Footer = () => {
               congue.
             </LogoDescription>
           </BrandContainer>
-          <LinksContainer></LinksContainer>
+
+          <LinksContainer>
+            <LinkSection title="Protocol" links={links.protocol} />
+            <LinkSection title="Connect" links={links.connect} />
+            <LinkSection title="Legal" links={links.legal} />
+          </LinksContainer>
         </InteractiveContentsContainer>
+
         <Line />
         <CopyrightText>Copyright 2022 © Overlay Foundation, All Right Reserved</CopyrightText>
       </FooterContainer>
