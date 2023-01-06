@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import OverlayLogoHeartCatImg from '../../assets/images/overlay-logo-heart-cat.png'
 
 const Wrapper = styled.div`
   padding: 45px 0;
@@ -9,27 +10,37 @@ const MainContainer = styled.div`
   flex-direction: row;
   max-width: 1100px;
   margin: auto;
+  justify-content: space-between;
 `
 
 const ContributingImageContainer = styled.div`
-  height: 450px;
-  max-width: 50%;
+  display: flex;
+  width: 50%;
+  max-width: 450px;
+
+  img {
+    width: 100%;
+  }
 `
 
 const ContributingTextContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-right: 25px;
 `
 
 const Title = styled.div`
   font-weight: bold;
   font-size: 36px;
+  max-width: 350px;
 `
 
 const Description = styled.div`
   font-size: 18px;
   color: #7b7b7b;
   padding: 8px 0;
+  max-width: 350px;
 `
 
 const StartContributingButton = styled.button`
@@ -49,7 +60,9 @@ const Contributing = () => {
   return (
     <Wrapper>
       <MainContainer>
-        <ContributingImageContainer></ContributingImageContainer>
+        <ContributingImageContainer>
+          <img src={OverlayLogoHeartCatImg} />
+        </ContributingImageContainer>
         <ContributingTextContainer>
           <Title>Overlay is run by cats, for real</Title>
           <Description>
