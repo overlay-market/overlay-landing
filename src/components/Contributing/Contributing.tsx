@@ -62,3 +62,5 @@ const Contributing = () => {
     </Wrapper>
   )
 }
+
+export default Contributing
