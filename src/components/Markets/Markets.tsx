@@ -1,7 +1,10 @@
 import styled from 'styled-components'
+import DiscoverMarketsMockDesktopImg from '../../assets/images/discover-markets-mock-desktop.png'
+import DiscoverMarketsMockMobileImg from '../../assets/images/discover-markets-mock-mobile.png'
 
 const MainContainer = styled.div`
   display: flex;
+  flex-direction: column;
   max-width: 1100px;
   margin: auto;
 `
@@ -35,6 +38,16 @@ const ExploreButton = styled.button`
   padding: 12px 24px;
 `
 
+const DiscoverMarketsMockImage = styled.div`
+  background: url(${DiscoverMarketsMockDesktopImg});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 400px;
+  margin-top: 40px;
+`
+
 const Markets = () => {
   return (
     <MainContainer>
@@ -50,6 +63,7 @@ const Markets = () => {
           <ExploreButton>Explore</ExploreButton>
         </div>
       </HeaderContainer>
+      <DiscoverMarketsMockImage />
     </MainContainer>
   )
 }
