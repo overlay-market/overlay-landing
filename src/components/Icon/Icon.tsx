@@ -51,7 +51,7 @@ const ExternalIconWrapper = styled.div<{
   height: ${({size}) => size}px;
   width: ${({size}) => size}px;
   margin: ${({margin}) => margin ?? margin};
-  color: ${({color}) => (color ? color : '#fff')};
+  color: ${({color}) => (color ? color : 'inherit')};
   transform: ${({transform}) => (transform ? transform : 'rotate(0deg)')};
   transition: transform 0.2s ease-out;
   cursor: ${({clickable}) => (clickable ? 'pointer' : 'default')};
