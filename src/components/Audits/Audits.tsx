@@ -38,14 +38,14 @@ const AuditorContainer = styled.div`
   flex-direction: column;
   border-bottom: 1px solid #232323;
   width: 300px;
-  padding: 30px 0;
+  padding: 20px 0 25px;
 `
 
 const AuditorLogo = styled.div<{src: string}>`
-  width: 200px;
+  width: 150px;
   height: 100px;
   background: url(${({src}) => src});
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
 `
@@ -56,6 +56,8 @@ const AuditorLink = styled.a`
   text-decoration: underline;
   box-shadow: none;
   color: #12b4ff;
+  margin-top: 20px;
+  font-size: 16px;
 `
 
 interface AuditorProps {
