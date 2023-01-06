@@ -1,5 +1,13 @@
 import styled from 'styled-components'
 import {TwitterTimelineEmbed} from 'react-twitter-embed'
+import HeroBackground from '../../assets/images/hero-background.png'
+
+const Wrapper = styled.div`
+  background: url(${HeroBackground});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+`
 
 const MainContainer = styled.div`
   display: flex;
@@ -7,7 +15,7 @@ const MainContainer = styled.div`
   max-width: 1100px;
   width: 100%;
   margin: auto;
-  padding: 45px 0;
+  padding: 45px 0 135px;
 `
 
 const Title = styled.div`
@@ -31,18 +39,20 @@ const TwitterEmbedContainer = styled.div`
 
 const MediaCarousel = () => {
   return (
-    <MainContainer>
-      <Title>Latest Updates</Title>
-      <CarouselContainer>
-        <TwitterEmbedContainer>
-          <TwitterTimelineEmbed
-            sourceType="profile"
-            screenName="OverlayProtocol"
-            options={{height: 700}}
-          />
-        </TwitterEmbedContainer>
-      </CarouselContainer>
-    </MainContainer>
+    <Wrapper>
+      <MainContainer>
+        <Title>Latest Updates</Title>
+        <CarouselContainer>
+          <TwitterEmbedContainer>
+            <TwitterTimelineEmbed
+              sourceType="profile"
+              screenName="OverlayProtocol"
+              options={{height: 700}}
+            />
+          </TwitterEmbedContainer>
+        </CarouselContainer>
+      </MainContainer>
+    </Wrapper>
   )
 }
 
