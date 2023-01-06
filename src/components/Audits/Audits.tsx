@@ -56,8 +56,18 @@ const AuditorLink = styled.a`
   text-decoration: underline;
   box-shadow: none;
   color: #12b4ff;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 16px;
+`
+
+const ArrowIconLink = styled.a`
+  display: flex;
+  flex-direction: row;
+  text-decoration: underline;
+  box-shadow: none;
+  color: black;
+  font-size: 16px;
+  margin-bottom: 50px;
 `
 
 interface AuditorProps {
@@ -113,7 +123,12 @@ const Audits = () => {
         Overlay Protocol has gone through two rigorous audits with some of the best, and continues
         to have open bounties for smart contract security bugs.
       </Description>
-      {/* <ArrowIconLink href="#">Explore bounties</ArrowIconLink> */}
+      <ArrowIconLink href="#">
+        Explore bounties
+        <ExternalIcon margin="auto 8px">
+          <ArrowRight size={12} />
+        </ExternalIcon>
+      </ArrowIconLink>
 
       <AuditorsContainer>
         {auditorsList.map(current => (
