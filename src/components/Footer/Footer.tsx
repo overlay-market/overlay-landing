@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import {Icon} from '../Icon/Icon'
+import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
 
 const Wrapper = styled.div`
   background: #f0f0f0;
@@ -15,7 +17,10 @@ const InteractiveContentsContainer = styled.div`
   flex-direction: row;
 `
 
-const BrandLogoContainer = styled.div``
+const LogoContainer = styled.div`
+  display: flex;
+  cursor: pointer;
+`
 
 const LinksContainer = styled.div``
 
@@ -36,7 +41,9 @@ const Footer = () => {
     <Wrapper>
       <FooterContainer>
         <InteractiveContentsContainer>
-          <BrandLogoContainer></BrandLogoContainer>
+          <LogoContainer>
+            <Icon src={OverlayLogo} alt="Overlay Logo" width={200} margin={'auto'} />
+          </LogoContainer>
           <LinksContainer></LinksContainer>
         </InteractiveContentsContainer>
         <Line />
