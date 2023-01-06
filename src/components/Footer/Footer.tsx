@@ -50,9 +50,22 @@ interface LinkAsset {
 }
 
 const Links = {
-  protocol: [] as Array<LinkAsset>,
-  connect: [] as Array<LinkAsset>,
-  legal: [] as Array<LinkAsset>,
+  protocol: [
+    {label: 'Github', href: ''},
+    {label: 'Documentation', href: ''},
+    {label: 'Community Docs', href: ''},
+    {label: 'Governance', href: ''},
+    {label: 'Whitepaper V1', href: ''},
+  ] as Array<LinkAsset>,
+  connect: [
+    {label: 'Discord', href: ''},
+    {label: 'Twitter', href: ''},
+    {label: 'Mirror.xyz', href: ''},
+  ] as Array<LinkAsset>,
+  legal: [
+    {label: 'Privacy Policy', href: ''},
+    {label: 'Terms of Service', href: ''},
+  ] as Array<LinkAsset>,
 }
 
 const Footer = () => {
