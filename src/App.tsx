@@ -34,6 +34,13 @@ const Line = styled.div`
   width: 100%;
   background: black;
 `
+
+const CopyrightText = styled.div`
+  font-size: 16px;
+  margin-top: 45px;
+  text-align: center;
+`
+
 const Footer = () => {
   return (
     <Wrapper>
@@ -43,6 +50,7 @@ const Footer = () => {
           <LinksContainer></LinksContainer>
         </InteractiveContentsContainer>
         <Line />
+        <CopyrightText>Copyright 2022 © Overlay Foundation, All Right Reserved</CopyrightText>
       </FooterContainer>
     </Wrapper>
   )
