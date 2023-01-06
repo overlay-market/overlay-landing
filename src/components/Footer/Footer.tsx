@@ -17,9 +17,17 @@ const InteractiveContentsContainer = styled.div`
   flex-direction: row;
 `
 
+const BrandContainer = styled.div``
+
 const LogoContainer = styled.div`
   display: flex;
   cursor: pointer;
+`
+
+const LogoDescription = styled.div`
+  width: 280px;
+  color: #d0d0d0;
+  font-size: 12px;
 `
 
 const LinksContainer = styled.div``
@@ -41,9 +49,15 @@ const Footer = () => {
     <Wrapper>
       <FooterContainer>
         <InteractiveContentsContainer>
-          <LogoContainer>
-            <Icon src={OverlayLogo} alt="Overlay Logo" width={200} margin={'auto'} />
-          </LogoContainer>
+          <BrandContainer>
+            <LogoContainer>
+              <Icon src={OverlayLogo} alt="Overlay Logo" width={200} margin="0" />
+            </LogoContainer>
+            <LogoDescription>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh in maecenas posuere at
+              congue.
+            </LogoDescription>
+          </BrandContainer>
           <LinksContainer></LinksContainer>
         </InteractiveContentsContainer>
         <Line />
