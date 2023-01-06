@@ -4,7 +4,7 @@ import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
 
 const Wrapper = styled.div`
   background: #f0f0f0;
-  padding: 75px 0 55px;
+  padding: 55px 0;
 `
 
 const FooterContainer = styled.div`
@@ -37,12 +37,12 @@ const LinksContainer = styled.div`
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+  padding-top: 18px;
 `
 
 const LinksColumn = styled.div`
   display: flex;
   flex-direction: column;
-  width: (100/3) %;
   text-align: left;
 `
 

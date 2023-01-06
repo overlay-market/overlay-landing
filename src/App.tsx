@@ -8,6 +8,7 @@ import ValueProposition from './components/ValueProposition/ValueProposition'
 import News from './components/News/News'
 import Audits from './components/Audits/Audits'
 import Contributing from './components/Contributing/Contributing'
+import MediaCarousel from './components/MediaCarousel/MediaCarousel'
 import Footer from './components/Footer/Footer'
 import './App.scss'
 
@@ -16,7 +17,6 @@ const App: React.FC = () => {
     <div className="App">
       <Nav />
       <Switch>
-        {/* TO DO: add Landing Page components in / route */}
         <Route path="/" exact>
           <Hero />
           <Investors />
@@ -24,6 +24,7 @@ const App: React.FC = () => {
           <News />
           <Audits />
           <Contributing />
+          <MediaCarousel />
         </Route>
         <Route exact strict path="/markets" component={Market} />
         <Route exact strict path="/ToS" component={TermsOfService} />
