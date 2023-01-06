@@ -5,6 +5,9 @@ import SpearbitDAOLogo from '../../assets/images/spearbit-dao-logo.png'
 import LeastAuthorityLogo from '../../assets/images/least-authority-logo.png'
 import ImmunefiLogo from '../../assets/images/immunefi-logo.png'
 
+const Wrapper = styled.div`
+  padding: 45px 0;
+`
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -117,29 +120,31 @@ const auditorsList: Array<AuditorAsset> = [
 
 const Audits = () => {
   return (
-    <MainContainer>
-      <Title>Security at the heart of production</Title>
-      <Description>
-        Overlay Protocol has gone through two rigorous audits with some of the best, and continues
-        to have open bounties for smart contract security bugs.
-      </Description>
-      <ArrowIconLink href="#">
-        Explore bounties
-        <ExternalIcon margin="auto 8px">
-          <ArrowRight size={12} />
-        </ExternalIcon>
-      </ArrowIconLink>
+    <Wrapper>
+      <MainContainer>
+        <Title>Security at the heart of production</Title>
+        <Description>
+          Overlay Protocol has gone through two rigorous audits with some of the best, and continues
+          to have open bounties for smart contract security bugs.
+        </Description>
+        <ArrowIconLink href="#">
+          Explore bounties
+          <ExternalIcon margin="auto 8px">
+            <ArrowRight size={12} />
+          </ExternalIcon>
+        </ArrowIconLink>
 
-      <AuditorsContainer>
-        {auditorsList.map(current => (
-          <Auditor
-            logoUrl={current.logoUrl}
-            completedAuditHref={current.completedAuditHref}
-            externalLinkText={current.externalLinkText}
-          />
-        ))}
-      </AuditorsContainer>
-    </MainContainer>
+        <AuditorsContainer>
+          {auditorsList.map(current => (
+            <Auditor
+              logoUrl={current.logoUrl}
+              completedAuditHref={current.completedAuditHref}
+              externalLinkText={current.externalLinkText}
+            />
+          ))}
+        </AuditorsContainer>
+      </MainContainer>
+    </Wrapper>
   )
 }
 
