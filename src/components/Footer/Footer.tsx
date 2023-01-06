@@ -44,6 +44,17 @@ const CopyrightText = styled.div`
   text-align: center;
 `
 
+interface LinkAsset {
+  label: string
+  href: string
+}
+
+const Links = {
+  protocol: [] as Array<LinkAsset>,
+  connect: [] as Array<LinkAsset>,
+  legal: [] as Array<LinkAsset>,
+}
+
 const Footer = () => {
   return (
     <Wrapper>
