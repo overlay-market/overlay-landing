@@ -17,7 +17,9 @@ const InteractiveContentsContainer = styled.div`
   flex-direction: row;
 `
 
-const BrandContainer = styled.div``
+const BrandContainer = styled.div`
+  min-width: 400px;
+`
 
 const LogoContainer = styled.div`
   display: flex;
@@ -33,6 +35,8 @@ const LogoDescription = styled.div`
 const LinksContainer = styled.div`
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
 `
 
 const LinksColumn = styled.div`
@@ -45,17 +49,18 @@ const LinksColumn = styled.div`
 const ColumnTitle = styled.div`
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: 6px;
 `
 
 const Line = styled.div`
   height: 1px;
   width: 100%;
   background: black;
+  margin: 60px 0 45px;
 `
 
 const CopyrightText = styled.div`
   font-size: 16px;
-  margin-top: 45px;
   text-align: center;
 `
 
@@ -64,6 +69,7 @@ const Link = styled.a`
   font-size: 15px;
   color: #232323;
   text-decoration: none;
+  margin: 10px 0;
 `
 
 interface LinkAsset {
