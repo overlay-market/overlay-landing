@@ -9,6 +9,32 @@ import News from './components/News/News'
 import Audits from './components/Audits/Audits'
 import './App.scss'
 
+const MainContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  max-width: 1100px;
+  margin: auto;
+`
+
+const ContributingImageContainer = styled.div`
+  height: 450px;
+  max-width: 50%;
+`
+
+const ContributingTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+const Contributing = () => {
+  return (
+    <MainContainer>
+      <ContributingImageContainer></ContributingImageContainer>
+      <ContributingTextContainer></ContributingTextContainer>
+    </MainContainer>
+  )
+}
+
 const App: React.FC = () => {
   return (
     <div className="App">
@@ -21,6 +47,7 @@ const App: React.FC = () => {
           <ValueProposition />
           <News />
           <Audits />
+          <Contributing />
         </Route>
         <Route exact strict path="/markets" component={Market} />
         <Route exact strict path="/ToS" component={TermsOfService} />
