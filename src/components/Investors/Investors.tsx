@@ -16,7 +16,7 @@ const MainContainer = styled.div`
 const Text = styled.div`
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
   margin: 48px 0;
 `

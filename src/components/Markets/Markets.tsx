@@ -16,20 +16,24 @@ const HeaderContainer = styled.div`
 `
 
 const Title = styled.div`
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 36px;
-  font-weight: bold;
   max-width: 450px;
 `
 
 const Description = styled.div`
+  font-family: 'Inter', sans-serif;
   font-size: 18px;
   color: #7b7b7b;
   max-width: 650px;
 `
 
 const ExploreButton = styled.button`
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
   background: #71CEFF;
-  font-weight: 18px;
   color: white;
   border-radius: 10px;
   outline: none;

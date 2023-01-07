@@ -8,6 +8,7 @@ import ImmunefiLogo from '../../assets/images/immunefi-logo.png'
 const Wrapper = styled.div`
   padding: 45px 0;
 `
+
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -17,12 +18,14 @@ const MainContainer = styled.div`
 `
 
 const Title = styled.div`
+  font-family: 'Inter', sans-serif;
   font-size: 36px;
-  font-weight: bold;
+  font-weight: 600;
   width: 370px;
 `
 
 const Description = styled.div`
+  font-family: 'Inter', sans-serif;
   font-size: 18px;
   color: #808182;
   margin: 24px 0;
@@ -54,6 +57,8 @@ const AuditorLogo = styled.div<{src: string}>`
 `
 
 const AuditorLink = styled.a`
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 600;
   display: flex;
   flex-direction: row;
   text-decoration: underline;
@@ -64,6 +69,8 @@ const AuditorLink = styled.a`
 `
 
 const ArrowIconLink = styled.a`
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 600;
   display: flex;
   flex-direction: row;
   text-decoration: underline;

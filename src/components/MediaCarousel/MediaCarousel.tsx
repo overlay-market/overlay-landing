@@ -19,8 +19,9 @@ const MainContainer = styled.div`
 `
 
 const Title = styled.div`
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 54px;
-  font-weight: bold;
   width: 100%;
   text-align: left;
   border-bottom: 1px solid #232323;

@@ -31,12 +31,14 @@ const ContributingTextContainer = styled.div`
 `
 
 const Title = styled.div`
-  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 36px;
   max-width: 350px;
 `
 
 const Description = styled.div`
+  font-family: 'Inter', sans-serif;
   font-size: 18px;
   color: #7b7b7b;
   padding: 8px 0;
@@ -44,8 +46,9 @@ const Description = styled.div`
 `
 
 const StartContributingButton = styled.button`
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 600;
   font-size: 20px;
-  font-weight: bold;
   color: white;
   width: fit-content;
   padding: 16px;
