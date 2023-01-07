@@ -10,8 +10,8 @@ const MainContainer = styled.div`
 const DesktopSplitViewContainer = styled.div`
   display: flex;
   margin: auto;
-  max-width: 1100px;
   width: 100%;
+  max-width: 1100px;
 `
 
 const PrimaryViewContainer = styled.div`
@@ -22,27 +22,30 @@ const PrimaryViewContainer = styled.div`
 const SecondaryViewContainer = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 60%;
   width: 60%;
+  max-width: 60%;
   align-items: end;
 `
 
 const Title = styled.div`
+  font-family: 'Inter', sans-serif;
   font-size: 36px;
-  font-weight: bold;
+  font-weight: 600;
   color: black;
   max-width: 400px;
 `
 
 const Description = styled.div`
-  max-width: 400px;
+  font-family: 'Inter', sans-serif;
   font-size: 18px;
   font-weight: regular;
   color: #7b7b7b;
+  max-width: 400px;
   margin: 32px 0;
 `
 
 const LightArrowButton = styled.button`
+  font-family: 'Inter', sans-serif;
   font-size: 20px;
   font-weight: bold;
   padding: 16px;

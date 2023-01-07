@@ -10,15 +10,11 @@ const MainContainer = styled.div`
   flex-direction: column;
   max-width: 1100px;
   margin: auto;
+  border-top: 1px solid black;
 `
 
-const Breakline = styled.div`
-  width: 100%;
-  border-bottom: 1px solid black;
-  height: 1px;
-`
-
-const TextContainer = styled.div`
+const Text = styled.div`
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 32px;
   font-weight: bold;
   text-align: center;
@@ -31,8 +27,7 @@ const Investors = () => {
   return (
     <Wrapper>
       <MainContainer>
-        <Breakline />
-        <TextContainer>Backed by the best</TextContainer>
+        <Text>Backed by the best</Text>
         <DesktopInvestorsPanel src={InvestorsPanelDesktop} />
       </MainContainer>
     </Wrapper>

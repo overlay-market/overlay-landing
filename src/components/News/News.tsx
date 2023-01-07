@@ -17,8 +17,9 @@ const MainContainer = styled.div`
 `
 
 const Title = styled.div`
+  font-family: 'Inter', sans-serif;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
   margin-bottom: 24px;
 `
