@@ -8,6 +8,7 @@ export const HeaderContainer = styled.div`
   max-width: 1200px;
   justify-content: space-between;
   width: 100%;
+  font-family: 'Inter', sans-serif;
 `
 
 export const LogoContainer = styled.div`
@@ -35,6 +36,7 @@ const ButtonsContainer = styled.div`
 `
 
 const TokenFaucetButton = styled.button`
+  font-family: 'Inter', sans-serif;
   background: transparent;
   border: none;
   box-shadow: none;
@@ -45,6 +47,7 @@ const TokenFaucetButton = styled.button`
 `
 
 const AppButton = styled.button`
+  font-family: 'Inter', sans-serif;
   background: #71ceff;
   border-radius: 5px;
   border: none;

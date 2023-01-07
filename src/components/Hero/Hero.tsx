@@ -34,18 +34,22 @@ const SecondaryViewContainer = styled.div`
   align-items: center;
 `
 
-const HeroTitleContainer = styled.div`
+const Title = styled.div`
+  font-family: 'Inter', san-serif;
+  font-weight: 600;
   font-size: 69px;
   margin-bottom: 24px;
 `
 
-const HeroDescriptionContainer = styled.div`
+const Description = styled.div`
   font-size: 20px;
-  color: #232323;
+  color: #7b7b7b;
   margin-bottom: 36px;
+  font-family: 'Inter', sans-serif;
 `
 
 const DarkArrowButton = styled.button`
+  font-family: 'Inter', sans-serif;
   background: black;
   color: #f9f9fb;
   border-radius: 10px;
@@ -77,6 +81,7 @@ const StatNumber = styled.div`
 `
 
 const StatDescription = styled.div`
+  font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 12px;
   color: #7d7a76;
 `
@@ -90,10 +95,10 @@ const Hero = () => {
     <HeroContainer>
       <SplitViewContainer>
         <PrimaryViewContainer>
-          <HeroTitleContainer>Liquidity for the ILLiquid</HeroTitleContainer>
-          <HeroDescriptionContainer>
-            Explore Overlay - Endless data markets, built on Ethereum
-          </HeroDescriptionContainer>
+          <Title>
+            Liquidity for the <i>ILL</i>iquid
+          </Title>
+          <Description>Explore Overlay - Endless data markets, built on Ethereum</Description>
           <DarkArrowButton>Get Started</DarkArrowButton>
           <HeroStatsContainer>
             <StatContainer>
@@ -107,7 +112,6 @@ const Hero = () => {
             </StatContainer>
           </HeroStatsContainer>
         </PrimaryViewContainer>
-
         <SecondaryViewContainer>
           <MainImage src={HeroChart} />
         </SecondaryViewContainer>
