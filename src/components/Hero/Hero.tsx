@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {device} from '../../theme/theme'
 import HeroChart from '../../assets/images/hero-chart.png'
 import HeroBackground from '../../assets/images/hero-background.png'
 
@@ -6,12 +7,16 @@ const HeroContainer = styled.div`
   display: flex;
   min-height: 625px;
   background: url(${HeroBackground});
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
   padding-top: 60px;
   margin-bottom: 45px;
+
+  @media ${device.sm} {
+    background-position: center;
+  }
 `
 
 const SplitViewContainer = styled.div`
@@ -23,15 +28,23 @@ const SplitViewContainer = styled.div`
 const PrimaryViewContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: auto;
+
+  @media ${device.sm} {
+    width: 50%;
+  }
 `
 
 const SecondaryViewContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  max-width: 50%;
-  align-items: center;
+  display: none;
+
+  @media ${device.sm} {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 50%;
+    align-items: center;
+  }
 `
 
 const Title = styled.div`
