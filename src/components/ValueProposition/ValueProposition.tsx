@@ -30,8 +30,6 @@ const SecondaryViewContainer = styled.div`
   @media ${device.sm} {
     display: flex;
     flex-direction: column;
-    width: 60%;
-    max-width: 60%;
     align-items: end;
   }
 `

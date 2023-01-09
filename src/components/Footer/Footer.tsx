@@ -23,7 +23,11 @@ const InteractiveContentsContainer = styled.div`
 `
 
 const BrandContainer = styled.div`
-  width: 400px;
+  width: auto;
+
+  @media ${device.sm} {
+    width: 400px;
+  }
 `
 
 const LogoContainer = styled.div`

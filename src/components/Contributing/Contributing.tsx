@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {device} from '../../theme/theme'
 import OverlayLogoHeartCatImg from '../../assets/images/overlay-logo-heart-cat.png'
 
 const Wrapper = styled.div`
@@ -7,10 +8,14 @@ const Wrapper = styled.div`
 
 const MainContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   max-width: 1100px;
   margin: auto;
   justify-content: space-between;
+
+  @media ${device.sm} {
+    flex-direction: row;
+  }
 `
 
 const ContributingImageContainer = styled.div`

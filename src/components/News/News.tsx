@@ -37,7 +37,6 @@ const NewsPlatformContainer = styled.div`
 
   @media ${device.sm} {
     flex-direction: row;
-    width: 1100px;
   }
 `
 
