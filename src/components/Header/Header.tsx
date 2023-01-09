@@ -1,5 +1,7 @@
 import styled from 'styled-components'
-import {Icon} from '../Icon/Icon'
+import {device} from '../../theme/theme'
+import {ExternalIcon, Icon} from '../Icon/Icon'
+import {Menu} from 'react-feather'
 import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
 
 export const HeaderContainer = styled.div`
@@ -17,8 +19,12 @@ export const LogoContainer = styled.div`
 `
 
 const LinksContainer = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: none;
+
+  @media ${device.sm} {
+    display: flex;
+    flex-direction: row;
+  }
 `
 
 const Link = styled.a`
@@ -31,8 +37,20 @@ const Link = styled.a`
 `
 
 const ButtonsContainer = styled.div`
+  display: none;
+
+  @media ${device.sm} {
+    display: flex;
+    flex-direction: row;
+  }
+`
+
+const MobileOnly = styled.div`
   display: flex;
-  flex-direction: row;
+
+  @media ${device.sm} {
+    display: none;
+  }
 `
 
 const TokenFaucetButton = styled.button`
@@ -61,7 +79,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <LogoContainer>
-        <Icon src={OverlayLogo} alt="Overlay Logo" width={140} margin={'auto'} />
+        <Icon src={OverlayLogo} alt="Overlay Logo" width={140} margin="auto" />
       </LogoContainer>
 
       <LinksContainer>
@@ -73,6 +91,12 @@ const Header = () => {
         <TokenFaucetButton>Get OVL</TokenFaucetButton>
         <AppButton>Launch App</AppButton>
       </ButtonsContainer>
+
+      <MobileOnly>
+        <ExternalIcon margin="auto">
+          <Menu />
+        </ExternalIcon>
+      </MobileOnly>
     </HeaderContainer>
   )
 }
