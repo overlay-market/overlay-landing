@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {device} from '../../theme/theme'
 import DiscoverMarketsMockDesktopImg from '../../assets/images/discover-markets-mock-desktop.png'
 import DiscoverMarketsMockMobileImg from '../../assets/images/discover-markets-mock-mobile.png'
 
@@ -11,15 +12,25 @@ const MainContainer = styled.div`
 
 const HeaderContainer = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: space-between;
+
+  @media ${device.sm} {
+    flex-direction: row;
+  }
 `
 
 const Title = styled.div`
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 36px;
-  max-width: 450px;
+  max-width: 300px;
+  margin-bottom: 20px;
+
+  @media ${device.sm} {
+    max-width: 450px;
+  }
 `
 
 const Description = styled.div`
@@ -27,6 +38,7 @@ const Description = styled.div`
   font-size: 18px;
   color: #7b7b7b;
   max-width: 650px;
+  margin-bottom: 20px;
 `
 
 const ExploreButton = styled.button`
@@ -49,7 +61,6 @@ const DiscoverMarketsMockImage = styled.div`
   background-size: contain;
   width: 100%;
   height: 400px;
-  margin-top: 40px;
 `
 
 const Markets = () => {
