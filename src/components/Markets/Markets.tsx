@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 import {device} from '../../theme/theme'
 import DiscoverMarketsMockDesktopImg from '../../assets/images/discover-markets-mock-desktop.png'
-import DiscoverMarketsMockMobileImg from '../../assets/images/discover-markets-mock-mobile.png'
 
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 1100px;
   margin: auto;
+  padding: 0 16px;
 `
 
 const HeaderContainer = styled.div`

@@ -3,7 +3,7 @@ import {device} from '../../theme/theme'
 import OverlayLogoHeartCatImg from '../../assets/images/overlay-logo-heart-cat.png'
 
 const Wrapper = styled.div`
-  padding: 45px 0;
+  padding: 45px 16px;
 `
 
 const MainContainer = styled.div`

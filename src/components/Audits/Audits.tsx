@@ -16,6 +16,7 @@ const MainContainer = styled.div`
   justify-content: center;
   max-width: 1100px;
   margin: auto;
+  padding: 0 16px;
 `
 
 const Title = styled.div`

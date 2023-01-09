@@ -9,7 +9,7 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 135px 0;
+  padding: 135px 16px;
   background: url(${NewsBackground});
   background-position: center;
   background-repeat: no-repeat;

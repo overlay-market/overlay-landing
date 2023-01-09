@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 0 16px;
 `
 
 const MainContainer = styled.div`

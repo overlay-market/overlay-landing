@@ -5,7 +5,7 @@ import ValuePropImage from '../../assets/images/value-proposition-image.png'
 const MainContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 45px 0;
+  padding: 45px 16px;
 `
 
 const DesktopSplitViewContainer = styled.div`
@@ -17,7 +17,6 @@ const DesktopSplitViewContainer = styled.div`
 
 const PrimaryViewContainer = styled.div`
   margin-top: auto;
-  width: auto%;
 
   @media ${device.sm} {
     width: 40%;

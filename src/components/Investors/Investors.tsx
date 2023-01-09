@@ -10,7 +10,7 @@ const MainContainer = styled.div`
   flex-direction: column;
   max-width: 1100px;
   margin: auto;
-  border-top: 1px solid black;
+  padding: 0 16px;
 `
 
 const Text = styled.div`
@@ -18,7 +18,9 @@ const Text = styled.div`
   font-size: 32px;
   font-weight: 600;
   text-align: center;
-  margin: 48px 0;
+  border-top: 1px solid black;
+  padding-top: 48px;
+  margin-bottom: 48px;
 `
 
 const DesktopInvestorsPanel = styled.img``

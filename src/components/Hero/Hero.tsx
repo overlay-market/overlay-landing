@@ -56,6 +56,7 @@ const Title = styled.div`
 
   @media ${device.sm} {
     font-size: 69px;
+    max-width: none;
   }
 `
 
