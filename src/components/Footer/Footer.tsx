@@ -23,7 +23,7 @@ const InteractiveContentsContainer = styled.div`
 `
 
 const BrandContainer = styled.div`
-  min-width: 400px;
+  width: 400px;
 `
 
 const LogoContainer = styled.div`

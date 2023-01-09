@@ -22,7 +22,7 @@ const Title = styled.div`
   font-family: 'Inter', sans-serif;
   font-size: 36px;
   font-weight: 600;
-  width: 370px;
+  max-width: 370px;
 `
 
 const Description = styled.div`
@@ -30,7 +30,7 @@ const Description = styled.div`
   font-size: 18px;
   color: #808182;
   margin: 24px 0;
-  width: 430px;
+  max-width: 430px;
 `
 
 const AuditorsContainer = styled.div`
