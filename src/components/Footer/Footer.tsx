@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {device} from '../../theme/theme'
 import {Icon} from '../Icon/Icon'
 import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
 
@@ -14,7 +15,11 @@ const FooterContainer = styled.div`
 
 const InteractiveContentsContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+
+  @media ${device.sm} {
+    flex-direction: row;
+  }
 `
 
 const BrandContainer = styled.div`

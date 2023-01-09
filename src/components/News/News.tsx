@@ -1,17 +1,16 @@
 import styled from 'styled-components'
 import {device} from '../../theme/theme'
-import NewsBrandsLogos from '../../assets/images/news-brands-desktop.png'
 import CoindeskLogo from '../../assets/images/coindesk-brand-logo.png'
 import BloombergLogo from '../../assets/images/bloomberg-brand-logo.png'
 import MessariLogo from '../../assets/images/messari-brand-logo.png'
-import Background from '../../assets/images/news-background.png'
+import NewsBackground from '../../assets/images/news-background.png'
 
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 135px 0;
-  background: url(${Background});
+  background: url(${NewsBackground});
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -30,6 +29,7 @@ const NewsPlatformContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   margin: auto;
+  padding: 40px 0;
   width: 100%;
   max-width: 1100px;
   border-top: 0.5px solid #232323;
