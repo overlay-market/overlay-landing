@@ -20,11 +20,16 @@ const MainContainer = styled.div`
 
 const ContributingImageContainer = styled.div`
   display: flex;
-  width: 50%;
-  max-width: 450px;
+  max-width: 250px;
+  margin: auto;
 
   img {
     width: 100%;
+  }
+
+  @media ${device.sm} {
+    width: 50%;
+    max-width: 450px;
   }
 `
 
@@ -40,6 +45,7 @@ const Title = styled.div`
   font-weight: 600;
   font-size: 36px;
   max-width: 350px;
+  margin-bottom: 16px;
 `
 
 const Description = styled.div`
@@ -48,6 +54,8 @@ const Description = styled.div`
   color: #7b7b7b;
   padding: 8px 0;
   max-width: 350px;
+  line-height: 25px;
+  margin-bottom: 16px;
 `
 
 const StartContributingButton = styled.button`
