@@ -5,7 +5,11 @@ import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
 
 const Wrapper = styled.div`
   background: #f0f0f0;
-  padding: 55px 0;
+  padding: 35px 0;
+
+  @media ${device.sm} {
+    padding: 55px 0;
+  }
 `
 
 const FooterContainer = styled.div`
@@ -24,6 +28,7 @@ const InteractiveContentsContainer = styled.div`
 
 const BrandContainer = styled.div`
   width: auto;
+  margin-bottom: 20px;
 
   @media ${device.sm} {
     width: 400px;
@@ -33,6 +38,7 @@ const BrandContainer = styled.div`
 const LogoContainer = styled.div`
   display: flex;
   cursor: pointer;
+  margin-bottom: 12px;
 `
 
 const LogoDescription = styled.div`
@@ -44,6 +50,7 @@ const LogoDescription = styled.div`
 const LinksContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
   padding-top: 18px;
@@ -53,6 +60,12 @@ const LinksColumn = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
+  width: 40%;
+  margin-bottom: 25px;
+
+  @media ${device.sm} {
+    width: auto;
+  }
 `
 
 const ColumnTitle = styled.div`

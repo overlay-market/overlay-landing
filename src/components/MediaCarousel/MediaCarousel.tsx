@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {device} from '../../theme/theme'
 import {TwitterTimelineEmbed} from 'react-twitter-embed'
 import HeroBackground from '../../assets/images/hero-background.png'
 
@@ -21,11 +22,15 @@ const MainContainer = styled.div`
 const Title = styled.div`
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 54px;
+  font-size: 32px;
   width: 100%;
   text-align: left;
   border-bottom: 1px solid #232323;
   padding-bottom: 30px;
+
+  @media ${device.sm} {
+    font-size: 54px;
+  }
 `
 
 const CarouselContainer = styled.div`
