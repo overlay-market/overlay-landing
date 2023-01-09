@@ -36,16 +36,21 @@ const SecondaryViewContainer = styled.div`
 
 const Title = styled.div`
   font-family: 'Inter', sans-serif;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 600;
   color: black;
-  max-width: 400px;
+  max-width: 300px;
+
+  @media ${device.sm} {
+    font-size: 36px;
+    max-width: 400px;
+  }
 `
 
 const Description = styled.div`
   font-family: 'Inter', sans-serif;
   font-size: 18px;
-  font-weight: regular;
+  line-height: 150%;
   color: #7b7b7b;
   max-width: 400px;
   margin: 32px 0;
