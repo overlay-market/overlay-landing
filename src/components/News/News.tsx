@@ -29,15 +29,15 @@ const NewsPlatformContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 40px 0;
   margin: auto;
-  width: 1100px;
+  width: 100%;
   max-width: 1100px;
   border-top: 0.5px solid #232323;
   border-bottom: 0.5px solid #232323;
 
   @media ${device.sm} {
     flex-direction: row;
+    width: 1100px;
   }
 `
 
@@ -45,21 +45,21 @@ const LogoContainer = styled.div`
   display: flex;
   width: 100%;
   min-width: 215px;
-
-  @media ${device.sm} {
-    width: 33%;
-  }
 `
 
 const Logo = styled.img`
-  margin: auto;
+  margin: 16px auto;
   width: 215px;
+
+  @media ${device.sm} {
+    margin: auto;
+  }
 `
 
-const NewsPlatformLogo = ({src}: {src: string}) => {
+const NewsPlatformLogo = ({src, alt}: {src: string; alt: string}) => {
   return (
     <LogoContainer>
-      <Logo src={src} />
+      <Logo src={src} alt={alt} />
     </LogoContainer>
   )
 }
@@ -69,9 +69,9 @@ const News = () => {
     <MainContainer>
       <Title>Overlay in the news</Title>
       <NewsPlatformContainer>
-        <NewsPlatformLogo src={CoindeskLogo} />
-        <NewsPlatformLogo src={BloombergLogo} />
-        <NewsPlatformLogo src={MessariLogo} />
+        <NewsPlatformLogo src={CoindeskLogo} alt="Coindesk Logo" />
+        <NewsPlatformLogo src={BloombergLogo} alt="Bloomberg Logo" />
+        <NewsPlatformLogo src={MessariLogo} alt="Messari Logo" />
       </NewsPlatformContainer>
     </MainContainer>
   )
