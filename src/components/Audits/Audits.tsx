@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {device} from '../../theme/theme'
 import {ExternalIcon} from '../Icon/Icon'
 import {ArrowRight, ExternalLink} from 'react-feather'
 import SpearbitDAOLogo from '../../assets/images/spearbit-dao-logo.png'
@@ -34,17 +35,25 @@ const Description = styled.div`
 
 const AuditorsContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   border-top: 1px solid #232323;
   justify-content: space-between;
+
+  @media ${device.sm} {
+    flex-direction: row;
+  }
 `
 
 const AuditorContainer = styled.div`
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #232323;
-  width: 300px;
+  width: 100%;
   padding: 20px 0 25px;
+
+  @media ${device.sm} {
+    width: 300px;
+  }
 `
 
 const AuditorLogo = styled.div<{src: string}>`
