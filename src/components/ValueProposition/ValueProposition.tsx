@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {device} from '../../theme/theme'
 import ValuePropImage from '../../assets/images/value-proposition-image.png'
 
 const MainContainer = styled.div`
@@ -16,15 +17,23 @@ const DesktopSplitViewContainer = styled.div`
 
 const PrimaryViewContainer = styled.div`
   margin-top: auto;
-  width: 40%;
+  width: auto%;
+
+  @media ${device.sm} {
+    width: 40%;
+  }
 `
 
 const SecondaryViewContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  max-width: 60%;
-  align-items: end;
+  display: none;
+
+  @media ${device.sm} {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    max-width: 60%;
+    align-items: end;
+  }
 `
 
 const Title = styled.div`
