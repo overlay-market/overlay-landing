@@ -47,6 +47,7 @@ const ButtonsContainer = styled.div`
 
 const MobileOnly = styled.div`
   display: flex;
+  margin-right: 8px;
 
   @media ${device.sm} {
     display: none;
@@ -93,7 +94,7 @@ const Header = () => {
       </ButtonsContainer>
 
       <MobileOnly>
-        <ExternalIcon margin="auto">
+        <ExternalIcon margin="auto" width={40} center={true}>
           <Menu />
         </ExternalIcon>
       </MobileOnly>

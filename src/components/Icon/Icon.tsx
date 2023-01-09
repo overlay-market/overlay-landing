@@ -36,7 +36,8 @@ export const Icon: React.FC<IconProps> = ({src, alt, height, width, margin}) => 
 }
 
 const ExternalIconWrapper = styled.div<{
-  size?: number
+  height?: number
+  width?: number
   margin?: string
   color?: string
   transform?: string
@@ -46,10 +47,11 @@ const ExternalIconWrapper = styled.div<{
   right?: string
   left?: string
   bottom?: string
+  center?: boolean
 }>`
   display: flex;
-  height: ${({size}) => size}px;
-  width: ${({size}) => size}px;
+  height: ${({height}) => height}px;
+  width: ${({width}) => width}px;
   margin: ${({margin}) => margin ?? margin};
   color: ${({color}) => (color ? color : 'inherit')};
   transform: ${({transform}) => (transform ? transform : 'rotate(0deg)')};
@@ -61,10 +63,12 @@ const ExternalIconWrapper = styled.div<{
   left: ${({left}) => left ?? left};
   bottom: ${({bottom}) => bottom ?? bottom};
   position: ${({position}) => (position ? position : 'auto')};
+  justify-content: ${({center}) => (center ? 'center' : 'auto')};
 `
 
 type ExternalIconProps = {
-  size?: number
+  height?: number
+  width?: number
   margin?: string
   children: React.ReactNode
   color?: string
@@ -76,10 +80,12 @@ type ExternalIconProps = {
   left?: string
   bottom?: string
   position?: string
+  center?: boolean
 }
 
 export const ExternalIcon = ({
-  size,
+  height,
+  width,
   margin,
   children,
   color,
@@ -91,10 +97,12 @@ export const ExternalIcon = ({
   left,
   bottom,
   position,
+  center,
 }: ExternalIconProps) => {
   return (
     <ExternalIconWrapper
-      size={size}
+      height={height}
+      width={width}
       margin={margin}
       color={color}
       transform={transform}
@@ -105,6 +113,7 @@ export const ExternalIcon = ({
       left={left}
       bottom={bottom}
       position={position}
+      center={center}
     >
       {children}
     </ExternalIconWrapper>

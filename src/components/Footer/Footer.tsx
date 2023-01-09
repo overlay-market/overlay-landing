@@ -5,10 +5,10 @@ import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
 
 const Wrapper = styled.div`
   background: #f0f0f0;
-  padding: 35px 0;
+  padding: 35px 16px;
 
   @media ${device.sm} {
-    padding: 55px 0;
+    padding: 55px 16px;
   }
 `
 
