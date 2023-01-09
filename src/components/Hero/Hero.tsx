@@ -5,7 +5,7 @@ import HeroBackground from '../../assets/images/hero-background.png'
 
 const HeroContainer = styled.div`
   display: flex;
-  min-height: 625px;
+  min-height: 480px;
   background: url(${HeroBackground});
   background-position: left;
   background-repeat: no-repeat;
@@ -50,15 +50,25 @@ const SecondaryViewContainer = styled.div`
 const Title = styled.div`
   font-family: 'Inter', san-serif;
   font-weight: 600;
-  font-size: 69px;
+  font-size: 48px;
   margin-bottom: 24px;
+  max-width: 300px;
+
+  @media ${device.sm} {
+    font-size: 69px;
+  }
 `
 
 const Description = styled.div`
-  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
   color: #7b7b7b;
   margin-bottom: 36px;
-  font-family: 'Inter', sans-serif;
+  max-width: 330px;
+
+  @media ${device.sm} {
+    font-size: 20px;
+  }
 `
 
 const DarkArrowButton = styled.button`
