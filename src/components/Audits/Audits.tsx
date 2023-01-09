@@ -20,9 +20,14 @@ const MainContainer = styled.div`
 
 const Title = styled.div`
   font-family: 'Inter', sans-serif;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 600;
-  max-width: 370px;
+  max-width: 300px;
+
+  @media ${device.sm} {
+    font-size: 36px;
+    max-width: 370px;
+  }
 `
 
 const Description = styled.div`
@@ -31,6 +36,7 @@ const Description = styled.div`
   color: #808182;
   margin: 24px 0;
   max-width: 430px;
+  line-height: 150%;
 `
 
 const AuditorsContainer = styled.div`
