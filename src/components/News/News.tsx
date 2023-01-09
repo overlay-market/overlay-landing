@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {device} from '../../theme/theme'
 import NewsBrandsLogos from '../../assets/images/news-brands-desktop.png'
 import CoindeskLogo from '../../assets/images/coindesk-brand-logo.png'
 import BloombergLogo from '../../assets/images/bloomberg-brand-logo.png'
@@ -26,26 +27,51 @@ const Title = styled.div`
 
 const NewsPlatformContainer = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 40px 0;
   margin: auto;
   width: 1100px;
   max-width: 1100px;
-  flex-direction: row;
-  justify-content: center;
   border-top: 0.5px solid #232323;
   border-bottom: 0.5px solid #232323;
+
+  @media ${device.sm} {
+    flex-direction: row;
+  }
 `
 
-const BrandLogo = styled.img`
-  height: 70px;
+const LogoContainer = styled.div`
+  display: flex;
+  width: 100%;
+  min-width: 215px;
+
+  @media ${device.sm} {
+    width: 33%;
+  }
 `
+
+const Logo = styled.img`
+  margin: auto;
+  width: 215px;
+`
+
+const NewsPlatformLogo = ({src}: {src: string}) => {
+  return (
+    <LogoContainer>
+      <Logo src={src} />
+    </LogoContainer>
+  )
+}
 
 const News = () => {
   return (
     <MainContainer>
       <Title>Overlay in the news</Title>
       <NewsPlatformContainer>
-        <BrandLogo src={NewsBrandsLogos} />
+        <NewsPlatformLogo src={CoindeskLogo} />
+        <NewsPlatformLogo src={BloombergLogo} />
+        <NewsPlatformLogo src={MessariLogo} />
       </NewsPlatformContainer>
     </MainContainer>
   )
