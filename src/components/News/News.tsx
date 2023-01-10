@@ -68,8 +68,8 @@ const News = () => {
     <MainContainer>
       <Title>Overlay in the news</Title>
       <NewsPlatformContainer>
-        <NewsPlatformLogo src={CoindeskLogo} alt="Coindesk Logo" />
-        <NewsPlatformLogo src={BloombergLogo} alt="Bloomberg Logo" />
+        {/* <NewsPlatformLogo src={CoindeskLogo} alt="Coindesk Logo" /> */}
+        {/* <NewsPlatformLogo src={BloombergLogo} alt="Bloomberg Logo" /> */}
         <NewsPlatformLogo src={MessariLogo} alt="Messari Logo" />
       </NewsPlatformContainer>
     </MainContainer>
