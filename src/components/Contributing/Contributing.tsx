@@ -21,7 +21,7 @@ const MainContainer = styled.div`
 const ContributingImageContainer = styled.div`
   display: flex;
   max-width: 250px;
-  margin: auto;
+  margin: auto auto 20px;
 
   img {
     width: 100%;

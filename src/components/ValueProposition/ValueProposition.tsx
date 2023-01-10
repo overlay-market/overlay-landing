@@ -69,7 +69,7 @@ const LightArrowButton = styled.button`
 `
 
 const ImageContainer = styled.img`
-  max-width: 650px;
+  max-width: 600px;
   margin: auto;
 `
 

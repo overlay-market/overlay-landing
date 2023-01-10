@@ -31,7 +31,7 @@ const BrandContainer = styled.div`
   margin-bottom: 20px;
 
   @media ${device.sm} {
-    width: 400px;
+    min-width: 400px;
   }
 `
 
