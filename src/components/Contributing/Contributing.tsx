@@ -28,7 +28,7 @@ const ContributingImageContainer = styled.div`
   }
 
   @media ${device.sm} {
-    width: 50%;
+    margin: 20px;
     max-width: 450px;
   }
 `
@@ -37,7 +37,7 @@ const ContributingTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 25px;
+  margin: auto 60px auto auto;
 `
 
 const Title = styled.div`
