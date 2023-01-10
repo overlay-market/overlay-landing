@@ -54,15 +54,6 @@ const ExploreButton = styled.button`
   padding: 12px 24px;
 `
 
-const DiscoverMarketsMockImage = styled.div`
-  background: url(${DiscoverMarketsMockDesktopImg});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: 400px;
-`
-
 const Markets = () => {
   return (
     <MainContainer>
@@ -78,7 +69,6 @@ const Markets = () => {
           <ExploreButton>Explore</ExploreButton>
         </div>
       </HeaderContainer>
-      <DiscoverMarketsMockImage />
     </MainContainer>
   )
 }
