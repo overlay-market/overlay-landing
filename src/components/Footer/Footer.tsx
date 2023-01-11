@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import {device} from '../../theme/theme'
 import {Icon} from '../Icon/Icon'
 import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
+import {GENERAL_LINKS} from '../../constants/constants'
 
 const Wrapper = styled.div`
   background: #f0f0f0;
@@ -108,20 +109,20 @@ interface LinkAsset {
 
 const links = {
   protocol: [
-    {label: 'Github', href: ''},
-    {label: 'Documentation', href: ''},
-    {label: 'Community Docs', href: ''},
-    {label: 'Governance', href: ''},
-    {label: 'Whitepaper V1', href: ''},
+    {label: 'Github', href: GENERAL_LINKS.GITHUB},
+    {label: 'Documentation', href: GENERAL_LINKS.DOCUMENTATION},
+    {label: 'Community Docs', href: GENERAL_LINKS.COMMUNITY_DOCS},
+    {label: 'Governance', href: GENERAL_LINKS.GOVERNANCE},
+    {label: 'Whitepaper V1', href: GENERAL_LINKS.WHITEPAPER_V1},
   ] as Array<LinkAsset>,
   connect: [
-    {label: 'Discord', href: ''},
-    {label: 'Twitter', href: ''},
-    {label: 'Mirror.xyz', href: ''},
+    {label: 'Discord', href: GENERAL_LINKS.DISCORD},
+    {label: 'Twitter', href: GENERAL_LINKS.TWITTER},
+    {label: 'Mirror.xyz', href: GENERAL_LINKS.MIRROR},
   ] as Array<LinkAsset>,
   legal: [
     {label: 'Privacy Policy', href: ''},
-    {label: 'Terms of Service', href: ''},
+    {label: 'Terms of Service', href: GENERAL_LINKS.TERMS_OF_SERVICE},
   ] as Array<LinkAsset>,
 }
 
