@@ -10,11 +10,10 @@ import Audits from './components/Audits/Audits'
 import Contributing from './components/Contributing/Contributing'
 import MediaCarousel from './components/MediaCarousel/MediaCarousel'
 import Footer from './components/Footer/Footer'
-import './App.scss'
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <div>
       <Nav />
       <Switch>
         <Route path="/" exact>
