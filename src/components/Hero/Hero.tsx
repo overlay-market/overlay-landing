@@ -1,6 +1,9 @@
 import styled from 'styled-components'
+import {Box} from 'rebass'
+import {ExternalIcon} from '../Icon/Icon'
+import {ArrowRight} from 'react-feather'
 import {device} from '../../theme/theme'
-import {StyledCTAButton} from '../Button/Button'
+import {RightArrowButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
 import HeroChart from '../../assets/images/hero-chart.png'
 import HeroBackground from '../../assets/images/hero-background.png'
@@ -74,11 +77,6 @@ const Description = styled.div`
   }
 `
 
-const DarkArrowButton = styled(StyledCTAButton)`
-  font-family: 'Inter', sans-serif;
-  margin-bottom: 48px;
-`
-
 const HeroStatsContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -115,7 +113,9 @@ const Hero = () => {
             Liquidity for the <i>ILL</i>iquid
           </Title>
           <Description>Explore Overlay - Endless data markets, built on Ethereum</Description>
-          <StyledCTAButton href={GENERAL_LINKS.LAUNCH_APP}>Get Started</StyledCTAButton>
+          <Box style={{marginBottom: '25px'}}>
+            <RightArrowButton href={GENERAL_LINKS.LAUNCH_APP}>Get Started</RightArrowButton>
+          </Box>
           <HeroStatsContainer>
             <StatContainer>
               <StatNumber>1400+</StatNumber>
