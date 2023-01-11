@@ -50,7 +50,7 @@ interface InvestorAsset {
   height?: number
 }
 
-const INVESTORS_LIST: Array<InvestorAsset> = [
+const investorsList: Array<InvestorAsset> = [
   {
     name: 'Polychain Capital',
     logoSrc: `${Investor_PolychainCapital_Logo}`,
@@ -72,7 +72,7 @@ const INVESTORS_LIST: Array<InvestorAsset> = [
   },
   {
     name: 'MetaCartel',
-    logoSrc: `${Investor_ParafiCapital_Logo}`,
+    logoSrc: `${Investor_Metacartel_Logo}`,
     width: 100,
   },
 ]
@@ -83,11 +83,9 @@ const Investors = () => {
       <MainContainer>
         <Text>Backed by the best</Text>
         <Box style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
-          <Investor src={Investor_PolychainCapital_Logo} width={200} />
-          <Investor src={Investor_ParafiCapital_Logo} width={200} />
-          <Investor src={Investor_1kx_Logo} height={125} />
-          <Investor src={Investor_TheLao_Logo} />
-          <Investor src={Investor_Metacartel_Logo} width={100} />
+          {investorsList.map(investor => (
+            <Investor src={investor.logoSrc} width={investor.width} height={investor.height} />
+          ))}
         </Box>
       </MainContainer>
     </Wrapper>
