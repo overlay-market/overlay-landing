@@ -5,7 +5,7 @@ import Links from './Links/Links'
 import Stats from './Stats/Stats'
 import Technical from './Technical/Technical'
 import Stakeholders from './Stakeholders/Stakeholders'
-import Auditors from './Auditors/Auditors'
+import Audits from './Audits/Audits'
 // import {CardContainer} from '../../components/FeedCard/FeedCard'
 
 interface ContainerProps {
@@ -34,7 +34,7 @@ const Market: React.FC = () => {
       <Container>
         <Technical header="Technical" />
         <Stakeholders header="Stakeholders" />
-        <Auditors header="Auditors" />
+        <Audits header="Audits" />
         {/* <CardContainer /> */}
       </Container>
     </>

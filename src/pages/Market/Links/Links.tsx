@@ -3,13 +3,14 @@ import React from 'react'
 // import styles from "./Links.module.scss";
 import {FeedCard, ListRow, Icon, Link} from '../../../components'
 // import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import NotionIcon from '../../../assets/icons/notion-icon.png'
-// import WhitepaperIcon from '../../../assets/icons/whitepaper-icon.png'
+// import NotionIcon from '../../../assets/icons/notion-icon.png'
+import WhitepaperIcon from '../../../assets/icons/whitepaper-icon.png'
 import TwitterIcon from '../../../assets/icons/twitter-icon.png'
 // import TelegramIcon from '../../../assets/icons/telegram-icon.png'
 import DiscordIcon from '../../../assets/icons/discord-icon.png'
 import CatEmojiIcon from '../../../assets/icons/cat-emoji.png'
 import MirrorIcon from '../../../assets/icons/mirror-logo.png'
+import MemoIcon from '../../../assets/icons/memo-emoji.png'
 // import GovernanceIcon from '../../../assets/icons/governance-emoji.png'
 
 const data = [
@@ -23,16 +24,16 @@ const data = [
   //   link: 'https://planckcat.lol/',
   //   icon: `${GovernanceIcon}`,
   // },
+  // {
+  //   text: 'Notion',
+  //   link: 'https://www.notion.so/Overlay-Protocol-29da60fd11e9436ea69e2a5e0db28a74',
+  //   icon: `${NotionIcon}`,
+  // },
   {
     text: 'Docs',
-    link: 'https://www.notion.so/Overlay-Protocol-29da60fd11e9436ea69e2a5e0db28a74',
-    icon: `${NotionIcon}`,
+    link: 'https://docs.overlay.market/',
+    icon: `${MemoIcon}`,
   },
-  // {
-  //   text: 'Whitepaper V1',
-  //   link: 'https://planckcat.mypinata.cloud/ipfs/QmVMX7DH8Kh22kxMyDFGUJcw1a3irNPvyZBtAogkyJYJEv',
-  //   icon: `${WhitepaperIcon}`,
-  // },
   {
     text: 'Twitter',
     link: 'https://twitter.com/OverlayProtocol',
@@ -52,6 +53,11 @@ const data = [
     text: 'Mirror.xyz',
     link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e',
     icon: `${MirrorIcon}`,
+  },
+  {
+    text: 'Whitepaper',
+    link: 'https://planckcat.mypinata.cloud/ipfs/QmVMX7DH8Kh22kxMyDFGUJcw1a3irNPvyZBtAogkyJYJEv',
+    icon: `${WhitepaperIcon}`,
   },
 ]
 

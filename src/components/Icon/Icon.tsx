@@ -1,17 +1,17 @@
 import React from 'react'
-import styled from 'styled-components/macro';
+import styled from 'styled-components/macro'
 
 interface IconContainerProps {
-  height: number;
-  width: number;
-  margin: string;
-  children?: React.ReactNode;
+  height?: number
+  width?: number
+  margin: string
+  children?: React.ReactNode
 }
 
-export const IconContainer = styled.div<IconContainerProps>`
-  height: ${(props) => props.height}px;
-  width: ${(props) => props.width}px;
-  margin: ${(props) => props.margin};
+const IconContainer = styled.div<IconContainerProps>`
+  height: ${props => (props.height ? props.height + 'px' : 'auto')};
+  width: ${props => (props.width ? props.width + 'px' : 'auto')};
+  margin: ${props => props.margin};
 
   img {
     height: 100%;
@@ -20,17 +20,102 @@ export const IconContainer = styled.div<IconContainerProps>`
 `
 
 interface IconProps {
-  src: string;
-  alt: string;
-  height: number;
-  width: number;
-  margin: string;
+  src: string
+  alt: string
+  height?: number
+  width?: number
+  margin: string
 }
 
 export const Icon: React.FC<IconProps> = ({src, alt, height, width, margin}) => {
-    return (
-      <IconContainer height={height} width={width} margin={margin}>
-        <img src={src} alt={alt} loading="lazy"/>
-      </IconContainer>
-    );
+  return (
+    <IconContainer height={height} width={width} margin={margin}>
+      <img src={src} alt={alt} loading="lazy" />
+    </IconContainer>
+  )
+}
+
+const ExternalIconWrapper = styled.div<{
+  height?: number
+  width?: number
+  margin?: string
+  color?: string
+  transform?: string
+  clickable?: boolean
+  position?: string
+  top?: string
+  right?: string
+  left?: string
+  bottom?: string
+  center?: boolean
+}>`
+  display: flex;
+  height: ${({height}) => height}px;
+  width: ${({width}) => width}px;
+  margin: ${({margin}) => margin ?? margin};
+  color: ${({color}) => (color ? color : 'inherit')};
+  transform: ${({transform}) => (transform ? transform : 'rotate(0deg)')};
+  transition: transform 0.2s ease-out;
+  cursor: ${({clickable}) => (clickable ? 'pointer' : 'default')};
+  z-index: 10;
+  top: ${({top}) => top ?? top};
+  right: ${({right}) => right ?? right};
+  left: ${({left}) => left ?? left};
+  bottom: ${({bottom}) => bottom ?? bottom};
+  position: ${({position}) => (position ? position : 'auto')};
+  justify-content: ${({center}) => (center ? 'center' : 'auto')};
+`
+
+type ExternalIconProps = {
+  height?: number
+  width?: number
+  margin?: string
+  children: React.ReactNode
+  color?: string
+  transform?: string
+  clickable?: boolean
+  onClick?: (event: any) => any
+  top?: string
+  right?: string
+  left?: string
+  bottom?: string
+  position?: string
+  center?: boolean
+}
+
+export const ExternalIcon = ({
+  height,
+  width,
+  margin,
+  children,
+  color,
+  transform,
+  clickable,
+  onClick,
+  top,
+  right,
+  left,
+  bottom,
+  position,
+  center,
+}: ExternalIconProps) => {
+  return (
+    <ExternalIconWrapper
+      height={height}
+      width={width}
+      margin={margin}
+      color={color}
+      transform={transform}
+      clickable={clickable}
+      onClick={onClick}
+      top={top}
+      right={right}
+      left={left}
+      bottom={bottom}
+      position={position}
+      center={center}
+    >
+      {children}
+    </ExternalIconWrapper>
+  )
 }

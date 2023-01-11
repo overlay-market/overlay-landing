@@ -1,16 +1,35 @@
 import {Route, Switch} from 'react-router-dom'
 import {Market, TermsOfService} from './pages'
 import {Nav} from './components'
-import './App.scss'
+import Hero from './components/Hero/Hero'
+import Investors from './components/Investors/Investors'
+import ValueProposition from './components/ValueProposition/ValueProposition'
+import News from './components/News/News'
+import Markets from './components/Markets/Markets'
+import Audits from './components/Audits/Audits'
+import Contributing from './components/Contributing/Contributing'
+import MediaCarousel from './components/MediaCarousel/MediaCarousel'
+import Footer from './components/Footer/Footer'
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <div>
       <Nav />
       <Switch>
-        <Route exact strict path="/" component={Market} />
+        <Route path="/" exact>
+          <Hero />
+          <Investors />
+          <ValueProposition />
+          <News />
+          <Markets />
+          <Audits />
+          <Contributing />
+          <MediaCarousel />
+        </Route>
+        <Route exact strict path="/markets" component={Market} />
         <Route exact strict path="/ToS" component={TermsOfService} />
       </Switch>
+      <Footer />
     </div>
   )
 }
