@@ -91,7 +91,7 @@ const Header = () => {
 
       <ButtonsContainer>
         <TokenFaucetButton>Get OVL</TokenFaucetButton>
-        <StyledCTAButton>Launch App</StyledCTAButton>
+        <StyledCTAButton href="https://app.overlay.market">Launch App</StyledCTAButton>
       </ButtonsContainer>
 
       <MobileOnly>
