@@ -1,4 +1,4 @@
-export const OVERLAY_LINKS = {
+export const GENERAL_LINKS = {
   GOVERNANCE: 'https://gov.overlay.market/',
   GITHUB: 'https://github.com/overlay-market',
   DOCUMENTATION: 'https://docs.overlay.market/',
@@ -11,4 +11,5 @@ export const OVERLAY_LINKS = {
   MIRROR: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e',
   PRIVACY_POLICY: '',
   TERMS_OF_SERVICE: '/tos',
+  LAUNCH_APP: 'https://app.overlay.market',
 }

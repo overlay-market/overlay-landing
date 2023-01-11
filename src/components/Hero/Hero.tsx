@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {device} from '../../theme/theme'
 import {StyledCTAButton} from '../Button/Button'
+import {GENERAL_LINKS} from '../../constants/constants'
 import HeroChart from '../../assets/images/hero-chart.png'
 import HeroBackground from '../../assets/images/hero-background.png'
 
@@ -114,7 +115,7 @@ const Hero = () => {
             Liquidity for the <i>ILL</i>iquid
           </Title>
           <Description>Explore Overlay - Endless data markets, built on Ethereum</Description>
-          <StyledCTAButton>Get Started</StyledCTAButton>
+          <StyledCTAButton href={GENERAL_LINKS.LAUNCH_APP}>Get Started</StyledCTAButton>
           <HeroStatsContainer>
             <StatContainer>
               <StatNumber>1400+</StatNumber>

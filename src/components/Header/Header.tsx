@@ -3,6 +3,7 @@ import {device} from '../../theme/theme'
 import {ExternalIcon, Icon} from '../Icon/Icon'
 import {Menu} from 'react-feather'
 import {StyledCTAButton} from '../Button/Button'
+import {GENERAL_LINKS} from '../../constants/constants'
 import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
 
 export const HeaderContainer = styled.div`
@@ -91,7 +92,7 @@ const Header = () => {
 
       <ButtonsContainer>
         <TokenFaucetButton>Get OVL</TokenFaucetButton>
-        <StyledCTAButton href="https://app.overlay.market">Launch App</StyledCTAButton>
+        <StyledCTAButton href={GENERAL_LINKS.LAUNCH_APP}>Launch App</StyledCTAButton>
       </ButtonsContainer>
 
       <MobileOnly>
