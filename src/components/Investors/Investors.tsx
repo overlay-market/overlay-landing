@@ -43,6 +43,33 @@ const Investor = styled.div<{
   height: ${({height}) => (height ? height + 'px' : '100px')};
 `
 
+const INVESTORS_LIST = [
+  {
+    name: 'Polychain Capital',
+    logoSrc: `${Investor_PolychainCapital_Logo}`,
+    width: 200,
+  },
+  {
+    name: 'Parafi Capital',
+    logoSrc: `${Investor_ParafiCapital_Logo}`,
+    width: 200,
+  },
+  {
+    name: '1kx',
+    logoSrc: `${Investor_1kx_Logo}`,
+    height: 125,
+  },
+  {
+    name: 'The Lao',
+    logoSrc: `${Investor_TheLao_Logo}`,
+  },
+  {
+    name: 'MetaCartel',
+    logoSrc: `${Investor_ParafiCapital_Logo}`,
+    width: 100,
+  },
+]
+
 const Investors = () => {
   return (
     <Wrapper>
