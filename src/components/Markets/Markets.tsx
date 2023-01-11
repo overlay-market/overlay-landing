@@ -28,6 +28,7 @@ const Title = styled.div`
   font-size: 36px;
   max-width: 300px;
   margin-bottom: 20px;
+  line-height: 42px;
 
   @media ${device.sm} {
     max-width: 450px;
@@ -40,6 +41,7 @@ const Description = styled.div`
   color: #7b7b7b;
   max-width: 650px;
   margin-bottom: 20px;
+  line-height: 25px;
 `
 
 const Markets = () => {

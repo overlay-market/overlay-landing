@@ -47,6 +47,7 @@ const Title = styled.div`
   font-size: 36px;
   max-width: 350px;
   margin-bottom: 16px;
+  line-height: 42px;
 `
 
 const Description = styled.div`
@@ -55,8 +56,8 @@ const Description = styled.div`
   color: #7b7b7b;
   padding: 8px 0;
   max-width: 350px;
-  line-height: 25px;
   margin-bottom: 16px;
+  line-height: 25px;
 `
 
 const Contributing = () => {

@@ -87,6 +87,7 @@ const CopyrightText = styled.div`
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   text-align: center;
+  line-height: 20px;
 `
 
 const Link = styled.a`

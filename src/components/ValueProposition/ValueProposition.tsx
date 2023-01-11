@@ -43,6 +43,7 @@ const Title = styled.div`
   font-weight: 600;
   color: black;
   max-width: 300px;
+  line-height: 42px;
 
   @media ${device.sm} {
     font-size: 36px;
@@ -53,10 +54,10 @@ const Title = styled.div`
 const Description = styled.div`
   font-family: 'Inter', sans-serif;
   font-size: 18px;
-  line-height: 150%;
   color: #7b7b7b;
   max-width: 400px;
   margin: 32px 0;
+  line-height: 150%;
 `
 
 const ImageContainer = styled.img`

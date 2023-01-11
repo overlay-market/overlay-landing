@@ -24,6 +24,7 @@ const Title = styled.div`
   font-size: 32px;
   font-weight: 600;
   max-width: 300px;
+  line-height: 42px;
 
   @media ${device.sm} {
     font-size: 36px;
@@ -37,7 +38,7 @@ const Description = styled.div`
   color: #808182;
   margin: 24px 0;
   max-width: 430px;
-  line-height: 150%;
+  line-height: 25px;
 `
 
 const AuditorsContainer = styled.div`

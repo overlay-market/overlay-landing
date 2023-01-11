@@ -8,11 +8,15 @@ import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
 
 export const HeaderContainer = styled.div`
   display: flex;
-  margin: 32px auto 64px;
+  font-family: 'Inter', sans-serif;
   max-width: 1200px;
   justify-content: space-between;
-  width: 100%;
-  font-family: 'Inter', sans-serif;
+  margin: 16px;
+
+  @media ${device.sm} {
+    width: 100%;
+    margin: 32px auto 64px;
+  }
 `
 
 export const LogoContainer = styled.div`

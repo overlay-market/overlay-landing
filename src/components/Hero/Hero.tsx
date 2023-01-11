@@ -69,6 +69,7 @@ const Description = styled.div`
   color: #7b7b7b;
   margin-bottom: 36px;
   max-width: 330px;
+  line-height: 25px;
 
   @media ${device.sm} {
     font-size: 20px;
@@ -111,7 +112,7 @@ const Hero = () => {
             Liquidity for the <i>ILL</i>iquid
           </Title>
           <Description>Explore Overlay - Endless data markets, built on Ethereum</Description>
-          <Box style={{marginBottom: '25px'}}>
+          <Box style={{marginBottom: '40px'}}>
             <RightArrowButton href={GENERAL_LINKS.LAUNCH_APP}>Get Started</RightArrowButton>
           </Box>
           <HeroStatsContainer>
