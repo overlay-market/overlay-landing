@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {StyledCTAButton} from '../Button/Button'
 import {device} from '../../theme/theme'
 import OverlayLogoHeartCatImg from '../../assets/images/overlay-logo-heart-cat.png'
 
@@ -85,7 +86,7 @@ const Contributing = () => {
             Overlay is run by the community, and consistent contributors earn Planck Cat NFTs,
             giving them special privileges and rewards.
           </Description>
-          <StartContributingButton> Start Contributing</StartContributingButton>
+          <StyledCTAButton> Start Contributing</StyledCTAButton>
         </ContributingTextContainer>
       </MainContainer>
     </Wrapper>

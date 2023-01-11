@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {device} from '../../theme/theme'
 import ValuePropImage from '../../assets/images/value-proposition-image.png'
+import {StyledCTAButton} from '../Button/Button'
 
 const MainContainer = styled.div`
   display: flex;
@@ -83,7 +84,7 @@ const ValueProposition = () => {
             Overlay is built from the ground up with OVL, a cryptocurrency that longs/shorts DeFi
             data streams and much, much more.
           </Description>
-          <LightArrowButton>Learn More</LightArrowButton>
+          <StyledCTAButton>Learn More</StyledCTAButton>
         </PrimaryViewContainer>
         <SecondaryViewContainer>
           <ImageContainer src={ValuePropImage} />

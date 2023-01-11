@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import {device} from '../../theme/theme'
+import {StyledCTAButton} from '../Button/Button'
 
 const MainContainer = styled.div`
   display: flex;
@@ -65,7 +66,7 @@ const Markets = () => {
           </Description>
         </div>
         <div>
-          <ExploreButton>Explore</ExploreButton>
+          <StyledCTAButton>Explore</StyledCTAButton>
         </div>
       </HeaderContainer>
     </MainContainer>

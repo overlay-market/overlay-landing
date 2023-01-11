@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import {device} from '../../theme/theme'
+import {StyledCTAButton} from '../Button/Button'
 import HeroChart from '../../assets/images/hero-chart.png'
 import HeroBackground from '../../assets/images/hero-background.png'
 
@@ -72,18 +73,8 @@ const Description = styled.div`
   }
 `
 
-const DarkArrowButton = styled.button`
+const DarkArrowButton = styled(StyledCTAButton)`
   font-family: 'Inter', sans-serif;
-  background: black;
-  color: #f9f9fb;
-  border-radius: 10px;
-  font-size: 20px;
-  box-shadow: none;
-  outline: none;
-  border: none;
-  padding: 16px 24px;
-  width: fit-content;
-  cursor: pointer;
   margin-bottom: 48px;
 `
 
@@ -123,7 +114,7 @@ const Hero = () => {
             Liquidity for the <i>ILL</i>iquid
           </Title>
           <Description>Explore Overlay - Endless data markets, built on Ethereum</Description>
-          <DarkArrowButton>Get Started</DarkArrowButton>
+          <StyledCTAButton>Get Started</StyledCTAButton>
           <HeroStatsContainer>
             <StatContainer>
               <StatNumber>1400+</StatNumber>
