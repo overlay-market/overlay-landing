@@ -70,6 +70,7 @@ const AuditorLogo = styled.div<{src: string}>`
   background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
+  margin-bottom: 10px;
 `
 
 const AuditorLink = styled.a`
