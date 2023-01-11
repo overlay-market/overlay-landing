@@ -43,7 +43,14 @@ const Investor = styled.div<{
   height: ${({height}) => (height ? height + 'px' : '100px')};
 `
 
-const INVESTORS_LIST = [
+interface InvestorAsset {
+  name: string
+  logoSrc: string
+  width?: number
+  height?: number
+}
+
+const INVESTORS_LIST: Array<InvestorAsset> = [
   {
     name: 'Polychain Capital',
     logoSrc: `${Investor_PolychainCapital_Logo}`,
