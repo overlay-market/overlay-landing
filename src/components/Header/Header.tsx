@@ -33,7 +33,7 @@ const LinksContainer = styled.div`
   }
 `
 
-const Link = styled.a`
+const StyledLink = styled.a`
   display: flex;
   color: black;
   text-decoration: none;
@@ -79,8 +79,12 @@ const Header = () => {
       </LogoContainer>
 
       <LinksContainer>
-        <Link>Governance</Link>
-        <Link>Documentation</Link>
+        <StyledLink href={GENERAL_LINKS.GOVERNANCE} target="_blank">
+          Governance
+        </StyledLink>
+        <StyledLink href={GENERAL_LINKS.DOCUMENTATION} target="_blank">
+          Documentation
+        </StyledLink>
       </LinksContainer>
 
       <ButtonsContainer>
