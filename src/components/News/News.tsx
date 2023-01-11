@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 import {device} from '../../theme/theme'
-import CoindeskLogo from '../../assets/images/coindesk-brand-logo.png'
-import BloombergLogo from '../../assets/images/bloomberg-brand-logo.png'
 import MessariLogo from '../../assets/images/messari-brand-logo.png'
 import NewsBackground from '../../assets/images/news-background.png'
 
@@ -68,8 +66,6 @@ const News = () => {
     <MainContainer>
       <Title>Overlay in the news</Title>
       <NewsPlatformContainer>
-        {/* <NewsPlatformLogo src={CoindeskLogo} alt="Coindesk Logo" /> */}
-        {/* <NewsPlatformLogo src={BloombergLogo} alt="Bloomberg Logo" /> */}
         <NewsPlatformLogo src={MessariLogo} alt="Messari Logo" />
       </NewsPlatformContainer>
     </MainContainer>

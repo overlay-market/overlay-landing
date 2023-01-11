@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import {device} from '../../theme/theme'
 import {ExternalIcon, Icon} from '../Icon/Icon'
-import {Menu, ArrowRight} from 'react-feather'
+import {Menu} from 'react-feather'
 import {StyledCTAButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
 import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
@@ -67,17 +67,6 @@ const TokenFaucetButton = styled.button`
   cursor: pointer;
 `
 
-const AppButton = styled.button`
-  font-family: 'Inter', sans-serif;
-  background: #71ceff;
-  border-radius: 5px;
-  border: none;
-  box-shadow: none;
-  padding: 8px 16px;
-  font-weight: bold;
-  cursor: pointer;
-`
-
 const Header = () => {
   return (
     <HeaderContainer>
@@ -92,12 +81,7 @@ const Header = () => {
 
       <ButtonsContainer>
         <TokenFaucetButton>Get OVL</TokenFaucetButton>
-        <StyledCTAButton href={GENERAL_LINKS.LAUNCH_APP}>
-          Launch App
-          <ExternalIcon margin="4px">
-            <ArrowRight size={16} />
-          </ExternalIcon>
-        </StyledCTAButton>
+        <StyledCTAButton href={GENERAL_LINKS.LAUNCH_APP}>Launch App</StyledCTAButton>
       </ButtonsContainer>
 
       <MobileOnly>

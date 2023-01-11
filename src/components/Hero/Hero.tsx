@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 import {Box} from 'rebass'
-import {ExternalIcon} from '../Icon/Icon'
-import {ArrowRight} from 'react-feather'
 import {device} from '../../theme/theme'
 import {RightArrowButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'

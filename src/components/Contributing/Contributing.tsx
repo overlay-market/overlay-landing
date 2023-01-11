@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {StyledCTAButton} from '../Button/Button'
+import {RightArrowButton} from '../Button/Button'
 import {device} from '../../theme/theme'
 import OverlayLogoHeartCatImg from '../../assets/images/overlay-logo-heart-cat.png'
 
@@ -59,26 +59,12 @@ const Description = styled.div`
   margin-bottom: 16px;
 `
 
-const StartContributingButton = styled.button`
-  font-family: 'Be Vietnam Pro', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  color: white;
-  width: fit-content;
-  padding: 16px;
-  background: #71ceff;
-  border-radius: 10px;
-  border: none;
-  box-shadow: none;
-  outline: none;
-`
-
 const Contributing = () => {
   return (
     <Wrapper>
       <MainContainer>
         <ContributingImageContainer>
-          <img src={OverlayLogoHeartCatImg} />
+          <img src={OverlayLogoHeartCatImg} alt="Contributing" />
         </ContributingImageContainer>
         <ContributingTextContainer>
           <Title>Overlay is run by cats, for real</Title>
@@ -86,7 +72,7 @@ const Contributing = () => {
             Overlay is run by the community, and consistent contributors earn Planck Cat NFTs,
             giving them special privileges and rewards.
           </Description>
-          <StyledCTAButton> Start Contributing</StyledCTAButton>
+          <RightArrowButton> Start Contributing</RightArrowButton>
         </ContributingTextContainer>
       </MainContainer>
     </Wrapper>

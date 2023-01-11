@@ -10,6 +10,6 @@ export const GENERAL_LINKS = {
   TWITTER: 'https://twitter.com/OverlayProtocol',
   MIRROR: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e',
   PRIVACY_POLICY: '',
-  TERMS_OF_SERVICE: '/tos',
+  TERMS_OF_SERVICE: 'https://overlay.market/#/tos',
   LAUNCH_APP: 'https://app.overlay.market',
 }

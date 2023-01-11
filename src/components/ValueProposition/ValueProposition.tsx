@@ -59,19 +59,6 @@ const Description = styled.div`
   margin: 32px 0;
 `
 
-const LightArrowButton = styled.button`
-  font-family: 'Inter', sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 16px;
-  border: 1px solid #71ceff;
-  border-radius: 10px;
-  background: white;
-  box-shadow: none;
-  outline: none;
-  cursor: pointer;
-`
-
 const ImageContainer = styled.img`
   max-width: 600px;
   margin: auto;

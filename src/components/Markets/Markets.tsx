@@ -42,19 +42,6 @@ const Description = styled.div`
   margin-bottom: 20px;
 `
 
-const ExploreButton = styled.button`
-  font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  background: #71CEFF;
-  color: white;
-  border-radius: 10px;
-  outline: none;
-  box-shadow; none;
-  border: none;
-  padding: 12px 24px;
-`
-
 const Markets = () => {
   return (
     <MainContainer>

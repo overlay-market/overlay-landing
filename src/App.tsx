@@ -1,5 +1,4 @@
 import {Route, Switch} from 'react-router-dom'
-import styled from 'styled-components'
 import {Market, TermsOfService} from './pages'
 import {Nav} from './components'
 import Hero from './components/Hero/Hero'
