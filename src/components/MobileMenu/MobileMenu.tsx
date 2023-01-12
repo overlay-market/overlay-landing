@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
 import {bool} from 'prop-types'
+import {GENERAL_LINKS} from '../../constants/constants'
 import useWindowDimensions from '../../hooks/useWindowDimensions'
 
 const StyledMenu = styled.nav<{open: boolean; height: number; width: number}>`
@@ -74,12 +75,18 @@ const MobileMenu = ({open, ...props}: {open: boolean; props?: any}) => {
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} height={height} width={width} {...props}>
       <Content>
-        <StyledInternalLink tabIndex={tabIndex} to={'/home'}>
-          HOME
-        </StyledInternalLink>
-        <StyledInternalLink tabIndex={tabIndex} to={'/mint'}>
-          MINT
-        </StyledInternalLink>
+        <StyledExternalLink tabIndex={tabIndex} href={GENERAL_LINKS.GOVERNANCE}>
+          Governance
+        </StyledExternalLink>
+        <StyledExternalLink tabIndex={tabIndex} href={GENERAL_LINKS.DOCUMENTATION}>
+          Documentation
+        </StyledExternalLink>
+        <StyledExternalLink tabIndex={tabIndex} href={''}>
+          Get OVL
+        </StyledExternalLink>
+        <StyledExternalLink tabIndex={tabIndex} href={GENERAL_LINKS.LAUNCH_APP}>
+          Launch App
+        </StyledExternalLink>
       </Content>
     </StyledMenu>
   )
