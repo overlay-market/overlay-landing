@@ -53,10 +53,11 @@ const StyledExternalLink = styled.a.attrs(props => ({
   rel: props.rel || 'noopener noreferrer',
   href: props.href,
 }))`
-  font-size: 14px;
-  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  text-align: right;
   text-decoration: none;
-  color: white;
+  color: black;
   font-weight: 700;
   margin: 16px 0;
 `
