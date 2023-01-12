@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import {device} from '../../theme/theme'
 import {ExternalIcon, Icon} from '../Icon/Icon'
-import {Menu} from 'react-feather'
+import {Menu, X} from 'react-feather'
 import {StyledCTAButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
 import {NavLink, useLocation} from 'react-router-dom'
@@ -115,12 +115,8 @@ const Header = () => {
         <StyledCTAButton href={GENERAL_LINKS.LAUNCH_APP}>Launch App</StyledCTAButton>
       </ButtonsContainer>
 
-      <MobileOnly>
-        <ExternalIcon margin="auto" width={40} center={true}>
-          <Menu />
-        </ExternalIcon>
-        <MobileMenu open={open} />
-      </MobileOnly>
+      <MobileMenuButton open={open} setOpen={setOpen} />
+      <MobileMenu open={open} />
     </HeaderContainer>
   )
 }
@@ -129,7 +125,16 @@ export default Header
 
 interface MobileMenuButtonProps {
   open: boolean
-  setOpen: () => void
+  setOpen: Function
 }
 
-const MobileMenuButton = ({open, setOpen}: MobileMenuButtonProps) => {}
+const MobileMenuButton = ({open, setOpen}: MobileMenuButtonProps) => {
+  return (
+    <MobileOnly>
+      <ExternalIcon margin="auto" width={40} center={true}>
+        {open && <X onClick={() => setOpen(!open)} />}
+        {!open && <Menu onClick={() => setOpen(!open)} />}
+      </ExternalIcon>
+    </MobileOnly>
+  )
+}
