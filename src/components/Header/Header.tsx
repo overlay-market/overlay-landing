@@ -5,6 +5,9 @@ import {ExternalIcon, Icon} from '../Icon/Icon'
 import {Menu} from 'react-feather'
 import {StyledCTAButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
+import {NavLink, useLocation} from 'react-router-dom'
+import {enableLock, disableLock} from '../../utils/scrollLock'
+import MobileMenu from '../MobileMenu/MobileMenu'
 import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
 
 export const HeaderContainer = styled.div`
@@ -74,6 +77,7 @@ const TokenFaucetButton = styled.button`
 
 const Header = () => {
   const [open, setOpen] = useState(false)
+  const location = useLocation().pathname
 
   // close menu when at new route
   useEffect(() => {
@@ -115,9 +119,17 @@ const Header = () => {
         <ExternalIcon margin="auto" width={40} center={true}>
           <Menu />
         </ExternalIcon>
+        <MobileMenu open={open} />
       </MobileOnly>
     </HeaderContainer>
   )
 }
 
 export default Header
+
+interface MobileMenuButtonProps {
+  open: boolean
+  setOpen: () => void
+}
+
+const MobileMenuButton = ({open, setOpen}: MobileMenuButtonProps) => {}
