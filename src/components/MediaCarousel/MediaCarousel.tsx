@@ -35,14 +35,37 @@ const Title = styled.div`
   }
 `
 
+const Subheader = styled.div`
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+
+  @media ${device.sm} {
+    font-size: 40px;
+    width: 500px;
+  }
+`
+
 const CarouselContainer = styled.div`
   display: flex;
   padding-top: 45px;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media ${device.sm} {
+    flex-direction: row;
+  }
 `
 
 const TwitterEmbedContainer = styled.div`
   width: 350px;
   height: 700px;
+`
+
+const MirrorContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `
 
 const MirrorTitle = styled.div`
@@ -76,6 +99,7 @@ const MirrorPost = ({
         display: 'flex',
         flexDirection: 'column',
         borderTop: '1px solid #CCCCCC',
+        maxWidth: '500px',
       }}
     >
       <MirrorTitle>{title}</MirrorTitle>
@@ -101,6 +125,16 @@ const MediaCarousel = () => {
               options={{height: 700}}
             />
           </TwitterEmbedContainer>
+
+          <MirrorContainer>
+            <Subheader>Mirror</Subheader>
+            <MirrorPost
+              title="lorem ipsum"
+              author="lorem ipsum"
+              date="lorem ipsum"
+              content="lorem ipsum"
+            />
+          </MirrorContainer>
         </CarouselContainer>
       </MainContainer>
     </Wrapper>
