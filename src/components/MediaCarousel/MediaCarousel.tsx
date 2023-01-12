@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {Box} from 'rebass'
 import {device} from '../../theme/theme'
 import {TwitterTimelineEmbed} from 'react-twitter-embed'
 import HeroBackground from '../../assets/images/hero-background.png'
@@ -43,6 +44,49 @@ const TwitterEmbedContainer = styled.div`
   width: 350px;
   height: 700px;
 `
+
+const MirrorTitle = styled.div`
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+`
+
+const Author = styled.div`
+  display: flex;
+`
+
+const Date = styled.div``
+
+const Content = styled.div``
+
+const MirrorPost = ({
+  title,
+  author,
+  date,
+  content,
+}: {
+  title: string
+  author: string
+  date: string
+  content: string
+}) => {
+  return (
+    <Box
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        borderTop: '1px solid #CCCCCC',
+      }}
+    >
+      <MirrorTitle>{title}</MirrorTitle>
+      <Box style={{display: 'flex'}}>
+        <Author>{author}</Author>
+        <Date>{date}</Date>
+        <Content>{content}</Content>
+      </Box>
+    </Box>
+  )
+}
 
 const MediaCarousel = () => {
   return (
