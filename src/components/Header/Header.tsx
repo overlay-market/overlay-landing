@@ -1,3 +1,4 @@
+import {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import {device} from '../../theme/theme'
 import {ExternalIcon, Icon} from '../Icon/Icon'
@@ -72,6 +73,24 @@ const TokenFaucetButton = styled.button`
 `
 
 const Header = () => {
+  const [open, setOpen] = useState(false)
+
+  // close menu when at new route
+  useEffect(() => {
+    if (open) {
+      setOpen(open => false)
+    }
+  }, [location])
+
+  // disable scroll when mobile menu open
+  useEffect(() => {
+    if (open) {
+      enableLock()
+    } else {
+      disableLock()
+    }
+  }, [open])
+
   return (
     <HeaderContainer>
       <LogoContainer>
