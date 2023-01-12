@@ -5,7 +5,8 @@ import {DynamicCarousel} from '../DynamicCarousel/DynamicCarousel'
 import OverlayLogoHeartCatImg from '../../assets/images/overlay-logo-heart-cat.png'
 
 const Wrapper = styled.div`
-  padding: 45px 16px;
+  overflow-x: hidden !important;
+  padding: 45px 0px;
 `
 
 const MainContainer = styled.div`

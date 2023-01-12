@@ -3,6 +3,7 @@ import PCD_Carousel from '../../assets/images/PCD-carousel.png'
 
 const Container = styled.div`
   display: block;
+  position: relative;
   overflow-x: hidden !important;
   height: 100px;
 `
