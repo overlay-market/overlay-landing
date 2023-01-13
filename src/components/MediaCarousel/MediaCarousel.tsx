@@ -72,10 +72,12 @@ const MirrorTitle = styled.div`
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 24px;
+  margin-bottom: 10px;
 `
 
 const AuthorContainer = styled.div`
   display: flex;
+  margin-bottom: 8px;
 `
 
 const Author = styled.div``
@@ -115,6 +117,7 @@ const MirrorPost = ({title, author, date, content}: MirrorPostAsset) => {
         flexDirection: 'column',
         borderTop: '1px solid #CCCCCC',
         maxWidth: '500px',
+        padding: '16px 0',
       }}
     >
       <MirrorTitle>{title}</MirrorTitle>
