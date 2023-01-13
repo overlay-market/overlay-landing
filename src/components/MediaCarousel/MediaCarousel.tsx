@@ -78,11 +78,20 @@ const MirrorTitle = styled.div`
 const AuthorContainer = styled.div`
   display: flex;
   margin-bottom: 8px;
+  align-items: center;
 `
 
-const Author = styled.div``
+const Author = styled.div`
+  font-weight: 600;
+  margin-right: 10px;
+`
 
-const Date = styled.div``
+const Date = styled.div`
+  background: #f0f0f0;
+  border-radius: 8px;
+  color: #aaaaaa;
+  padding: 4px;
+`
 
 const Content = styled.div``
 
