@@ -105,17 +105,7 @@ const overlayMirrorPosts: Array<MirrorPostAsset> = [
   },
 ]
 
-const MirrorPost = ({
-  title,
-  author,
-  date,
-  content,
-}: {
-  title: string
-  author: string
-  date: string
-  content: string
-}) => {
+const MirrorPost = ({title, author, date, content}: MirrorPostAsset) => {
   return (
     <Box
       style={{
@@ -151,12 +141,14 @@ const MediaCarousel = () => {
 
           <MirrorContainer>
             <Subheader>Mirror</Subheader>
-            <MirrorPost
-              title="lorem ipsum"
-              author="lorem ipsum"
-              date="lorem ipsum"
-              content="lorem ipsum"
-            />
+            {overlayMirrorPosts.map(post => (
+              <MirrorPost
+                title={post.title}
+                author={post.author}
+                date={post.date}
+                content={post.content}
+              />
+            ))}
           </MirrorContainer>
         </CarouselContainer>
       </MainContainer>
