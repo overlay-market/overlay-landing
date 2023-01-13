@@ -74,9 +74,11 @@ const MirrorTitle = styled.div`
   font-size: 24px;
 `
 
-const Author = styled.div`
+const AuthorContainer = styled.div`
   display: flex;
 `
+
+const Author = styled.div``
 
 const Date = styled.div``
 
@@ -116,9 +118,11 @@ const MirrorPost = ({title, author, date, content}: MirrorPostAsset) => {
       }}
     >
       <MirrorTitle>{title}</MirrorTitle>
-      <Box style={{display: 'flex'}}>
-        <Author>{author}</Author>
-        <Date>{date}</Date>
+      <Box style={{display: 'flex', flexDirection: 'column'}}>
+        <AuthorContainer>
+          <Author>{author}</Author>
+          <Date>{date}</Date>
+        </AuthorContainer>
         <Content>{content}</Content>
       </Box>
     </Box>
