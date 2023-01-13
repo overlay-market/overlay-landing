@@ -82,6 +82,29 @@ const Date = styled.div``
 
 const Content = styled.div``
 
+interface MirrorPostAsset {
+  title: string
+  author: string
+  date: string
+  content: string
+}
+
+const overlayMirrorPosts: Array<MirrorPostAsset> = [
+  {
+    title: 'Litter Box 1, OVL and rewards program',
+    author: 'mertoi.eth',
+    date: 'October 4th, 2022',
+    content: 'Overlay is launched on Ethereum Mainnet',
+  },
+  {
+    title: 'Using OpenZeppelin Defender To Monitor A Contract',
+    author: 'c-note.eth',
+    date: 'September 29th, 2022',
+    content:
+      'This doc acts as a guide/workflow on how to set up a relay, autotask, and sentinel to watch and act on certain responses from a smart contract.',
+  },
+]
+
 const MirrorPost = ({
   title,
   author,
