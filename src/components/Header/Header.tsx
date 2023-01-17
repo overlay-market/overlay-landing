@@ -29,7 +29,6 @@ export const HeaderContainer = styled.div`
 
 export const LogoContainer = styled.div`
   display: flex;
-  cursor: pointer;
 `
 
 const LinksContainer = styled.div`
@@ -70,6 +69,7 @@ const MobileOnly = styled.div`
 
 const TokenFaucetButton = styled.button`
   font-family: 'Inter', sans-serif;
+  font-size: 16px;
   background: transparent;
   border: none;
   box-shadow: none;
@@ -102,7 +102,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <LogoContainer>
-        <Icon src={OverlayLogo} alt="Overlay Logo" width={140} margin="auto" />
+        <Icon src={OverlayLogo} alt="Overlay Logo" width={200} margin="auto" />
       </LogoContainer>
 
       <LinksContainer>
