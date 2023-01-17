@@ -72,13 +72,15 @@ const MirrorTitle = styled.a`
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 `
 
 const AuthorContainer = styled.div`
   display: flex;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
   align-items: center;
 `
 
