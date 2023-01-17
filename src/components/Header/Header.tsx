@@ -12,6 +12,10 @@ import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
 
 export const HeaderContainer = styled.div`
   display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   font-family: 'Inter', sans-serif;
   max-width: 1200px;
   justify-content: space-between;
