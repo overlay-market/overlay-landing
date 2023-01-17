@@ -68,11 +68,12 @@ const MirrorContainer = styled.div`
   flex-direction: column;
 `
 
-const MirrorTitle = styled.div`
+const MirrorTitle = styled.a`
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 24px;
   margin-bottom: 10px;
+  cursor: pointer;
 `
 
 const AuthorContainer = styled.div`
@@ -85,8 +86,9 @@ const AuthorIcon = styled.div<{background?: string}>`
   background: ${({background}) => background ?? background};
   background-repeat: no-repeat;
   border-radius: 50px;
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
+  margin-right: 4px;
 `
 
 const Author = styled.div`
@@ -104,6 +106,7 @@ const Date = styled.div`
 const Content = styled.div``
 
 interface MirrorPostAsset {
+  link: string
   title: string
   author: string
   date: string
@@ -113,6 +116,7 @@ interface MirrorPostAsset {
 
 const overlayMirrorPosts: Array<MirrorPostAsset> = [
   {
+    link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e/nauBWxFQTSAVMxfXCmo8WtTLRarZKd3mA1dc_NBFQvA',
     title: 'Litter Box 1, OVL and rewards program',
     author: 'mertoi.eth',
     date: 'October 4th, 2022',
@@ -121,6 +125,7 @@ const overlayMirrorPosts: Array<MirrorPostAsset> = [
       'radial-gradient(79.05% 79.05% at 21.62% 20.95%, rgb(0, 122, 255) 0%, rgb(0, 224, 255) 100%)',
   },
   {
+    link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e/n1suXTe7Xcj-z1w5njRsWM_0Y6RHy-nGr1bB6SUYs00',
     title: 'Using OpenZeppelin Defender To Monitor A Contract',
     author: 'c-note.eth',
     date: 'September 29th, 2022',
@@ -130,7 +135,7 @@ const overlayMirrorPosts: Array<MirrorPostAsset> = [
   },
 ]
 
-const MirrorPost = ({title, author, date, content, background}: MirrorPostAsset) => {
+const MirrorPost = ({link, title, author, date, content, background}: MirrorPostAsset) => {
   return (
     <Box
       style={{
@@ -141,7 +146,9 @@ const MirrorPost = ({title, author, date, content, background}: MirrorPostAsset)
         padding: '16px 0',
       }}
     >
-      <MirrorTitle>{title}</MirrorTitle>
+      <MirrorTitle href={link} target="_blank" rel="noopener noreferrer">
+        {title}
+      </MirrorTitle>
       <Box style={{display: 'flex', flexDirection: 'column'}}>
         <AuthorContainer>
           <AuthorIcon background={background} />
@@ -172,6 +179,7 @@ const MediaCarousel = () => {
             <Subheader>Mirror</Subheader>
             {overlayMirrorPosts.map(post => (
               <MirrorPost
+                link={post.link}
                 title={post.title}
                 author={post.author}
                 date={post.date}
