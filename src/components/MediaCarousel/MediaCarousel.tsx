@@ -100,6 +100,7 @@ interface MirrorPostAsset {
   author: string
   date: string
   content: string
+  background?: string
 }
 
 const overlayMirrorPosts: Array<MirrorPostAsset> = [
@@ -108,6 +109,8 @@ const overlayMirrorPosts: Array<MirrorPostAsset> = [
     author: 'mertoi.eth',
     date: 'October 4th, 2022',
     content: 'Overlay is launched on Ethereum Mainnet',
+    background:
+      'radial-gradient(79.05% 79.05% at 21.62% 20.95%, rgb(0, 122, 255) 0%, rgb(0, 224, 255) 100%)',
   },
   {
     title: 'Using OpenZeppelin Defender To Monitor A Contract',
@@ -115,6 +118,7 @@ const overlayMirrorPosts: Array<MirrorPostAsset> = [
     date: 'September 29th, 2022',
     content:
       'This doc acts as a guide/workflow on how to set up a relay, autotask, and sentinel to watch and act on certain responses from a smart contract.',
+    background: 'radial-gradient(79.05% 79.05% at 21.62% 20.95%, #FF3B30 0%, #FFA030 100%);',
   },
 ]
 
