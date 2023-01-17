@@ -81,6 +81,14 @@ const AuthorContainer = styled.div`
   align-items: center;
 `
 
+const AuthorIcon = styled.div<{background?: string}>`
+  background: ${({background}) => background ?? background};
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+`
+
 const Author = styled.div`
   font-weight: 600;
   margin-right: 10px;
@@ -122,7 +130,7 @@ const overlayMirrorPosts: Array<MirrorPostAsset> = [
   },
 ]
 
-const MirrorPost = ({title, author, date, content}: MirrorPostAsset) => {
+const MirrorPost = ({title, author, date, content, background}: MirrorPostAsset) => {
   return (
     <Box
       style={{
@@ -136,6 +144,7 @@ const MirrorPost = ({title, author, date, content}: MirrorPostAsset) => {
       <MirrorTitle>{title}</MirrorTitle>
       <Box style={{display: 'flex', flexDirection: 'column'}}>
         <AuthorContainer>
+          <AuthorIcon background={background} />
           <Author>{author}</Author>
           <Date>{date}</Date>
         </AuthorContainer>
@@ -167,6 +176,7 @@ const MediaCarousel = () => {
                 author={post.author}
                 date={post.date}
                 content={post.content}
+                background={post.background}
               />
             ))}
           </MirrorContainer>
