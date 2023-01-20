@@ -6,7 +6,7 @@ import OverlayLogoHeartCatImg from '../../assets/images/overlay-logo-heart-cat.p
 
 const Wrapper = styled.div`
   overflow-x: hidden !important;
-  padding: 45px 0px;
+  padding: 80px 0px;
 `
 
 const MainContainer = styled.div`
