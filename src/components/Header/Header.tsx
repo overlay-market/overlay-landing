@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import {device} from '../../theme/theme'
 import {ExternalIcon, Icon} from '../Icon/Icon'
 import {Menu, X} from 'react-feather'
-import {StyledCTAButton} from '../Button/Button'
+import {BlueCTAButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
-import {NavLink, useLocation} from 'react-router-dom'
+import {useLocation} from 'react-router-dom'
 import {enableLock, disableLock} from '../../utils/scrollLock'
 import MobileMenu from '../MobileMenu/MobileMenu'
 import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
@@ -116,7 +116,7 @@ const Header = () => {
 
       <ButtonsContainer>
         <TokenFaucetButton>Get OVL</TokenFaucetButton>
-        <StyledCTAButton href={GENERAL_LINKS.LAUNCH_APP}>Launch App</StyledCTAButton>
+        <BlueCTAButton href={GENERAL_LINKS.LAUNCH_APP}>Launch App</BlueCTAButton>
       </ButtonsContainer>
 
       <MobileMenuButton open={open} setOpen={setOpen} />
