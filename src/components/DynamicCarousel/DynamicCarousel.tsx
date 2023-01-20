@@ -5,13 +5,13 @@ const Container = styled.div`
   display: block;
   position: relative;
   overflow-x: hidden !important;
-  height: 100px;
+  height: 300px;
 `
 
 const Carousel = styled.img`
   position: absolute;
   animation: moveSlideshow 100s linear infinite;
-  height: 100px;
+  height: 300px;
 
   @keyframes moveSlideshow {
     100% {
