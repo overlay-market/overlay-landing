@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 import {Box} from 'rebass'
-import {device} from '../../theme/theme'
 import {TwitterTimelineEmbed} from 'react-twitter-embed'
+import {device} from '../../theme/theme'
+import {Icon} from '../Icon/Icon'
 import HeroBackground from '../../assets/images/hero-background.png'
+import Star from '../../assets/images/star.png'
 
 const Wrapper = styled.div`
   background: url(${HeroBackground});
@@ -22,6 +24,7 @@ const MainContainer = styled.div`
 `
 
 const Title = styled.div`
+  display: flex;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 32px;
@@ -31,7 +34,7 @@ const Title = styled.div`
   padding-bottom: 30px;
 
   @media ${device.sm} {
-    font-size: 54px;
+    font-size: 36px;
   }
 `
 
@@ -42,7 +45,7 @@ const Subheader = styled.div`
   margin-bottom: 20px;
 
   @media ${device.sm} {
-    font-size: 40px;
+    font-size: 28px;
     width: 500px;
   }
 `
@@ -167,7 +170,10 @@ const MediaCarousel = () => {
   return (
     <Wrapper>
       <MainContainer>
-        <Title>Latest Updates</Title>
+        <Title>
+          Latest Updates
+          <Icon src={Star} height={45} alt="" margin="0 0 0 30px" />
+        </Title>
         <CarouselContainer>
           <TwitterEmbedContainer>
             <TwitterTimelineEmbed
