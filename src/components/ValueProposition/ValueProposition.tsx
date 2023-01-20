@@ -9,7 +9,7 @@ import ValuePropImage from '../../assets/images/value-proposition-image.png'
 const MainContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 45px 16px;
+  padding: 80px 16px;
 `
 
 const DesktopSplitViewContainer = styled.div`

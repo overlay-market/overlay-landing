@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 import {RightArrowButton} from '../Button/Button'
 import {device} from '../../theme/theme'
+import {DynamicCarousel} from '../DynamicCarousel/DynamicCarousel'
 import OverlayLogoHeartCatImg from '../../assets/images/overlay-logo-heart-cat.png'
 
 const Wrapper = styled.div`
-  padding: 45px 16px;
+  overflow-x: hidden !important;
+  padding: 80px 0px;
 `
 
 const MainContainer = styled.div`
@@ -76,6 +78,7 @@ const Contributing = () => {
           <RightArrowButton> Start Contributing</RightArrowButton>
         </ContributingTextContainer>
       </MainContainer>
+      <DynamicCarousel />
     </Wrapper>
   )
 }

@@ -1,13 +1,21 @@
+import {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import {device} from '../../theme/theme'
 import {ExternalIcon, Icon} from '../Icon/Icon'
-import {Menu} from 'react-feather'
-import {StyledCTAButton} from '../Button/Button'
+import {Menu, X} from 'react-feather'
+import {BlueCTAButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
+import {useLocation} from 'react-router-dom'
+import {enableLock, disableLock} from '../../utils/scrollLock'
+import MobileMenu from '../MobileMenu/MobileMenu'
 import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
 
 export const HeaderContainer = styled.div`
   display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   font-family: 'Inter', sans-serif;
   max-width: 1200px;
   justify-content: space-between;
@@ -21,7 +29,6 @@ export const HeaderContainer = styled.div`
 
 export const LogoContainer = styled.div`
   display: flex;
-  cursor: pointer;
 `
 
 const LinksContainer = styled.div`
@@ -62,6 +69,7 @@ const MobileOnly = styled.div`
 
 const TokenFaucetButton = styled.button`
   font-family: 'Inter', sans-serif;
+  font-size: 16px;
   background: transparent;
   border: none;
   box-shadow: none;
@@ -72,10 +80,29 @@ const TokenFaucetButton = styled.button`
 `
 
 const Header = () => {
+  const [open, setOpen] = useState(false)
+  const location = useLocation().pathname
+
+  // close menu when at new route
+  useEffect(() => {
+    if (open) {
+      setOpen(open => false)
+    }
+  }, [location])
+
+  // disable scroll when mobile menu open
+  useEffect(() => {
+    if (open) {
+      enableLock()
+    } else {
+      disableLock()
+    }
+  }, [open])
+
   return (
     <HeaderContainer>
       <LogoContainer>
-        <Icon src={OverlayLogo} alt="Overlay Logo" width={140} margin="auto" />
+        <Icon src={OverlayLogo} alt="Overlay Logo" width={200} margin="auto" />
       </LogoContainer>
 
       <LinksContainer>
@@ -89,16 +116,29 @@ const Header = () => {
 
       <ButtonsContainer>
         <TokenFaucetButton>Get OVL</TokenFaucetButton>
-        <StyledCTAButton href={GENERAL_LINKS.LAUNCH_APP}>Launch App</StyledCTAButton>
+        <BlueCTAButton href={GENERAL_LINKS.LAUNCH_APP}>Launch App</BlueCTAButton>
       </ButtonsContainer>
 
-      <MobileOnly>
-        <ExternalIcon margin="auto" width={40} center={true}>
-          <Menu />
-        </ExternalIcon>
-      </MobileOnly>
+      <MobileMenuButton open={open} setOpen={setOpen} />
+      <MobileMenu open={open} />
     </HeaderContainer>
   )
 }
 
 export default Header
+
+interface MobileMenuButtonProps {
+  open: boolean
+  setOpen: Function
+}
+
+const MobileMenuButton = ({open, setOpen}: MobileMenuButtonProps) => {
+  return (
+    <MobileOnly>
+      <ExternalIcon margin="auto" width={40} center={true}>
+        {open && <X onClick={() => setOpen(!open)} />}
+        {!open && <Menu onClick={() => setOpen(!open)} />}
+      </ExternalIcon>
+    </MobileOnly>
+  )
+}

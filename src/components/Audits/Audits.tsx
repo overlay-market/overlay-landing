@@ -7,7 +7,7 @@ import LeastAuthorityLogo from '../../assets/images/least-authority-logo.png'
 import ImmunefiLogo from '../../assets/images/immunefi-logo.png'
 
 const Wrapper = styled.div`
-  padding: 45px 0;
+  padding: 80px 0;
 `
 
 const MainContainer = styled.div`
@@ -132,13 +132,13 @@ const auditorsList: Array<AuditorAsset> = [
   {
     name: 'Least Authority',
     logoUrl: `${LeastAuthorityLogo}`,
-    completedAuditHref: `https://github.com/overlay-market/v1-core/blob/main/audits/spearbit/audit.pdf`,
+    completedAuditHref: `https://github.com/overlay-market/v1-core/blob/main/audits/leastauthority/audit.pdf`,
     externalLinkText: 'Least Authority Audit',
   },
   {
     name: 'Immunefi',
     logoUrl: `${ImmunefiLogo}`,
-    completedAuditHref: `https://github.com/overlay-market/v1-core/blob/main/audits/spearbit/audit.pdf`,
+    completedAuditHref: `https://immunefi.com/bounty/overlay/`,
     externalLinkText: 'Immunefi Bounty',
   },
 ]

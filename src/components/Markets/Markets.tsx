@@ -8,7 +8,7 @@ const MainContainer = styled.div`
   flex-direction: column;
   max-width: 1100px;
   margin: auto;
-  padding: 45px 16px;
+  padding: 80px 16px;
 `
 
 const HeaderContainer = styled.div`

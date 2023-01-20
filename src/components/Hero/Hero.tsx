@@ -14,8 +14,7 @@ const HeroContainer = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
-  padding-top: 60px;
-  margin-bottom: 45px;
+  padding: 160px 0 45px;
 
   @media ${device.sm} {
     background-position: center;
@@ -103,6 +102,22 @@ const MainImage = styled.img`
   max-width: 450px;
 `
 
+const HeroStats = () => {
+  return (
+    <HeroStatsContainer>
+      <StatContainer>
+        <StatNumber>1400+</StatNumber>
+        <StatDescription>Users Active</StatDescription>
+      </StatContainer>
+      |
+      <StatContainer>
+        <StatNumber>20+</StatNumber>
+        <StatDescription>Data Streams</StatDescription>
+      </StatContainer>
+    </HeroStatsContainer>
+  )
+}
+
 const Hero = () => {
   return (
     <HeroContainer>
@@ -115,17 +130,6 @@ const Hero = () => {
           <Box style={{marginBottom: '40px'}}>
             <RightArrowButton href={GENERAL_LINKS.LAUNCH_APP}>Get Started</RightArrowButton>
           </Box>
-          <HeroStatsContainer>
-            <StatContainer>
-              <StatNumber>1400+</StatNumber>
-              <StatDescription>Users Active</StatDescription>
-            </StatContainer>
-            |
-            <StatContainer>
-              <StatNumber>20+</StatNumber>
-              <StatDescription>Data Streams</StatDescription>
-            </StatContainer>
-          </HeroStatsContainer>
         </PrimaryViewContainer>
         <SecondaryViewContainer>
           <MainImage src={HeroChart} />
