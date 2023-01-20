@@ -7,7 +7,7 @@ import Investor_TheLao_Logo from '../../assets/images/the-lao-logo.png'
 import Investor_Metacartel_Logo from '../../assets/images/metacartel-logo.png'
 
 const Wrapper = styled.div`
-  padding: 45px 0;
+  padding: 45px 0 80px;
 `
 
 const MainContainer = styled.div`
@@ -20,10 +20,10 @@ const MainContainer = styled.div`
 
 const Text = styled.div`
   font-family: 'Inter', sans-serif;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
   text-align: center;
-  border-top: 1px solid black;
+  border-top: 1px solid #232323;
   padding-top: 48px;
   margin-bottom: 10px;
 `
