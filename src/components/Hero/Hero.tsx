@@ -8,7 +8,7 @@ import HeroBackground from '../../assets/images/hero-background.png'
 
 const HeroContainer = styled.div`
   display: flex;
-  min-height: 480px;
+  min-height: 350px;
   background: url(${HeroBackground});
   background-position: left;
   background-repeat: no-repeat;
@@ -18,6 +18,7 @@ const HeroContainer = styled.div`
 
   @media ${device.sm} {
     background-position: center;
+    min-height: 480px;
   }
 `
 

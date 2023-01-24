@@ -66,7 +66,7 @@ const AuditorContainer = styled.div`
 
 const AuditorLogo = styled.div<{src: string}>`
   width: 150px;
-  height: 100px;
+  height: 80px;
   background: url(${({src}) => src});
   background-position: left;
   background-repeat: no-repeat;
