@@ -41,11 +41,11 @@ const Title = styled.div`
 const Subheader = styled.div`
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 32px;
   margin-bottom: 20px;
 
   @media ${device.sm} {
-    font-size: 28px;
+    font-size: 34px;
     width: 500px;
   }
 `
@@ -64,6 +64,7 @@ const CarouselContainer = styled.div`
 const TwitterEmbedContainer = styled.div`
   width: 350px;
   height: 700px;
+  margin-bottom: 32px;
 `
 
 const MirrorContainer = styled.div`
