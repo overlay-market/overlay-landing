@@ -16,9 +16,11 @@ const MainContainer = styled.div`
   margin: auto;
   justify-content: space-between;
   padding: 0 16px;
+  margin-bottom: 80px;
 
   @media ${device.sm} {
     flex-direction: row;
+    margin-bottom: 40px;
   }
 `
 
