@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import PCD_Carousel from '../../assets/images/PCD-carousel.png'
+import PCD_Carousel from '../../assets/images/PCD-carousel.jpg'
 
 const Container = styled.div`
   display: block;
@@ -11,7 +11,7 @@ const Container = styled.div`
 const Carousel = styled.img`
   position: absolute;
   animation: moveSlideshow 100s linear infinite;
-  height: 300px;
+  height: 150px;
 
   @keyframes moveSlideshow {
     100% {

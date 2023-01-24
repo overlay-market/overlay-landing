@@ -15,6 +15,7 @@ const MainContainer = styled.div`
   max-width: 1100px;
   margin: auto;
   justify-content: space-between;
+  padding: 0 16px;
 
   @media ${device.sm} {
     flex-direction: row;
