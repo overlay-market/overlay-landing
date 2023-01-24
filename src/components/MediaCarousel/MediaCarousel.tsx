@@ -20,7 +20,7 @@ const MainContainer = styled.div`
   max-width: 1100px;
   width: 100%;
   margin: auto;
-  padding: 45px 0 135px;
+  padding-bottom: 135px;
 `
 
 const Title = styled.div`

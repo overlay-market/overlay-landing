@@ -81,7 +81,7 @@ const Contributing = () => {
           <RightArrowButton> Start Contributing</RightArrowButton>
         </ContributingTextContainer>
       </MainContainer>
-      <DynamicCarousel />
+      <DynamicCarousel height={150} />
     </Wrapper>
   )
 }
