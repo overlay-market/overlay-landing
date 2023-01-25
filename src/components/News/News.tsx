@@ -38,7 +38,7 @@ const NewsPlatformContainer = styled.div`
   }
 `
 
-const LogoContainer = styled.div`
+const LogoContainer = styled.a`
   display: flex;
   width: 100%;
   min-width: 215px;
@@ -53,9 +53,15 @@ const Logo = styled.img`
   }
 `
 
-const NewsPlatformLogo = ({src, alt}: {src: string; alt: string}) => {
+interface NewsPlatformLogoProps {
+  src: string
+  alt: string
+  href?: string
+}
+
+const NewsPlatformLogo = ({src, alt, href}: NewsPlatformLogoProps) => {
   return (
-    <LogoContainer>
+    <LogoContainer href={href} target="_blank" rel="noopener noreferrer">
       <Logo src={src} alt={alt} />
     </LogoContainer>
   )
