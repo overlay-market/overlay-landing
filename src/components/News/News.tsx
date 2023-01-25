@@ -68,11 +68,13 @@ const NewsPlatformLogo = ({src, alt, href}: NewsPlatformLogoProps) => {
 }
 
 const News = () => {
+  const MessariLink = 'https://messari.io/report/overlay-an-exchange-for-unexplored-markets'
+
   return (
     <MainContainer>
       <Title>Overlay in the news</Title>
       <NewsPlatformContainer>
-        <NewsPlatformLogo src={MessariLogo} alt="Messari Logo" />
+        <NewsPlatformLogo src={MessariLogo} alt="Messari Logo" href={MessariLink} />
       </NewsPlatformContainer>
     </MainContainer>
   )
