@@ -1,5 +1,5 @@
 import {Route, Switch} from 'react-router-dom'
-import {Market, TermsOfService} from './pages'
+import {TermsOfService} from './pages'
 import {Nav} from './components'
 import Hero from './components/Hero/Hero'
 import Investors from './components/Investors/Investors'
@@ -26,7 +26,6 @@ const App: React.FC = () => {
           <Contributing />
           <MediaCarousel />
         </Route>
-        <Route exact strict path="/markets" component={Market} />
         <Route exact strict path="/ToS" component={TermsOfService} />
       </Switch>
       <Footer />
