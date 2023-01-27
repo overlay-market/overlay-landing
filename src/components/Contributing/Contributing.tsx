@@ -36,6 +36,7 @@ const ContributingImageContainer = styled.div`
   @media ${device.sm} {
     margin: 20px;
     max-width: 450px;
+    max-height: 450px;
   }
 `
 
