@@ -1,27 +1,27 @@
-import React, { useMemo } from "react";
-import { Text, TextProps as TextPropsOriginal } from 'rebass';
-import styled, { 
+import React, {useMemo} from 'react'
+import {Text, TextProps as TextPropsOriginal} from 'rebass'
+import styled, {
   css,
   DefaultTheme,
-  ThemeProvider as StyledComponentsThemeProvider
-} from 'styled-components';
-import { useIsDarkMode } from "../state/user/hooks";
-import { Colors } from "./styled";
+  ThemeProvider as StyledComponentsThemeProvider,
+} from 'styled-components'
+import {useIsDarkMode} from '../state/user/hooks'
+import {Colors} from './styled'
 
-// remove screenSize once 
+// remove screenSize once
 // updated for theme provider
 const screenSize = {
-  sm: '576px',
+  sm: '768px',
   md: '768px',
   lg: '992px',
-  xl: '1400px'
-};
+  xl: '1400px',
+}
 
 export const device = {
   sm: `(min-width: ${screenSize.sm})`,
   md: `(min-width: ${screenSize.md})`,
   lg: `(min-width: ${screenSize.lg})`,
-  xl: `(min-width: ${screenSize.xl})`
+  xl: `(min-width: ${screenSize.xl})`,
 }
 
 // updated
@@ -29,20 +29,19 @@ export const MEDIA_WIDTHS = {
   sm: 576,
   md: 768,
   lg: 992,
-  xl: 1400
-};
+  xl: 1400,
+}
 
-const mediaWidthTemplates: { [width in keyof typeof MEDIA_WIDTHS]: typeof css } = Object.keys(MEDIA_WIDTHS).reduce(
-  (accumulator, size) => {
-    ;(accumulator as any)[size] = (a: any, b: any, c: any) => css`
-      @media (min-width: ${(MEDIA_WIDTHS as any)[size]}px) {
-        ${css(a, b, c)}
-      }
-    `
-    return accumulator
-  },
-  {}
-) as any;
+const mediaWidthTemplates: {[width in keyof typeof MEDIA_WIDTHS]: typeof css} = Object.keys(
+  MEDIA_WIDTHS,
+).reduce((accumulator, size) => {
+  ;(accumulator as any)[size] = (a: any, b: any, c: any) => css`
+    @media (min-width: ${(MEDIA_WIDTHS as any)[size]}px) {
+      ${css(a, b, c)}
+    }
+  `
+  return accumulator
+}, {}) as any
 
 export function colors(darkMode: boolean): Colors {
   return {
@@ -63,9 +62,9 @@ export function colors(darkMode: boolean): Colors {
     red: '#DC1F4E',
 
     // yellow
-    yellow: '#F2C94C'
+    yellow: '#F2C94C',
   }
-};
+}
 
 export function theme(darkMode: boolean): DefaultTheme {
   return {
@@ -73,18 +72,20 @@ export function theme(darkMode: boolean): DefaultTheme {
 
     mediaWidth: mediaWidthTemplates,
   }
-};
+}
 
-export default function ThemeProvider({ children } : { children: React.ReactNode }) {
-  const darkMode = useIsDarkMode();
+export default function ThemeProvider({children}: {children: React.ReactNode}) {
+  const darkMode = useIsDarkMode()
 
-  const themeObject = useMemo(() => theme(darkMode), [darkMode]);
+  const themeObject = useMemo(() => theme(darkMode), [darkMode])
 
-  return <StyledComponentsThemeProvider theme={themeObject}>{children}</StyledComponentsThemeProvider>;
-};
+  return (
+    <StyledComponentsThemeProvider theme={themeObject}>{children}</StyledComponentsThemeProvider>
+  )
+}
 
-const TextWrapper = styled(Text)<{ color: keyof Colors }>`
-  color: ${({ color, theme }) => (theme as any)[color]};
+const TextWrapper = styled(Text)<{color: keyof Colors}>`
+  color: ${({color, theme}) => (theme as any)[color]};
 `
 
 type TextProps = Omit<TextPropsOriginal, 'css'>
