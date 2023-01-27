@@ -1,5 +1,5 @@
 export const GENERAL_LINKS = {
-  GOVERNANCE: 'https://gov.overlay.market/',
+  GOVERNANCE: 'https://commonwealth.im/overlay',
   GITHUB: 'https://github.com/overlay-market',
   DOCUMENTATION: 'https://docs.overlay.market/',
   COMMUNITY_DOCS:

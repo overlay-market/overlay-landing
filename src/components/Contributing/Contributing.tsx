@@ -67,6 +67,7 @@ const Description = styled.div`
 `
 
 const Contributing = () => {
+  const ContributorLink = 'http://discord.gg/ovl'
   return (
     <Wrapper>
       <MainContainer>
@@ -79,7 +80,7 @@ const Contributing = () => {
             Overlay is run by the community, and consistent contributors earn Planck Cat NFTs,
             giving them special privileges and rewards.
           </Description>
-          <RightArrowButton> Start Contributing</RightArrowButton>
+          <RightArrowButton href={ContributorLink}> Start Contributing</RightArrowButton>
         </ContributingTextContainer>
       </MainContainer>
       <DynamicCarousel height={150} />
