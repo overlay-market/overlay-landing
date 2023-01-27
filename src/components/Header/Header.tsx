@@ -102,7 +102,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <LogoContainer>
-        <Icon src={OverlayLogo} alt="Overlay Logo" width={200} margin="auto" />
+        <Icon src={OverlayLogo} alt="Overlay Logo" width={200} margin="" />
       </LogoContainer>
 
       <LinksContainer>
