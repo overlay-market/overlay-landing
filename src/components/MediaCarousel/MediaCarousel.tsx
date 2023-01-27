@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 80px 16px;
+  padding: 80px 16px 160px;
 `
 
 const MainContainer = styled.div`
@@ -20,7 +20,6 @@ const MainContainer = styled.div`
   max-width: 1100px;
   width: 100%;
   margin: auto;
-  padding-bottom: 135px;
 `
 
 const Title = styled.div`
