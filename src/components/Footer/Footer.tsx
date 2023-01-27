@@ -120,10 +120,7 @@ const links = {
     {label: 'Twitter', href: GENERAL_LINKS.TWITTER},
     {label: 'Mirror.xyz', href: GENERAL_LINKS.MIRROR},
   ] as Array<LinkAsset>,
-  legal: [
-    {label: 'Privacy Policy', href: ''},
-    {label: 'Terms of Service', href: GENERAL_LINKS.TERMS_OF_SERVICE},
-  ] as Array<LinkAsset>,
+  legal: [{label: 'Terms of Service', href: GENERAL_LINKS.TERMS_OF_SERVICE}] as Array<LinkAsset>,
 }
 
 const LinkSection = ({title, links}: {title: string; links: Array<LinkAsset>}) => {

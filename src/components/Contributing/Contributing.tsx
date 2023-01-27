@@ -15,9 +15,12 @@ const MainContainer = styled.div`
   max-width: 1100px;
   margin: auto;
   justify-content: space-between;
+  padding: 0 16px;
+  margin-bottom: 80px;
 
   @media ${device.sm} {
     flex-direction: row;
+    margin-bottom: 40px;
   }
 `
 
@@ -78,7 +81,7 @@ const Contributing = () => {
           <RightArrowButton> Start Contributing</RightArrowButton>
         </ContributingTextContainer>
       </MainContainer>
-      <DynamicCarousel />
+      <DynamicCarousel height={150} />
     </Wrapper>
   )
 }

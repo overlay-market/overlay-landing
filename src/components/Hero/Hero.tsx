@@ -4,12 +4,12 @@ import {device} from '../../theme/theme'
 import {RightArrowButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
 import HeroChart from '../../assets/images/hero-chart.png'
-import HeroBackground from '../../assets/images/hero-background.png'
+import OptimizedHeroBackground from '../../assets/images/optimized-hero-background.jpg'
 
 const HeroContainer = styled.div`
   display: flex;
-  min-height: 480px;
-  background: url(${HeroBackground});
+  min-height: 350px;
+  background: url(${OptimizedHeroBackground});
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,6 +18,7 @@ const HeroContainer = styled.div`
 
   @media ${device.sm} {
     background-position: center;
+    min-height: 480px;
   }
 `
 

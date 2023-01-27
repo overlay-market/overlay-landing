@@ -3,11 +3,11 @@ import {Box} from 'rebass'
 import {TwitterTimelineEmbed} from 'react-twitter-embed'
 import {device} from '../../theme/theme'
 import {Icon} from '../Icon/Icon'
-import HeroBackground from '../../assets/images/hero-background.png'
+import OptimizedHeroBackground from '../../assets/images/optimized-hero-background.jpg'
 import Star from '../../assets/images/star.png'
 
 const Wrapper = styled.div`
-  background: url(${HeroBackground});
+  background: url(${OptimizedHeroBackground});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,7 +20,7 @@ const MainContainer = styled.div`
   max-width: 1100px;
   width: 100%;
   margin: auto;
-  padding: 45px 0 135px;
+  padding-bottom: 135px;
 `
 
 const Title = styled.div`
@@ -41,11 +41,11 @@ const Title = styled.div`
 const Subheader = styled.div`
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 32px;
   margin-bottom: 20px;
 
   @media ${device.sm} {
-    font-size: 28px;
+    font-size: 34px;
     width: 500px;
   }
 `
@@ -64,6 +64,7 @@ const CarouselContainer = styled.div`
 const TwitterEmbedContainer = styled.div`
   width: 350px;
   height: 700px;
+  margin-bottom: 32px;
 `
 
 const MirrorContainer = styled.div`
@@ -120,6 +121,35 @@ interface MirrorPostAsset {
 }
 
 const overlayMirrorPosts: Array<MirrorPostAsset> = [
+  {
+    link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e/wTsX1pBySrFOGNenYEB3mNTR410JLP4_YjxwYuunYKE',
+    title: 'Inverse Markets on Overlay',
+    author: 'madhav.eth',
+    date: 'January 25th, 2022',
+    content:
+      'Pending governance approval, Overlay will employ “inverse markets” on the protocol - markets where the “quote” of one unit of an asset will be presented in terms of Overlay’s native token, OVL. For instance, there may be an ETH-OVL market. This will help users to hedge the OVL exposure they may have (because of entering positions on Overlay’s markets), and go long on OVL, if they so wish.',
+    background:
+      'radial-gradient(79.05% 79.05% at 21.62% 20.95%, rgb(0, 122, 255) 0%, rgb(0, 224, 255) 100%)',
+  },
+  {
+    link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e/RpnX3-Z0rG_kO_cmmTImRNg5cC-eSxrURkHxG1BmwLw',
+    title: 'Basis Position / Funding Arbitrage on Overlay',
+    author: 'madhav.eth',
+    date: 'January 25th, 2022',
+    content: 'Earn yield in market neutral positions',
+    background:
+      'radial-gradient(79.05% 79.05% at 21.62% 20.95%, rgb(0, 122, 255) 0%, rgb(0, 224, 255) 100%)',
+  },
+  {
+    link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e/vtmmujPcVINTIVavcsztrYHmP_N1mA4RwgYHmZ8lLdw',
+    title: 'Introduction to Pricing and Price Impact on Overlay',
+    author: 'madhav.eth',
+    date: 'January 25th, 2022',
+    content:
+      'Pricing based on oracle feeds makes Overlay versatile, but also prone to certain oracle manipulation-based attack vectors. To counter these factors, Overlay employs several mechanisms that should mitigate exposure to the protocol: TWAP-based pricing, bid-ask spreads, and price impact/slippage.',
+    background:
+      'radial-gradient(79.05% 79.05% at 21.62% 20.95%, rgb(0, 122, 255) 0%, rgb(0, 224, 255) 100%)',
+  },
   {
     link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e/nauBWxFQTSAVMxfXCmo8WtTLRarZKd3mA1dc_NBFQvA',
     title: 'Litter Box 1, OVL and rewards program',
