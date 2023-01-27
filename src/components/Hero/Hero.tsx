@@ -14,7 +14,7 @@ const HeroContainer = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
-  padding: 160px 0 45px;
+  padding: 160px 16px 45px;
 
   @media ${device.sm} {
     background-position: center;

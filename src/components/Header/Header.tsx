@@ -22,8 +22,8 @@ export const HeaderContainer = styled.div`
   margin: 16px;
 
   @media ${device.sm} {
-    width: 100%;
     margin: 32px auto 64px;
+    padding: 0 16px;
   }
 `
 
