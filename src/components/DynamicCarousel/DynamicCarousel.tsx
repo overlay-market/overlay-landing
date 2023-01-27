@@ -11,7 +11,9 @@ const Container = styled.div<{height?: number}>`
 const Carousel = styled.img<{height?: number}>`
   position: absolute;
   animation: moveSlideshow 100s linear infinite;
-  height: ${({height}) => (height ? height + 'px' : '150px')} @keyframes moveSlideshow {
+  height: ${({height}) => (height ? height + 'px' : '150px')};
+
+  @keyframes moveSlideshow {
     100% {
       transform: translateX(-66.6666%);
     }
