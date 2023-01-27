@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import {RightArrowButton} from '../Button/Button'
 import {device} from '../../theme/theme'
 import {DynamicCarousel} from '../DynamicCarousel/DynamicCarousel'
-import OverlayLogoHeartCatImg from '../../assets/images/overlay-logo-heart-cat.png'
+import OverlayLogoHeartCatImg from '../../assets/images/overlay-heart-cat.jpg'
 
 const Wrapper = styled.div`
   overflow-x: hidden !important;

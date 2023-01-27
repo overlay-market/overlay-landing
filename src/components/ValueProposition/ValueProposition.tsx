@@ -5,6 +5,7 @@ import {ArrowRight} from 'react-feather'
 import {StyledCTAButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
 import ValuePropImage from '../../assets/images/value-proposition-image.png'
+import ValuePropositionAsset from '../../assets/images/value-proposition-image.jpg'
 
 const MainContainer = styled.div`
   display: flex;
@@ -83,7 +84,7 @@ const ValueProposition = () => {
           </StyledCTAButton>
         </PrimaryViewContainer>
         <SecondaryViewContainer>
-          <ImageContainer src={ValuePropImage} />
+          <ImageContainer src={ValuePropositionAsset} />
         </SecondaryViewContainer>
       </DesktopSplitViewContainer>
     </MainContainer>

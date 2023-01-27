@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import {device} from '../../theme/theme'
 import MessariLogo from '../../assets/images/messari-brand-logo.png'
-import NewsBackground from '../../assets/images/news-background.png'
+import NewsBackground from '../../assets/images/news-background.jpg'
 
 const MainContainer = styled.div`
   display: flex;
@@ -26,7 +26,7 @@ const NewsPlatformContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: auto;
+  margin: 0 auto;
   padding: 40px 0;
   width: 100%;
   max-width: 1100px;
