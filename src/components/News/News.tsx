@@ -42,7 +42,7 @@ const LogoContainer = styled.a`
   display: flex;
   width: 100%;
   min-width: 215px;
-  max-height: 40px;
+  max-height: 75px;
 `
 
 const Logo = styled.img`

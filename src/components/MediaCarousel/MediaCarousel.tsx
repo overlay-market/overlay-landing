@@ -211,7 +211,7 @@ const MediaCarousel = () => {
       <MainContainer>
         <Title>
           Latest Updates
-          <Icon src={Star} height={45} alt="" margin="0 0 0 30px" />
+          <Icon src={Star} height={45} alt="" margin="0 0 0 20px" />
         </Title>
         <CarouselContainer>
           <TwitterEmbedContainer>
