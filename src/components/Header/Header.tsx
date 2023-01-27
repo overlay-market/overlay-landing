@@ -115,7 +115,7 @@ const Header = () => {
       </LinksContainer>
 
       <ButtonsContainer>
-        <TokenFaucetButton>Get OVL</TokenFaucetButton>
+        {/* <TokenFaucetButton>Get OVL</TokenFaucetButton> */}
         <BlueCTAButton href={GENERAL_LINKS.LAUNCH_APP}>Launch App</BlueCTAButton>
       </ButtonsContainer>
 
