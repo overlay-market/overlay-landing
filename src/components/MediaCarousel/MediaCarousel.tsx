@@ -62,7 +62,7 @@ const CarouselContainer = styled.div`
 
 const TwitterEmbedContainer = styled.div`
   width: 350px;
-  height: 700px;
+  height: 1200px;
   margin-bottom: 32px;
 `
 
@@ -120,6 +120,16 @@ interface MirrorPostAsset {
 }
 
 const overlayMirrorPosts: Array<MirrorPostAsset> = [
+  {
+    link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e/vimCWCt5I63CLHQq5AXrH4PAS-pxzIKlYVwRdXCGPuM',
+    title: 'Payoff Caps, OI Caps, and the Circuit Breaker on Overlay Protocol',
+    author: 'madhav.eth',
+    date: 'January 26th, 2022',
+    content:
+      'Overlay Protocol has governance-set payoff and open interest caps that are specific to each Overlay market. These caps help the protocol minimize the impact of heavy tail behavior of some assets. Circuit Breakers act as an additional layer of protection that restrict the notional size of new positions when OVL printing (to pay out PnL) in the recent past has been excessive.',
+    background:
+      'radial-gradient(79.05% 79.05% at 21.62% 20.95%, rgb(0, 122, 255) 0%, rgb(0, 224, 255) 100%)',
+  },
   {
     link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e/wTsX1pBySrFOGNenYEB3mNTR410JLP4_YjxwYuunYKE',
     title: 'Inverse Markets on Overlay',
@@ -208,7 +218,7 @@ const MediaCarousel = () => {
             <TwitterTimelineEmbed
               sourceType="profile"
               screenName="OverlayProtocol"
-              options={{height: 700}}
+              options={{height: 1200}}
             />
           </TwitterEmbedContainer>
 
