@@ -12,4 +12,5 @@ export const GENERAL_LINKS = {
   PRIVACY_POLICY: '',
   TERMS_OF_SERVICE: 'https://overlay.market/#/tos',
   LAUNCH_APP: 'https://app.overlay.market',
+  CLAIM: 'https://app.overlay.market/claim',
 }

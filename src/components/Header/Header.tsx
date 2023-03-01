@@ -106,11 +106,14 @@ const Header = () => {
       </LogoContainer>
 
       <LinksContainer>
-        <StyledLink href={GENERAL_LINKS.GOVERNANCE} target="_blank">
+        <StyledLink href={GENERAL_LINKS.GOVERNANCE} target="_blank" rel="noopener noreferrer">
           Governance
         </StyledLink>
-        <StyledLink href={GENERAL_LINKS.DOCUMENTATION} target="_blank">
+        <StyledLink href={GENERAL_LINKS.DOCUMENTATION} target="_blank" rel="noopener noreferrer">
           Documentation
+        </StyledLink>
+        <StyledLink href={GENERAL_LINKS.CLAIM} target="_blank" rel="noopener noreferrer">
+          Claim
         </StyledLink>
       </LinksContainer>
 
