@@ -121,10 +121,20 @@ interface MirrorPostAsset {
 
 const overlayMirrorPosts: Array<MirrorPostAsset> = [
   {
+    link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e/b6Zt_6IrDSTwgM0NjmlNLvTGgx0vIfNzGhP6hXMJKKQ',
+    title: 'Introducing Bored Ape Yacht Club Floor Price Market',
+    author: 'mertioi.eth',
+    date: 'March 15th, 2023',
+    content:
+      "It’s the day that Overlay Protocol pushes the boundaries of what's possible in DeFi. We've just launched Bored Ape Yacht Club floor price market.",
+    background:
+      'radial-gradient(79.05% 79.05% at 21.62% 20.95%, rgb(0, 122, 255) 0%, rgb(0, 224, 255) 100%)',
+  },
+  {
     link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e/vimCWCt5I63CLHQq5AXrH4PAS-pxzIKlYVwRdXCGPuM',
     title: 'Payoff Caps, OI Caps, and the Circuit Breaker on Overlay Protocol',
     author: 'madhav.eth',
-    date: 'January 26th, 2022',
+    date: 'January 26th, 2023',
     content:
       'Overlay Protocol has governance-set payoff and open interest caps that are specific to each Overlay market. These caps help the protocol minimize the impact of heavy tail behavior of some assets. Circuit Breakers act as an additional layer of protection that restrict the notional size of new positions when OVL printing (to pay out PnL) in the recent past has been excessive.',
     background:
@@ -144,7 +154,7 @@ const overlayMirrorPosts: Array<MirrorPostAsset> = [
     link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e/RpnX3-Z0rG_kO_cmmTImRNg5cC-eSxrURkHxG1BmwLw',
     title: 'Basis Position / Funding Arbitrage on Overlay',
     author: 'madhav.eth',
-    date: 'January 25th, 2022',
+    date: 'January 25th, 2023',
     content: 'Earn yield in market neutral positions',
     background:
       'radial-gradient(79.05% 79.05% at 21.62% 20.95%, rgb(0, 122, 255) 0%, rgb(0, 224, 255) 100%)',
@@ -153,7 +163,7 @@ const overlayMirrorPosts: Array<MirrorPostAsset> = [
     link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e/vtmmujPcVINTIVavcsztrYHmP_N1mA4RwgYHmZ8lLdw',
     title: 'Introduction to Pricing and Price Impact on Overlay',
     author: 'madhav.eth',
-    date: 'January 25th, 2022',
+    date: 'January 25th, 2023',
     content:
       'Pricing based on oracle feeds makes Overlay versatile, but also prone to certain oracle manipulation-based attack vectors. To counter these factors, Overlay employs several mechanisms that should mitigate exposure to the protocol: TWAP-based pricing, bid-ask spreads, and price impact/slippage.',
     background:
@@ -168,15 +178,15 @@ const overlayMirrorPosts: Array<MirrorPostAsset> = [
     background:
       'radial-gradient(79.05% 79.05% at 21.62% 20.95%, rgb(0, 122, 255) 0%, rgb(0, 224, 255) 100%)',
   },
-  {
-    link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e/n1suXTe7Xcj-z1w5njRsWM_0Y6RHy-nGr1bB6SUYs00',
-    title: 'Using OpenZeppelin Defender To Monitor A Contract',
-    author: 'c-note.eth',
-    date: 'September 29th, 2022',
-    content:
-      'This doc acts as a guide/workflow on how to set up a relay, autotask, and sentinel to watch and act on certain responses from a smart contract.',
-    background: 'radial-gradient(79.05% 79.05% at 21.62% 20.95%, #FF3B30 0%, #FFA030 100%);',
-  },
+  // {
+  //   link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e/n1suXTe7Xcj-z1w5njRsWM_0Y6RHy-nGr1bB6SUYs00',
+  //   title: 'Using OpenZeppelin Defender To Monitor A Contract',
+  //   author: 'c-note.eth',
+  //   date: 'September 29th, 2022',
+  //   content:
+  //     'This doc acts as a guide/workflow on how to set up a relay, autotask, and sentinel to watch and act on certain responses from a smart contract.',
+  //   background: 'radial-gradient(79.05% 79.05% at 21.62% 20.95%, #FF3B30 0%, #FFA030 100%);',
+  // },
 ]
 
 const MirrorPost = ({link, title, author, date, content, background}: MirrorPostAsset) => {
