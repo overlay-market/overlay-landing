@@ -3,6 +3,7 @@ import {device} from '../../theme/theme'
 import {Icon} from '../Icon/Icon'
 import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
 import {GENERAL_LINKS} from '../../constants/constants'
+import getCurrentYear from '../../hooks/getCurrentYear'
 
 const Wrapper = styled.div`
   background: #f0f0f0;
@@ -135,6 +136,8 @@ const LinkSection = ({title, links}: {title: string; links: Array<LinkAsset>}) =
 }
 
 const Footer = () => {
+  const currentYear = getCurrentYear()
+
   return (
     <Wrapper>
       <FooterContainer>
@@ -157,7 +160,9 @@ const Footer = () => {
         </InteractiveContentsContainer>
 
         <Line />
-        <CopyrightText>Copyright 2023 © Overlay Foundation, All Right Reserved</CopyrightText>
+        <CopyrightText>
+          Copyright {currentYear} © Overlay Foundation, All Rights Reserved
+        </CopyrightText>
       </FooterContainer>
     </Wrapper>
   )
