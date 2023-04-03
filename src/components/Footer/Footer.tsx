@@ -157,7 +157,7 @@ const Footer = () => {
         </InteractiveContentsContainer>
 
         <Line />
-        <CopyrightText>Copyright 2022 © Overlay Foundation, All Right Reserved</CopyrightText>
+        <CopyrightText>Copyright 2023 © Overlay Foundation, All Right Reserved</CopyrightText>
       </FooterContainer>
     </Wrapper>
   )
