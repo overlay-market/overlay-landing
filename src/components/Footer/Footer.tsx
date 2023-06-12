@@ -54,7 +54,7 @@ const LinksContainer = styled.div`
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
-  padding: 18px 24px 24px 24px;
+  padding: 18px 0px 0px 18px;
 
   @media ${device.sm} {
     padding: 18px 0px 0px 0px;
