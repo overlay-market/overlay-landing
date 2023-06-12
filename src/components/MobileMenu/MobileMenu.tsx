@@ -36,7 +36,6 @@ const LogoContainer = styled.div`
 `
 
 const LaunchButtonContainer = styled.div`
-  margin-top: 1rem;
   padding-left: 2rem;
 `
 
