@@ -129,7 +129,7 @@ const Hero = () => {
             Liquidity for the <i>ILL</i>iquid
           </Title>
           <Description>Explore Overlay - Endless data markets, built on Ethereum</Description>
-          <Box style={{marginBottom: '40px'}}>
+          <Box style={{marginBottom: '40px', borderRadius: '10px'}}>
             <RightArrowButton href={GENERAL_LINKS.LAUNCH_APP}>Get Started</RightArrowButton>
           </Box>
         </PrimaryViewContainer>

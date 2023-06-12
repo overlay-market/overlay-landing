@@ -14,3 +14,24 @@ export const GENERAL_LINKS = {
   LAUNCH_APP: 'https://app.overlay.market',
   CLAIM: 'https://app.overlay.market/claim',
 }
+
+export interface LinkAsset {
+  label: string
+  href: string
+}
+
+export const LINKS = {
+  protocol: [
+    {label: 'Github', href: GENERAL_LINKS.GITHUB},
+    {label: 'Documentation', href: GENERAL_LINKS.DOCUMENTATION},
+    {label: 'Community Docs', href: GENERAL_LINKS.COMMUNITY_DOCS},
+    {label: 'Governance', href: GENERAL_LINKS.GOVERNANCE},
+    {label: 'Whitepaper V1', href: GENERAL_LINKS.WHITEPAPER_V1},
+  ] as Array<LinkAsset>,
+  connect: [
+    {label: 'Discord', href: GENERAL_LINKS.DISCORD},
+    {label: 'Twitter', href: GENERAL_LINKS.TWITTER},
+    {label: 'Mirror', href: GENERAL_LINKS.MIRROR},
+  ] as Array<LinkAsset>,
+  legal: [{label: 'Terms of Service', href: GENERAL_LINKS.TERMS_OF_SERVICE}] as Array<LinkAsset>,
+}

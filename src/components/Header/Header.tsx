@@ -2,13 +2,16 @@ import {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import {device} from '../../theme/theme'
 import {ExternalIcon, Icon} from '../Icon/Icon'
-import {Menu, X} from 'react-feather'
+import {Menu} from 'react-feather'
 import {BlueCTAButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
 import {useLocation} from 'react-router-dom'
 import {enableLock, disableLock} from '../../utils/scrollLock'
 import MobileMenu from '../MobileMenu/MobileMenu'
 import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
+import {ReactComponent as DiscordIcon} from '../../assets/icons/discord.svg'
+import {ReactComponent as TwitterIcon} from '../../assets/icons/twitter.svg'
+import {IconButton} from '@material-ui/core'
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -27,6 +30,10 @@ export const HeaderContainer = styled.div`
   }
 `
 
+export const FlexRow = styled.div`
+  display: flex;
+`
+
 export const LogoContainer = styled.div`
   display: flex;
 `
@@ -34,9 +41,10 @@ export const LogoContainer = styled.div`
 const LinksContainer = styled.div`
   display: none;
 
-  @media ${device.sm} {
+  @media ${device.lg} {
     display: flex;
     flex-direction: row;
+    margin-left: 96px;
   }
 `
 
@@ -55,8 +63,39 @@ const ButtonsContainer = styled.div`
   @media ${device.sm} {
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
 `
+
+interface IconButtonProps {
+  href: string
+  target: string
+  marginRight?: number
+  marginLeft?: number
+}
+
+export const StyledIconButton = styled(IconButton)<IconButtonProps>(props => ({
+  marginRight: props.marginRight ? '42px !important' : 0,
+  marginLeft: props.marginLeft ? `${props.marginLeft}px !important` : 0,
+  '& svg': {
+    height: '22px',
+    width: '22px',
+  },
+  '&:hover': {
+    backgroundColor: 'transparent !important',
+  },
+  '& .MuiTouchRipple-root': {
+    display: 'none',
+  },
+  [`@media ${device.lg}`]: {
+    marginRight: props.marginRight ? `${props.marginRight}px !important` : 0,
+    marginLeft: '0px !important',
+  },
+}))
+
+StyledIconButton.defaultProps = {
+  disableRipple: true,
+}
 
 const MobileOnly = styled.div`
   display: flex;
@@ -101,29 +140,42 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <LogoContainer>
-        <Icon src={OverlayLogo} alt="Overlay Logo" width={200} margin="" />
-      </LogoContainer>
+      <FlexRow>
+        <LogoContainer>
+          <Icon src={OverlayLogo} alt="Overlay Logo" width={200} margin="" />
+        </LogoContainer>
 
-      <LinksContainer>
-        <StyledLink href={GENERAL_LINKS.GOVERNANCE} target="_blank" rel="noopener noreferrer">
-          Governance
-        </StyledLink>
-        <StyledLink href={GENERAL_LINKS.DOCUMENTATION} target="_blank" rel="noopener noreferrer">
-          Documentation
-        </StyledLink>
-        <StyledLink href={GENERAL_LINKS.CLAIM} target="_blank" rel="noopener noreferrer">
-          Claim
-        </StyledLink>
-      </LinksContainer>
+        <LinksContainer>
+          <StyledLink href={GENERAL_LINKS.DOCUMENTATION} target="_blank" rel="noopener noreferrer">
+            Documentation
+          </StyledLink>
+          <StyledLink href={GENERAL_LINKS.GOVERNANCE} target="_blank" rel="noopener noreferrer">
+            Governance
+          </StyledLink>
+          <StyledLink href={GENERAL_LINKS.WHITEPAPER_V1} target="_blank" rel="noopener noreferrer">
+            White Paper
+          </StyledLink>
+        </LinksContainer>
+      </FlexRow>
 
       <ButtonsContainer>
         {/* <TokenFaucetButton>Get OVL</TokenFaucetButton> */}
+        <StyledIconButton href={GENERAL_LINKS.DISCORD} target="_blank">
+          <DiscordIcon />
+        </StyledIconButton>
+        <StyledIconButton
+          href={GENERAL_LINKS.TWITTER}
+          target="_blank"
+          marginLeft={18}
+          marginRight={60}
+        >
+          <TwitterIcon />
+        </StyledIconButton>
         <BlueCTAButton href={GENERAL_LINKS.LAUNCH_APP}>Launch App</BlueCTAButton>
       </ButtonsContainer>
 
       <MobileMenuButton open={open} setOpen={setOpen} />
-      <MobileMenu open={open} />
+      <MobileMenu open={open} setOpen={setOpen} />
     </HeaderContainer>
   )
 }
@@ -139,7 +191,6 @@ const MobileMenuButton = ({open, setOpen}: MobileMenuButtonProps) => {
   return (
     <MobileOnly>
       <ExternalIcon margin="auto" width={40} center={true}>
-        {open && <X onClick={() => setOpen(!open)} />}
         {!open && <Menu onClick={() => setOpen(!open)} />}
       </ExternalIcon>
     </MobileOnly>
