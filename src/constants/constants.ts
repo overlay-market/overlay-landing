@@ -26,7 +26,7 @@ export const LINKS = {
     {label: 'Documentation', href: GENERAL_LINKS.DOCUMENTATION},
     {label: 'Community Docs', href: GENERAL_LINKS.COMMUNITY_DOCS},
     {label: 'Governance', href: GENERAL_LINKS.GOVERNANCE},
-    {label: 'Whitepaper V1', href: GENERAL_LINKS.WHITEPAPER_V1},
+    {label: 'White Paper V1', href: GENERAL_LINKS.WHITEPAPER_V1},
   ] as Array<LinkAsset>,
   connect: [
     {label: 'Discord', href: GENERAL_LINKS.DISCORD},
