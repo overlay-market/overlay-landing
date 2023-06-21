@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import {device} from '../../theme/theme'
 import {Icon} from '../Icon/Icon'
 import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
-import {GENERAL_LINKS} from '../../constants/constants'
+import {LINKS} from '../../constants/constants'
 import getCurrentYear from '../../hooks/getCurrentYear'
 
 const Wrapper = styled.div`
@@ -54,7 +54,11 @@ const LinksContainer = styled.div`
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
-  padding-top: 18px;
+  padding: 18px 0px 0px 18px;
+
+  @media ${device.sm} {
+    padding: 18px 0px 0px 0px;
+  }
 `
 
 const LinksColumn = styled.div`
@@ -104,26 +108,6 @@ interface LinkAsset {
   href: string
 }
 
-/**
- * @TO-DO: Create constant file with Overlay link assets and hrefs
- */
-
-const links = {
-  protocol: [
-    {label: 'Github', href: GENERAL_LINKS.GITHUB},
-    {label: 'Documentation', href: GENERAL_LINKS.DOCUMENTATION},
-    {label: 'Community Docs', href: GENERAL_LINKS.COMMUNITY_DOCS},
-    {label: 'Governance', href: GENERAL_LINKS.GOVERNANCE},
-    {label: 'Whitepaper V1', href: GENERAL_LINKS.WHITEPAPER_V1},
-  ] as Array<LinkAsset>,
-  connect: [
-    {label: 'Discord', href: GENERAL_LINKS.DISCORD},
-    {label: 'Twitter', href: GENERAL_LINKS.TWITTER},
-    {label: 'Mirror.xyz', href: GENERAL_LINKS.MIRROR},
-  ] as Array<LinkAsset>,
-  legal: [{label: 'Terms of Service', href: GENERAL_LINKS.TERMS_OF_SERVICE}] as Array<LinkAsset>,
-}
-
 const LinkSection = ({title, links}: {title: string; links: Array<LinkAsset>}) => {
   return (
     <LinksColumn>
@@ -153,9 +137,9 @@ const Footer = () => {
           </BrandContainer>
 
           <LinksContainer>
-            <LinkSection title="Protocol" links={links.protocol} />
-            <LinkSection title="Connect" links={links.connect} />
-            <LinkSection title="Legal" links={links.legal} />
+            <LinkSection title="Protocol" links={LINKS.protocol} />
+            <LinkSection title="Connect" links={LINKS.connect} />
+            <LinkSection title="Legal" links={LINKS.legal} />
           </LinksContainer>
         </InteractiveContentsContainer>
 

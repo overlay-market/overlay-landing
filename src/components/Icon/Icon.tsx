@@ -48,6 +48,7 @@ const ExternalIconWrapper = styled.div<{
   left?: string
   bottom?: string
   center?: boolean
+  alignCenter?: boolean
 }>`
   display: flex;
   height: ${({height}) => height}px;
@@ -64,6 +65,7 @@ const ExternalIconWrapper = styled.div<{
   bottom: ${({bottom}) => bottom ?? bottom};
   position: ${({position}) => (position ? position : 'auto')};
   justify-content: ${({center}) => (center ? 'center' : 'auto')};
+  align-items: ${({alignCenter}) => (alignCenter ? 'center' : 'initial')};
 `
 
 type ExternalIconProps = {
@@ -81,6 +83,7 @@ type ExternalIconProps = {
   bottom?: string
   position?: string
   center?: boolean
+  alignCenter?: boolean
 }
 
 export const ExternalIcon = ({
@@ -98,6 +101,7 @@ export const ExternalIcon = ({
   bottom,
   position,
   center,
+  alignCenter,
 }: ExternalIconProps) => {
   return (
     <ExternalIconWrapper
@@ -114,6 +118,7 @@ export const ExternalIcon = ({
       bottom={bottom}
       position={position}
       center={center}
+      alignCenter={alignCenter}
     >
       {children}
     </ExternalIconWrapper>
