@@ -38,6 +38,7 @@ const Title = styled.div`
 `
 
 const Subheader = styled.div`
+  width: 100% !important;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 32px;
@@ -68,7 +69,9 @@ const TwitterEmbedContainer = styled.div`
 
 const MirrorContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `
 
 const MirrorTitle = styled.a`
@@ -198,6 +201,7 @@ const MirrorPost = ({link, title, author, date, content, background}: MirrorPost
         borderTop: '1px solid #CCCCCC',
         maxWidth: '500px',
         padding: '16px 0',
+        width: '100%',
       }}
     >
       <MirrorTitle href={link} target="_blank" rel="noopener noreferrer">
@@ -216,6 +220,8 @@ const MirrorPost = ({link, title, author, date, content, background}: MirrorPost
 }
 
 const MediaCarousel = () => {
+  let showTwitterWidget = false
+
   return (
     <Wrapper>
       <MainContainer>
@@ -224,13 +230,15 @@ const MediaCarousel = () => {
           <Icon src={Star} height={45} alt="" margin="0 0 0 20px" />
         </Title>
         <CarouselContainer>
-          <TwitterEmbedContainer>
-            <TwitterTimelineEmbed
-              sourceType="profile"
-              screenName="OverlayProtocol"
-              options={{height: 1200}}
-            />
-          </TwitterEmbedContainer>
+          {showTwitterWidget && (
+            <TwitterEmbedContainer>
+              <TwitterTimelineEmbed
+                sourceType="profile"
+                screenName="OverlayProtocol"
+                options={{height: 1200}}
+              />
+            </TwitterEmbedContainer>
+          )}
 
           <MirrorContainer>
             <Subheader>Mirror</Subheader>
