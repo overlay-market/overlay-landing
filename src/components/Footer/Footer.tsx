@@ -42,11 +42,11 @@ const LogoContainer = styled.div`
   margin-bottom: 12px;
 `
 
-const LogoDescription = styled.div`
-  width: 280px;
-  color: #d0d0d0;
-  font-size: 12px;
-`
+// const LogoDescription = styled.div`
+//   width: 280px;
+//   color: #d0d0d0;
+//   font-size: 12px;
+// `
 
 const LinksContainer = styled.div`
   display: flex;
