@@ -29,7 +29,6 @@ const App: React.FC = () => {
   return (
     <div>
       <CookieConsent
-      // debug={true}
           enableDeclineButton
           onDecline={() => {
             window.amplitude.setOptOut(true)
