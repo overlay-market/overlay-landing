@@ -29,7 +29,7 @@ const App: React.FC = () => {
   return (
     <div>
       <CookieConsent
-      debug={true}
+      // debug={true}
           enableDeclineButton
           onDecline={() => {
             window.amplitude.setOptOut(true)
@@ -39,7 +39,7 @@ const App: React.FC = () => {
           declineButtonStyle={{fontSize: "13px", padding: "16px, 36px, 16px, 36px", height: "40px", width: "116px", fontWeight: "700", background: "#ffffff00", border: "1px solid", borderRadius: "8px", borderColor: "#E5F6FF"}}
           location="bottom"
           buttonText="Allow"
-          cookieName="myAwesomeCookieName2"
+          cookieName="CookieConsent"
           style={{ background: "#2B373B" }}
           buttonStyle={{ color: "white", fontSize: "13px", background: "#53B1F9", borderRadius: "8px", padding: "16px, 36px, 16px, 36px", height: "40px", width: "116px", fontWeight: "700" }}
           expires={150}
