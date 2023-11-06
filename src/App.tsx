@@ -28,12 +28,12 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <Switch>
-        <Route path="/" exact>
-        <CookieConsent
+      <CookieConsent
+      debug={true}
           enableDeclineButton
           onDecline={() => {
-            alert("nay!");
+            window.amplitude.setOptOut(true)
+            gaOptout();
           }}
           declineButtonText="Decline"
           declineButtonStyle={{fontSize: "13px", padding: "16px, 36px, 16px, 36px", height: "40px", width: "116px", fontWeight: "700", background: "#ffffff00", border: "1px solid", borderRadius: "8px", borderColor: "#E5F6FF"}}
@@ -47,6 +47,9 @@ const App: React.FC = () => {
           This website uses cookies to enhance the user experience.{" "}
           View our <a href="https://overlay.market/#/tos" style={{ color: "#ffffff" }}>TOS</a> to learn more.
         </CookieConsent>
+      <Switch>
+        <Route path="/" exact>
+        
           <Nav />
           <Hero />
           <Investors />
@@ -62,6 +65,14 @@ const App: React.FC = () => {
       <Footer />
     </div>
   )
+}
+
+function gaOptout() {
+  var gaProperty = 'G-QJR084KXFT';
+  var disableStr = 'ga-disable-' + gaProperty;
+  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+  // @ts-ignore
+  window[disableStr] = true;
 }
 
 export default App

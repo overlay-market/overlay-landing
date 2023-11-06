@@ -4,19 +4,19 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJR084KXFT"></script>
     <script>
+      var gaProperty = 'G-QJR084KXFT'
+      var disableStr = 'ga-disable-' + gaProperty
+      if (document.cookie.indexOf('CookieConsent=false') > -1) {
+        window[disableStr] = true
+      }
+    </script>
+    <script>
       window.dataLayer = window.dataLayer || []
       function gtag() {
         dataLayer.push(arguments)
       }
       gtag('js', new Date())
       gtag('config', 'G-QJR084KXFT')
-    </script>
-    <script>
-      var gaProperty = 'G-QJR084KXFT'
-      var disableStr = 'ga-disable-' + gaProperty
-      if (document.cookie.indexOf('CookieConsent=false') > -1) {
-        window[disableStr] = true
-      }
     </script>
     <script type="text/javascript">
       !(function () {
