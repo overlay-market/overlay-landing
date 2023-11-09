@@ -20,7 +20,7 @@ const Body = styled.p`
 `
 
 const Section = styled.p`
-  font-weight: 700;
+  font-weight: 702;
 `
 
 const Subsection = styled.p`
