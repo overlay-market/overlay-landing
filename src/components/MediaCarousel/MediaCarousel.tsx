@@ -141,25 +141,6 @@ const overlayMirrorPosts: Array<MirrorPostAsset> = [
       'radial-gradient(79.05% 79.05% at 21.62% 20.95%, rgb(0, 122, 255) 0%, rgb(0, 224, 255) 100%)',
   },
   {
-    link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e/wTsX1pBySrFOGNenYEB3mNTR410JLP4_YjxwYuunYKE',
-    title: 'Inverse Markets on Overlay',
-    author: 'madhav.eth',
-    date: 'January 25th, 2022',
-    content:
-      'Pending governance approval, Overlay will employ “inverse markets” on the protocol - markets where the “quote” of one unit of an asset will be presented in terms of Overlay’s native token, OVL. For instance, there may be an ETH-OVL market. This will help users to hedge the OVL exposure they may have (because of entering positions on Overlay’s markets), and go long on OVL, if they so wish.',
-    background:
-      'radial-gradient(79.05% 79.05% at 21.62% 20.95%, rgb(0, 122, 255) 0%, rgb(0, 224, 255) 100%)',
-  },
-  {
-    link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e/RpnX3-Z0rG_kO_cmmTImRNg5cC-eSxrURkHxG1BmwLw',
-    title: 'Basis Position / Funding Arbitrage on Overlay',
-    author: 'madhav.eth',
-    date: 'January 25th, 2023',
-    content: 'Earn yield in market neutral positions',
-    background:
-      'radial-gradient(79.05% 79.05% at 21.62% 20.95%, rgb(0, 122, 255) 0%, rgb(0, 224, 255) 100%)',
-  },
-  {
     link: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e/vtmmujPcVINTIVavcsztrYHmP_N1mA4RwgYHmZ8lLdw',
     title: 'Introduction to Pricing and Price Impact on Overlay',
     author: 'madhav.eth',
