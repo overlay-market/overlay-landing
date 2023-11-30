@@ -5,10 +5,6 @@ import Investor_ParafiCapital_Logo from '../../assets/images/parafi-capital-logo
 import Investor_1kx_Logo from '../../assets/images/1kx-logo.png'
 import Investor_TheLao_Logo from '../../assets/images/the-lao-logo.png'
 import Investor_Metacartel_Logo from '../../assets/images/metacartel-logo.png'
-import Investor_Citizenx_Logo from '../../assets/images/citizenx-logo.png'
-import Investor_GTS_Logo from '../../assets/images/gts-logo.png'
-import Investor_LBank_Logo from '../../assets/images/lbank-logo.png'
-import Investor_CSPDAO_Logo from '../../assets/images/csp-logo.png'
 
 const Wrapper = styled.div`
   padding: 45px 0 80px;
@@ -54,7 +50,7 @@ interface InvestorAsset {
   height?: number
 }
 
-const investorsList1: Array<InvestorAsset> = [
+const investorsList: Array<InvestorAsset> = [
   {
     name: 'Polychain Capital',
     logoSrc: `${Investor_PolychainCapital_Logo}`,
@@ -70,41 +66,14 @@ const investorsList1: Array<InvestorAsset> = [
     logoSrc: `${Investor_1kx_Logo}`,
     height: 125,
   },
-]
-
-const investorsList2: Array<InvestorAsset> = [
-  {
-    name: 'GTS Ventures',
-    logoSrc: `${Investor_GTS_Logo}`,
-    width: 120,
-  },
-  {
-    name: 'LBank',
-    logoSrc: `${Investor_LBank_Logo}`,
-    width: 120,
-  },
-  {
-    name: 'Citizen X',
-    logoSrc: `${Investor_Citizenx_Logo}`,
-    width: 120,
-  },
-]
-
-const investorsList3: Array<InvestorAsset> = [
-  {
-    name: 'CSP DAO',
-    logoSrc: `${Investor_CSPDAO_Logo}`,
-    width: 148,
-  },
   {
     name: 'The Lao',
     logoSrc: `${Investor_TheLao_Logo}`,
-    width: 157,
   },
   {
-    name: 'Metacartel',
+    name: 'MetaCartel',
     logoSrc: `${Investor_Metacartel_Logo}`,
-    width: 78,
+    width: 100,
   },
 ]
 
@@ -114,17 +83,7 @@ const Investors = () => {
       <MainContainer>
         <Text>Backed by the best</Text>
         <Box style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
-          {investorsList1.map(investor => (
-            <Investor src={investor.logoSrc} width={investor.width} height={investor.height} />
-          ))}
-        </Box>
-        <Box style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', width: '80%', alignSelf: 'center'}}>
-          {investorsList2.map(investor => (
-            <Investor src={investor.logoSrc} width={investor.width} height={investor.height} />
-          ))}
-        </Box>
-        <Box style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', width: '70%', alignSelf: 'center'}}>
-          {investorsList3.map(investor => (
+          {investorsList.map(investor => (
             <Investor src={investor.logoSrc} width={investor.width} height={investor.height} />
           ))}
         </Box>
