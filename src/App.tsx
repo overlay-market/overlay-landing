@@ -8,7 +8,6 @@ import News from './components/News/News'
 import Markets from './components/Markets/Markets'
 import Audits from './components/Audits/Audits'
 import Contributing from './components/Contributing/Contributing'
-import MediaCarousel from './components/MediaCarousel/MediaCarousel'
 import Footer from './components/Footer/Footer'
 import { cookie3Analytics } from "@cookie3/analytics";
 import { useEffect } from 'react';
@@ -57,7 +56,6 @@ const App: React.FC = () => {
           <Markets />
           <Audits />
           <Contributing />
-          <MediaCarousel />
         </Route>
         <Route exact strict path="/ToS" component={TermsOfService} />
       </Switch>
