@@ -4,7 +4,7 @@ import {device} from '../../theme/theme'
 import {RightArrowButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
 import HeroChart from '../../assets/images/hero-chart.png'
-import OptimizedHeroChart from '../../assets/images/optimized-hero-chart.jpg'
+import OptimizedHeroChart from '../../assets/images/hero-background-btcd.png'
 import OptimizedHeroBackground from '../../assets/images/optimized-hero-background.jpg'
 
 const HeroContainer = styled.div`
