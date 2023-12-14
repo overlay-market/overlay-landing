@@ -5,7 +5,7 @@ import {ArrowRight} from 'react-feather'
 import {StyledCTAButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
 import ValuePropImage from '../../assets/images/value-proposition-image.png'
-import ValuePropositionAsset from '../../assets/images/value-proposition-image.jpg'
+import ValuePropositionAsset from '../../assets/images/value-proposition-image.png'
 
 const MainContainer = styled.div`
   display: flex;
