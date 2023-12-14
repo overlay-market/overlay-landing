@@ -11,6 +11,7 @@ import MobileMenu from '../MobileMenu/MobileMenu'
 import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
 import {ReactComponent as DiscordIcon} from '../../assets/icons/discord.svg'
 import {ReactComponent as TwitterIcon} from '../../assets/icons/twitter.svg'
+import {ReactComponent as MirrorIcon} from '../../assets/icons/mirror.svg'
 import {IconButton} from '@material-ui/core'
 
 export const HeaderContainer = styled.div`
@@ -160,6 +161,9 @@ const Header = () => {
 
       <ButtonsContainer>
         {/* <TokenFaucetButton>Get OVL</TokenFaucetButton> */}
+        <StyledIconButton href={GENERAL_LINKS.MIRROR} target="_blank">
+          <MirrorIcon />
+        </StyledIconButton>
         <StyledIconButton href={GENERAL_LINKS.DISCORD} target="_blank">
           <DiscordIcon />
         </StyledIconButton>
