@@ -126,9 +126,9 @@ const Hero = () => {
       <SplitViewContainer>
         <PrimaryViewContainer>
           <Title>
-            Liquidity for the <i>ILL</i>iquid
+            The Trade Everything Engine
           </Title>
-          <Description>Explore Overlay - Endless data markets, built on Arbitrum</Description>
+          <Description>The Exotic Perps Dex, native to Arbitrum</Description>
           <Box style={{marginBottom: '40px'}}>
             <RightArrowButton href={GENERAL_LINKS.LAUNCH_APP}>Get Started</RightArrowButton>
           </Box>
