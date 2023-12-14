@@ -1,5 +1,5 @@
-import {Route, Switch} from 'react-router-dom'
-import {TermsOfService} from './pages'
+import {Route, Switch, useLocation} from 'react-router-dom'
+import {TermsOfService, AccessDenied} from './pages'
 import {Nav} from './components'
 import Hero from './components/Hero/Hero'
 import Investors from './components/Investors/Investors'
@@ -14,6 +14,7 @@ import { useEffect } from 'react';
 import CookieConsent from 'react-cookie-consent'
 
 const App: React.FC = () => {
+  const location = useLocation();
   
   useEffect(() => {
     var gaProperty: string = 'G-QJR084KXFT'
@@ -58,8 +59,9 @@ const App: React.FC = () => {
           <Contributing />
         </Route>
         <Route exact strict path="/ToS" component={TermsOfService} />
+        <Route exact strict path="/AccessDenied" component={AccessDenied} />
       </Switch>
-      <Footer />
+      {location.pathname !== '/AccessDenied' && <Footer />}
     </div>
   )
 }
