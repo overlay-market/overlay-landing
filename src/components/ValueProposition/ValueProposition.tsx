@@ -73,7 +73,7 @@ const ValueProposition = () => {
         <PrimaryViewContainer>
           <Title>Say Goodbye to Liquidity Pools and Counter Parties</Title>
           <Description>
-            Overlay is built from the ground up with OVL, a cryptocurrency that longs/shorts DeFi
+            Overlay is built from the ground up with OV, a cryptocurrency that longs/shorts DeFi
             data streams and much, much more.
           </Description>
           <StyledCTAButton href={GENERAL_LINKS.DOCUMENTATION}>

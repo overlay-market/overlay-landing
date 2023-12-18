@@ -67,7 +67,7 @@ const Description = styled.div`
 `
 
 const Contributing = () => {
-  const ContributorLink = 'http://discord.gg/ovl'
+  const ContributorLink = 'https://discord.com/invite/overlay'
   return (
     <Wrapper>
       <MainContainer>

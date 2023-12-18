@@ -136,7 +136,7 @@ const overlayMirrorPosts: Array<MirrorPostAsset> = [
     author: 'madhav.eth',
     date: 'January 26th, 2023',
     content:
-      'Overlay Protocol has governance-set payoff and open interest caps that are specific to each Overlay market. These caps help the protocol minimize the impact of heavy tail behavior of some assets. Circuit Breakers act as an additional layer of protection that restrict the notional size of new positions when OVL printing (to pay out PnL) in the recent past has been excessive.',
+      'Overlay Protocol has governance-set payoff and open interest caps that are specific to each Overlay market. These caps help the protocol minimize the impact of heavy tail behavior of some assets. Circuit Breakers act as an additional layer of protection that restrict the notional size of new positions when OV printing (to pay out PnL) in the recent past has been excessive.',
     background:
       'radial-gradient(79.05% 79.05% at 21.62% 20.95%, rgb(0, 122, 255) 0%, rgb(0, 224, 255) 100%)',
   },
