@@ -1,2 +1,2 @@
 # overlay-landing
-Overlay (OVL) Landing Page
+Overlay (OV) Landing Page

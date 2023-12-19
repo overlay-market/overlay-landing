@@ -160,7 +160,7 @@ const Header = () => {
       </FlexRow>
 
       <ButtonsContainer>
-        {/* <TokenFaucetButton>Get OVL</TokenFaucetButton> */}
+        {/* <TokenFaucetButton>Get OV</TokenFaucetButton> */}
         <StyledIconButton href={GENERAL_LINKS.MIRROR} target="_blank">
           <MirrorIcon />
         </StyledIconButton>
