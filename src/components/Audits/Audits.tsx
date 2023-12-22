@@ -16,7 +16,11 @@ const MainContainer = styled.div`
   justify-content: center;
   max-width: 1100px;
   margin: auto;
-  padding: 0 16px;
+  padding: 0 34px;
+
+  @media ${device.md} {
+    padding: 0px 40px;
+  }
 `
 
 const Title = styled.div`
@@ -26,7 +30,7 @@ const Title = styled.div`
   max-width: 300px;
   line-height: 42px;
 
-  @media ${device.sm} {
+  @media ${device.md} {
     font-size: 36px;
     max-width: 370px;
   }
@@ -47,8 +51,15 @@ const AuditorsContainer = styled.div`
   border-top: 1px solid #232323;
   justify-content: space-between;
 
-  @media ${device.sm} {
+  @media ${device.md} {
+    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: start;
+    gap: 80px;
+  }
+
+  @media ${device.md} {
+    gap: 100px;
   }
 `
 
@@ -56,12 +67,8 @@ const AuditorContainer = styled.div`
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #232323;
-  width: 100%;
+  width: 300px;
   padding: 20px 0 25px;
-
-  @media ${device.sm} {
-    width: 300px;
-  }
 `
 
 const AuditorLogo = styled.div<{src: string}>`

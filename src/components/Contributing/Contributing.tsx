@@ -6,21 +6,26 @@ import OverlayLogoHeartCatImg from '../../assets/images/overlay-heart-cat.jpg'
 
 const Wrapper = styled.div`
   overflow-x: hidden !important;
-  padding: 80px 0px 160px;
+  padding: 0px 0px 160px;
+
+  @media ${device.lg} {
+    padding: 80px 0px 160px;
+  }
 `
 
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 1100px;
-  margin: auto;
-  justify-content: space-between;
-  padding: 0 16px;
+  justify-content: start;
+  padding: 0 34px;
   margin-bottom: 80px;
 
-  @media ${device.sm} {
+  @media ${device.lg} {
     flex-direction: row;
+    margin: auto;
     margin-bottom: 40px;
+    justify-content: space-between;
   }
 `
 
@@ -33,10 +38,12 @@ const ContributingImageContainer = styled.div`
     width: 100%;
   }
 
-  @media ${device.sm} {
-    margin: 20px;
+  @media ${device.md} {
     max-width: 450px;
     max-height: 450px;
+  }
+  @media ${device.lg} {
+    margin: 20px;
   }
 `
 
@@ -44,7 +51,10 @@ const ContributingTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: auto 60px auto auto;
+  
+  @media ${device.lg} {
+    margin: auto 60px auto auto;
+  }
 `
 
 const Title = styled.div`

@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   background: #f0f0f0;
   padding: 35px 16px;
 
-  @media ${device.sm} {
+  @media ${device.md} {
     padding: 55px 16px;
   }
 `
@@ -23,7 +23,7 @@ const InteractiveContentsContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media ${device.sm} {
+  @media ${device.md} {
     flex-direction: row;
   }
 `
@@ -32,7 +32,10 @@ const BrandContainer = styled.div`
   width: auto;
   margin-bottom: 20px;
 
-  @media ${device.sm} {
+  @media ${device.md} {
+    min-width: 300px;
+  }
+  @media ${device.lg} {
     min-width: 400px;
   }
 `
@@ -56,7 +59,7 @@ const LinksContainer = styled.div`
   justify-content: space-between;
   padding: 18px 0px 0px 18px;
 
-  @media ${device.sm} {
+  @media ${device.md} {
     padding: 18px 0px 0px 0px;
   }
 `
@@ -68,7 +71,7 @@ const LinksColumn = styled.div`
   width: 40%;
   margin-bottom: 25px;
 
-  @media ${device.sm} {
+  @media ${device.md} {
     width: auto;
   }
 `

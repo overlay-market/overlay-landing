@@ -8,7 +8,11 @@ const MainContainer = styled.div`
   flex-direction: column;
   max-width: 1100px;
   margin: auto;
-  padding: 80px 16px;
+  padding: 80px 34px;
+
+  @media ${device.md} {
+    padding: 80px 40px;
+  }
 `
 
 const HeaderContainer = styled.div`
@@ -17,8 +21,9 @@ const HeaderContainer = styled.div`
   width: 100%;
   justify-content: space-between;
 
-  @media ${device.sm} {
+  @media ${device.md} {
     flex-direction: row;
+    gap: 80px;
   }
 `
 
@@ -30,7 +35,7 @@ const Title = styled.div`
   margin-bottom: 20px;
   line-height: 42px;
 
-  @media ${device.sm} {
+  @media ${device.md} {
     max-width: 450px;
   }
 `
@@ -39,9 +44,13 @@ const Description = styled.div`
   font-family: 'Inter', sans-serif;
   font-size: 18px;
   color: #7b7b7b;
-  max-width: 650px;
+  max-width: 350px;
   margin-bottom: 20px;
   line-height: 25px;
+
+  @media ${device.md} {
+    max-width: 650px;
+  }
 `
 
 const Markets = () => {

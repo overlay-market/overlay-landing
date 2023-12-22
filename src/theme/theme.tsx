@@ -11,10 +11,14 @@ import {Colors} from './styled'
 // remove screenSize once
 // updated for theme provider
 const screenSize = {
-  sm: '768px',
+  // sm: '768px',
+  // md: '768px',
+  // lg: '992px',
+  // xl: '1400px',
+  sm: '375px',
   md: '768px',
-  lg: '992px',
-  xl: '1400px',
+  lg: '1024px',
+  xl: '1440px',
 }
 
 export const device = {
