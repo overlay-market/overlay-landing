@@ -7,11 +7,15 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 16px;
+  padding: 80px 34px;
   background: url(${NewsBackground});
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+
+  @media ${device.md} {
+    padding: 80px 40px;
+  }
 `
 
 const Title = styled.div`
@@ -33,7 +37,7 @@ const NewsPlatformContainer = styled.div`
   border-top: 0.5px solid #232323;
   border-bottom: 0.5px solid #232323;
 
-  @media ${device.sm} {
+  @media ${device.md} {
     flex-direction: row;
   }
 `
@@ -49,7 +53,7 @@ const Logo = styled.img`
   margin: 16px auto;
   width: 215px;
 
-  @media ${device.sm} {
+  @media ${device.md} {
     margin: auto;
   }
 `

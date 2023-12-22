@@ -28,6 +28,13 @@ const Text = styled.div`
   margin-bottom: 10px;
 `
 
+const StyledBox = styled(Box)`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+`
+
 const Investor = styled.div<{
   src?: string
   width?: number
@@ -35,7 +42,7 @@ const Investor = styled.div<{
 }>`
   display: flex;
   background: url(${({src}) => src ?? src});
-  margin: auto;
+  margin: auto 0;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -82,11 +89,11 @@ const Investors = () => {
     <Wrapper>
       <MainContainer>
         <Text>Backed by the best</Text>
-        <Box style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
+        <StyledBox>  
           {investorsList.map(investor => (
             <Investor src={investor.logoSrc} width={investor.width} height={investor.height} />
           ))}
-        </Box>
+        </StyledBox>
       </MainContainer>
     </Wrapper>
   )
