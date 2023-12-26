@@ -164,9 +164,9 @@ const Header = () => {
         <StyledIconButton href={GENERAL_LINKS.MIRROR} target="_blank">
           <MirrorIcon />
         </StyledIconButton>
-        <StyledIconButton href={GENERAL_LINKS.DISCORD} target="_blank">
+        {/* <StyledIconButton href={GENERAL_LINKS.DISCORD} target="_blank">
           <DiscordIcon />
-        </StyledIconButton>
+        </StyledIconButton> */}
         <StyledIconButton
           href={GENERAL_LINKS.TWITTER}
           target="_blank"
