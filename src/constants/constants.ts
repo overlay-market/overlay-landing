@@ -5,8 +5,8 @@ export const GENERAL_LINKS = {
   COMMUNITY_DOCS:
     'https://flash-asp-362.notion.site/Overlay-Protocol-29da60fd11e9436ea69e2a5e0db28a74',
   WHITEPAPER_V1:
-    'https://overlay.market/whitepaper',
-  DISCORD: 'https://overlay.market/discord',
+    'https://redrct.overlay.market/whitepaper',
+  DISCORD: 'https://redrct.overlay.market/discord',
   TWITTER: 'https://twitter.com/OverlayProtocol',
   MIRROR: 'https://mirror.xyz/0x7999C7f0b9f2259434b7aD130bBe36723a49E14e',
   PRIVACY_POLICY: '',

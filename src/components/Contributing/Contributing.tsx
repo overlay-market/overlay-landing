@@ -3,6 +3,7 @@ import {RightArrowButton} from '../Button/Button'
 import {device} from '../../theme/theme'
 import {DynamicCarousel} from '../DynamicCarousel/DynamicCarousel'
 import OverlayLogoHeartCatImg from '../../assets/images/overlay-heart-cat.jpg'
+import { GENERAL_LINKS } from '../../constants/constants'
 
 const Wrapper = styled.div`
   overflow-x: hidden !important;
@@ -67,7 +68,7 @@ const Description = styled.div`
 `
 
 const Contributing = () => {
-  const ContributorLink = 'https://overlay.market/discord'
+  const ContributorLink = GENERAL_LINKS.DISCORD
   return (
     <Wrapper>
       <MainContainer>
