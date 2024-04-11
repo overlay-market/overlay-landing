@@ -5,6 +5,7 @@ import {ArrowRight, ExternalLink} from 'react-feather'
 import SpearbitDAOLogo from '../../assets/images/spearbit-dao-logo.png'
 import LeastAuthorityLogo from '../../assets/images/least-authority-logo.png'
 import ImmunefiLogo from '../../assets/images/immunefi-logo.png'
+import TrailofBits from '../../assets/images/trail-of-bit-logo.png'
 
 const Wrapper = styled.div`
   padding: 80px 0;
@@ -140,6 +141,12 @@ const auditorsList: Array<AuditorAsset> = [
     logoUrl: `${ImmunefiLogo}`,
     completedAuditHref: `https://immunefi.com/bounty/overlay/`,
     externalLinkText: 'Immunefi Bounty',
+  },
+  {
+    name: 'Trail of Bits',
+    logoUrl: `${TrailofBits}`,
+    completedAuditHref: ``,
+    externalLinkText: 'Trail of Bits Bounty',
   },
 ]
 
