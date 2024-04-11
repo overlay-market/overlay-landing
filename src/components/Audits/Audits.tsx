@@ -137,16 +137,16 @@ const auditorsList: Array<AuditorAsset> = [
     externalLinkText: 'Least Authority Audit',
   },
   {
+    name: 'Trail of Bits',
+    logoUrl: `${TrailofBits}`,
+    completedAuditHref: `https://github.com/overlay-market/v1-core/blob/main/audits/trailofbits/audit.pdf`,
+    externalLinkText: 'Trail of Bits Audit',
+  },
+  {
     name: 'Immunefi',
     logoUrl: `${ImmunefiLogo}`,
     completedAuditHref: `https://immunefi.com/bounty/overlay/`,
     externalLinkText: 'Immunefi Bounty',
-  },
-  {
-    name: 'Trail of Bits',
-    logoUrl: `${TrailofBits}`,
-    completedAuditHref: `https://github.com/overlay-market/v1-core/blob/main/audits/trailofbits/audit.pdf`,
-    externalLinkText: 'Trail of Bits Bounty',
   },
 ]
 
