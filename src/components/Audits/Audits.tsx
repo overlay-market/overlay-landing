@@ -145,7 +145,7 @@ const auditorsList: Array<AuditorAsset> = [
   {
     name: 'Trail of Bits',
     logoUrl: `${TrailofBits}`,
-    completedAuditHref: ``,
+    completedAuditHref: `https://github.com/overlay-market/v1-core/blob/main/audits/trailofbits/audit.pdf`,
     externalLinkText: 'Trail of Bits Bounty',
   },
 ]
