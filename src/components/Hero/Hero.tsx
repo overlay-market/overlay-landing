@@ -5,7 +5,10 @@ import {RightArrowButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
 import HeroChart from '../../assets/images/hero-chart.png'
 import OptimizedHeroChart from '../../assets/images/hero-background-ai.jpg'
+import HeroImageDesktop from '../../assets/images/hero-image-desktop.png'
+import HeroImageMobile from '../../assets/images/hero-image-mobile.png'
 import OptimizedHeroBackground from '../../assets/images/optimized-hero-background.jpg'
+import { useEffect, useState } from 'react'
 
 const HeroContainer = styled.div`
   display: flex;
@@ -121,6 +124,36 @@ const HeroStats = () => {
   )
 }
 
+const HeroImage = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Set initial value
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up event listener
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  console.log({isMobile})
+
+  return (
+    <div style={{ display: 'flex', justifyContent: isMobile ? 'center' : 'flex-start' }}>
+      <img
+        src={isMobile ? HeroImageMobile : HeroImageDesktop}
+        alt="Hero"
+        style={{ width: isMobile ? '375px' : '537px', paddingBottom: '25px' }}
+      />
+    </div>
+  );
+};
+
 const Hero = () => {
   return (
     <HeroContainer>
@@ -130,6 +163,7 @@ const Hero = () => {
             The Trade Everything Engine
           </Title>
           <Description>The Exotic Perps Dex, native to Arbitrum</Description>
+          <HeroImage />
           <Box style={{marginBottom: '40px'}}>
             <RightArrowButton href={GENERAL_LINKS.LAUNCH_APP}>Start Trading</RightArrowButton>
           </Box>
