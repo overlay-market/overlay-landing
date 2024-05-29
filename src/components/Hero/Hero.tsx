@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import {Box} from 'rebass'
-import {device} from '../../theme/theme'
+import {MEDIA_WIDTHS, device} from '../../theme/theme'
 import {RightArrowButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
 import HeroChart from '../../assets/images/hero-chart.png'
@@ -129,7 +129,7 @@ const HeroImage = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < MEDIA_WIDTHS.sm);
     };
 
     // Set initial value
