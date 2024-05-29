@@ -130,7 +130,7 @@ const Hero = () => {
           </Title>
           <Description>The Exotic Perps Dex, native to Arbitrum</Description>
           <Box style={{marginBottom: '40px'}}>
-            <RightArrowButton href={GENERAL_LINKS.LAUNCH_APP}>Get Started</RightArrowButton>
+            <RightArrowButton href={GENERAL_LINKS.LAUNCH_APP}>Start Trading</RightArrowButton>
           </Box>
         </PrimaryViewContainer>
         <SecondaryViewContainer>
