@@ -25,7 +25,7 @@ export const StyledCTAButton = ({children, href}: StyledCTAButtonProps) => {
 export const BlueCTAButton = ({children, href}: StyledCTAButtonProps) => {
   return (
     <StyledLink href={href} target="_blank" rel="noopener noreferrer">
-      <button className="cta-button blue-bg">{children}</button>
+      <button className="cta-button linear-bg round">{children}</button>
     </StyledLink>
   )
 }

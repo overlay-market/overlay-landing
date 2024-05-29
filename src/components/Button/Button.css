@@ -35,6 +35,19 @@
   background: linear-gradient(271deg, #ECFF75 6.76%, rgba(255, 60, 235, 0.70) 98.96%), #FFF;
 }
 
+.round {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 43px;
+  color: var(--000000, #000);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 25.6px */
+}
+
 .cta-button:focus {
   outline: none;
   box-shadow: none;
