@@ -19,6 +19,34 @@
   background: #71CEFF;
 }
 
+.linear-bg {
+  color: var(--Black-ovl-black, #0B0F1C);
+  font-family: Inter;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 28px */
+  display: flex;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 10px;
+  background: linear-gradient(271deg, #ECFF75 6.76%, rgba(255, 60, 235, 0.70) 98.96%), #FFF;
+}
+
+.round {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 43px;
+  color: var(--000000, #000);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+
 .cta-button:focus {
   outline: none;
   box-shadow: none;

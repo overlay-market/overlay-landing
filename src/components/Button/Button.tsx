@@ -17,7 +17,7 @@ const StyledLink = styled.a`
 export const StyledCTAButton = ({children, href}: StyledCTAButtonProps) => {
   return (
     <StyledLink href={href} target="_blank" rel="noopener noreferrer">
-      <button className="cta-button glow-on-hover">{children}</button>
+      <button className="cta-button linear-bg">{children}</button>
     </StyledLink>
   )
 }
@@ -25,7 +25,7 @@ export const StyledCTAButton = ({children, href}: StyledCTAButtonProps) => {
 export const BlueCTAButton = ({children, href}: StyledCTAButtonProps) => {
   return (
     <StyledLink href={href} target="_blank" rel="noopener noreferrer">
-      <button className="cta-button blue-bg">{children}</button>
+      <button className="cta-button linear-bg round">{children}</button>
     </StyledLink>
   )
 }
@@ -35,7 +35,7 @@ export const RightArrowButton = ({children, href}: StyledCTAButtonProps) => {
     <StyledCTAButton href={href}>
       {children}
       <ExternalIcon margin={'0 0 0 4px'}>
-        <ArrowRight size={16} />
+        <ArrowRight size={28} />
       </ExternalIcon>
     </StyledCTAButton>
   )

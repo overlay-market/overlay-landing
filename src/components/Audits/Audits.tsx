@@ -151,8 +151,9 @@ const auditorsList: Array<AuditorAsset> = [
 ]
 
 const Audits = () => {
-  const ImmunefiBountyLink = auditorsList[2].completedAuditHref
-
+  const immunefiEntry = auditorsList.find(auditor => auditor.name === 'Immunefi');
+  const ImmunefiBountyLink = immunefiEntry ? immunefiEntry.completedAuditHref : '#';
+  
   return (
     <Wrapper>
       <MainContainer>

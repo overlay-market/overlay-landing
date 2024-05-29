@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 import {Box} from 'rebass'
-import {device} from '../../theme/theme'
+import {MEDIA_WIDTHS, device} from '../../theme/theme'
 import {RightArrowButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
 import HeroChart from '../../assets/images/hero-chart.png'
-import OptimizedHeroChart from '../../assets/images/hero-background-btcd.png'
+import OptimizedHeroChart from '../../assets/images/hero-background-ai.jpg'
+import HeroImageDesktop from '../../assets/images/hero-image-desktop.png'
+import HeroImageMobile from '../../assets/images/hero-image-mobile.png'
 import OptimizedHeroBackground from '../../assets/images/optimized-hero-background.jpg'
+import { useEffect, useState } from 'react'
 
 const HeroContainer = styled.div`
   display: flex;
@@ -67,10 +70,11 @@ const Title = styled.div`
 const Description = styled.div`
   font-family: 'Inter', sans-serif;
   font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
   color: #7b7b7b;
   margin-bottom: 36px;
-  max-width: 330px;
-  line-height: 25px;
+  line-height: 160%; /* 32px */
 
   @media ${device.sm} {
     font-size: 20px;
@@ -120,6 +124,36 @@ const HeroStats = () => {
   )
 }
 
+const HeroImage = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < MEDIA_WIDTHS.sm);
+    };
+
+    // Set initial value
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up event listener
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  console.log({isMobile})
+
+  return (
+    <div style={{ display: 'flex', justifyContent: isMobile ? 'center' : 'flex-start' }}>
+      <img
+        src={isMobile ? HeroImageMobile : HeroImageDesktop}
+        alt="Hero"
+        style={{ width: isMobile ? '375px' : '537px', paddingBottom: '25px' }}
+      />
+    </div>
+  );
+};
+
 const Hero = () => {
   return (
     <HeroContainer>
@@ -129,8 +163,9 @@ const Hero = () => {
             The Trade Everything Engine
           </Title>
           <Description>The Exotic Perps Dex, native to Arbitrum</Description>
+          <HeroImage />
           <Box style={{marginBottom: '40px'}}>
-            <RightArrowButton href={GENERAL_LINKS.LAUNCH_APP}>Get Started</RightArrowButton>
+            <RightArrowButton href={GENERAL_LINKS.LAUNCH_APP}>Start Trading</RightArrowButton>
           </Box>
         </PrimaryViewContainer>
         <SecondaryViewContainer>
