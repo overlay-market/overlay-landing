@@ -67,10 +67,11 @@ const Title = styled.div`
 const Description = styled.div`
   font-family: 'Inter', sans-serif;
   font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
   color: #7b7b7b;
   margin-bottom: 36px;
-  max-width: 330px;
-  line-height: 25px;
+  line-height: 160%; /* 32px */
 
   @media ${device.sm} {
     font-size: 20px;
