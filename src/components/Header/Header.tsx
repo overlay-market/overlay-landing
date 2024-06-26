@@ -156,6 +156,9 @@ const Header = () => {
           <StyledLink href={GENERAL_LINKS.WHITEPAPER_V1} target="_blank" rel="noopener noreferrer">
             White Paper
           </StyledLink>
+          <StyledLink href={GENERAL_LINKS.STATISTICS} target="_blank" rel="noopener noreferrer">
+            Statistics
+          </StyledLink>
         </LinksContainer>
       </FlexRow>
 

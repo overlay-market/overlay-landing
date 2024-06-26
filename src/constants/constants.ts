@@ -13,6 +13,7 @@ export const GENERAL_LINKS = {
   TERMS_OF_SERVICE: 'https://overlay.market/#/tos',
   LAUNCH_APP: 'https://app.overlay.market',
   CLAIM: 'https://app.overlay.market/claim',
+  STATISTICS: 'https://stats.overlay.market/'
 }
 
 export interface LinkAsset {
@@ -26,6 +27,7 @@ export const LINKS = {
     {label: 'Documentation', href: GENERAL_LINKS.DOCUMENTATION},
     {label: 'Governance', href: GENERAL_LINKS.GOVERNANCE},
     {label: 'White Paper V1', href: GENERAL_LINKS.WHITEPAPER_V1},
+    {label: 'Statistics', href: GENERAL_LINKS.STATISTICS},
   ] as Array<LinkAsset>,
   connect: [
     {label: 'Discord', href: GENERAL_LINKS.DISCORD},
