@@ -162,7 +162,7 @@ const Hero = () => {
           <Title>
             The Trade Everything Engine
           </Title>
-          <Description>The Exotic Perps Dex, native to Arbitrum</Description>
+          <Description>The Exotic Perps Dex</Description>
           <HeroImage />
           <Box style={{marginBottom: '40px'}}>
             <RightArrowButton href={GENERAL_LINKS.LAUNCH_APP}>Start Trading</RightArrowButton>
