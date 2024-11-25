@@ -25,7 +25,7 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   margin: 16px;
 
-  @media ${device.sm} {
+  @media ${device.md} {
     margin: 32px auto 64px;
     padding: 0 16px;
   }
@@ -33,6 +33,8 @@ export const HeaderContainer = styled.div`
 
 export const FlexRow = styled.div`
   display: flex;
+  width: 700px;
+  justify-content: space-between;
 `
 
 export const LogoContainer = styled.div`
@@ -45,7 +47,6 @@ const LinksContainer = styled.div`
   @media ${device.lg} {
     display: flex;
     flex-direction: row;
-    margin-left: 96px;
   }
 `
 
@@ -61,7 +62,7 @@ const StyledLink = styled.a`
 const ButtonsContainer = styled.div`
   display: none;
 
-  @media ${device.sm} {
+  @media ${device.md} {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -102,7 +103,7 @@ const MobileOnly = styled.div`
   display: flex;
   margin-right: 8px;
 
-  @media ${device.sm} {
+  @media ${device.md} {
     display: none;
   }
 `

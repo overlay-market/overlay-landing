@@ -20,8 +20,7 @@ const HeroContainer = styled.div`
   justify-content: center;
   padding: 160px 16px 45px;
 
-  @media ${device.sm} {
-    background-position: center;
+  @media ${device.md} {
     min-height: 480px;
   }
 `
@@ -30,22 +29,33 @@ const SplitViewContainer = styled.div`
   display: flex;
   flex-direction: row;
   max-width: 1115px;
+  
+  @media ${device.md} {
+    padding-left: 64px;
+  }
+  @media ${device.xl} {
+    padding-left: 0;
+    max-width: 1100px;
+  }
 `
 
 const PrimaryViewContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: auto;
-
-  @media ${device.sm} {
-    width: 50%;
+  
+  @media ${device.md} {
+    width: 60%;  
+  }
+  @media ${device.lg} {
+    width: 50%;  
   }
 `
 
 const SecondaryViewContainer = styled.div`
   display: none;
 
-  @media ${device.sm} {
+  @media ${device.lg} {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -61,7 +71,7 @@ const Title = styled.div`
   margin-bottom: 24px;
   max-width: 300px;
 
-  @media ${device.sm} {
+  @media ${device.md} {
     font-size: 69px;
     max-width: none;
   }
@@ -76,7 +86,7 @@ const Description = styled.div`
   margin-bottom: 36px;
   line-height: 160%; /* 32px */
 
-  @media ${device.sm} {
+  @media ${device.md} {
     font-size: 20px;
   }
 `

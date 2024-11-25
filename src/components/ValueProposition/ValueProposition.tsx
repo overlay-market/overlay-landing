@@ -10,31 +10,57 @@ import ValuePropositionAsset from '../../assets/images/value-proposition-image.p
 const MainContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 80px 16px;
+  padding: 0px 34px 80px;
+
+  @media ${device.md} {
+    padding: 80px 16px 0px 40px;
+  }
+  @media ${device.lg} {
+    padding: 80px 16px 80px 40px;
+  }
 `
 
 const DesktopSplitViewContainer = styled.div`
   display: flex;
+  justify-content: space-between;
   margin: auto;
   width: 100%;
   max-width: 1100px;
+
+  @media ${device.md} {
+    flex-direction: column;
+  }
+  @media ${device.lg} {
+    flex-direction: row;
+  }
 `
 
 const PrimaryViewContainer = styled.div`
-  margin-top: auto;
+  margin-top: 0px;
 
-  @media ${device.sm} {
-    width: 40%;
+  @media ${device.md} {
+    min-width: 50%;
+  }
+  @media ${device.lg} {
+    margin-top: auto;
+    min-width: 40%;
   }
 `
 
 const SecondaryViewContainer = styled.div`
   display: none;
 
-  @media ${device.sm} {
+  @media ${device.md} {
     display: flex;
-    flex-direction: column;
-    align-items: end;
+    justify-content: end;
+    position: relative;
+    bottom: 90px;
+    z-index:-1;
+  }
+  @media ${device.lg} {
+    display: flex;
+    bottom: 0px;
+    z-index: 0;
   }
 `
 
@@ -46,7 +72,7 @@ const Title = styled.div`
   max-width: 300px;
   line-height: 42px;
 
-  @media ${device.sm} {
+  @media ${device.md} {
     font-size: 36px;
     max-width: 400px;
   }
@@ -63,7 +89,6 @@ const Description = styled.div`
 
 const ImageContainer = styled.img`
   max-width: 600px;
-  margin: auto;
 `
 
 const ValueProposition = () => {
