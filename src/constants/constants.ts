@@ -13,6 +13,7 @@ export const GENERAL_LINKS = {
   TERMS_OF_SERVICE: 'https://overlay.market/#/tos',
   LAUNCH_APP: 'https://app.overlay.market',
   CLAIM: 'https://app.overlay.market/claim',
+  TELEGRAM: 'https://t.me/overlay_protocol',
 }
 
 export interface LinkAsset {
@@ -29,6 +30,7 @@ export const LINKS = {
   ] as Array<LinkAsset>,
   connect: [
     {label: 'Discord', href: GENERAL_LINKS.DISCORD},
+    {label: 'Telegram', href: GENERAL_LINKS.TELEGRAM},
     {label: 'Twitter', href: GENERAL_LINKS.TWITTER},
     {label: 'Mirror', href: GENERAL_LINKS.MIRROR},
   ] as Array<LinkAsset>,

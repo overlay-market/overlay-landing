@@ -10,6 +10,7 @@ import {enableLock, disableLock} from '../../utils/scrollLock'
 import MobileMenu from '../MobileMenu/MobileMenu'
 import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
 import {ReactComponent as DiscordIcon} from '../../assets/icons/discord.svg'
+import TelegramIcon from '../../assets/icons/telegram-icon.png'
 import {ReactComponent as TwitterIcon} from '../../assets/icons/twitter.svg'
 import {ReactComponent as MirrorIcon} from '../../assets/icons/mirror.svg'
 import {IconButton} from '@material-ui/core'
@@ -166,6 +167,9 @@ const Header = () => {
         </StyledIconButton>
         <StyledIconButton href={GENERAL_LINKS.DISCORD} target="_blank">
           <DiscordIcon />
+        </StyledIconButton>
+        <StyledIconButton href={GENERAL_LINKS.TELEGRAM} target="_blank">
+          <Icon src={TelegramIcon} alt="Telegram Logo" width={22} height={22} margin="" />
         </StyledIconButton>
         <StyledIconButton
           href={GENERAL_LINKS.TWITTER}
