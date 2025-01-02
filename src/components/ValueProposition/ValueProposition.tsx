@@ -76,12 +76,12 @@ const ValueProposition = () => {
             Overlay is built from the ground up with OV, a cryptocurrency that longs/shorts DeFi
             data streams and much, much more.
           </Description>
-          {/* <StyledCTAButton href={GENERAL_LINKS.DOCUMENTATION}>
+          <StyledCTAButton href={GENERAL_LINKS.DOCUMENTATION}>
             Learn More
             <ExternalIcon margin={'4px'}>
               <ArrowRight size={16} />
             </ExternalIcon>
-          </StyledCTAButton> */}
+          </StyledCTAButton>
         </PrimaryViewContainer>
         <SecondaryViewContainer>
           <ImageContainer src={ValuePropositionAsset} />
