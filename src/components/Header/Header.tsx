@@ -148,12 +148,12 @@ const Header = () => {
         </LogoContainer>
 
         <LinksContainer>
-          <StyledLink href={GENERAL_LINKS.DOCUMENTATION} target="_blank" rel="noopener noreferrer">
+          {/* <StyledLink href={GENERAL_LINKS.DOCUMENTATION} target="_blank" rel="noopener noreferrer">
             Documentation
           </StyledLink>
           <StyledLink href={GENERAL_LINKS.GOVERNANCE} target="_blank" rel="noopener noreferrer">
             Governance
-          </StyledLink>
+          </StyledLink> */}
           <StyledLink href={GENERAL_LINKS.WHITEPAPER_V1} target="_blank" rel="noopener noreferrer">
             White Paper
           </StyledLink>

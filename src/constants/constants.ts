@@ -24,8 +24,8 @@ export interface LinkAsset {
 export const LINKS = {
   protocol: [
     {label: 'Github', href: GENERAL_LINKS.GITHUB},
-    {label: 'Documentation', href: GENERAL_LINKS.DOCUMENTATION},
-    {label: 'Governance', href: GENERAL_LINKS.GOVERNANCE},
+    // {label: 'Documentation', href: GENERAL_LINKS.DOCUMENTATION},
+    // {label: 'Governance', href: GENERAL_LINKS.GOVERNANCE},
     {label: 'White Paper V1', href: GENERAL_LINKS.WHITEPAPER_V1},
   ] as Array<LinkAsset>,
   connect: [
