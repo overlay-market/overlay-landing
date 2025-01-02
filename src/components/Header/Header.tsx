@@ -162,9 +162,9 @@ const Header = () => {
 
       <ButtonsContainer>
         {/* <TokenFaucetButton>Get OV</TokenFaucetButton> */}
-        <StyledIconButton href={GENERAL_LINKS.MIRROR} target="_blank">
+        {/* <StyledIconButton href={GENERAL_LINKS.MIRROR} target="_blank">
           <MirrorIcon />
-        </StyledIconButton>
+        </StyledIconButton> */}
         <StyledIconButton href={GENERAL_LINKS.DISCORD} target="_blank">
           <DiscordIcon />
         </StyledIconButton>

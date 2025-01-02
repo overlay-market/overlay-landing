@@ -32,7 +32,7 @@ export const LINKS = {
     {label: 'Discord', href: GENERAL_LINKS.DISCORD},
     {label: 'Telegram', href: GENERAL_LINKS.TELEGRAM},
     {label: 'Twitter', href: GENERAL_LINKS.TWITTER},
-    {label: 'Mirror', href: GENERAL_LINKS.MIRROR},
+    // {label: 'Mirror', href: GENERAL_LINKS.MIRROR},
   ] as Array<LinkAsset>,
   legal: [{label: 'Terms of Service', href: GENERAL_LINKS.TERMS_OF_SERVICE}] as Array<LinkAsset>,
 }
