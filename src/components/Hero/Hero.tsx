@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import {Box} from 'rebass'
 import {MEDIA_WIDTHS, device} from '../../theme/theme'
 import {RightArrowButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
@@ -9,10 +8,11 @@ import HeroImageDesktop from '../../assets/images/hero-image-desktop.png'
 import HeroImageMobile from '../../assets/images/hero-image-mobile.png'
 import OptimizedHeroBackground from '../../assets/images/optimized-hero-background.jpg'
 import {useEffect, useState} from 'react'
+import MarketCardsCarousel from './MarketCardsCarousel'
 
 const HeroContainer = styled.div`
   display: flex;
-  min-height: 350px;
+  flex-direction: column;
   background: url(${OptimizedHeroBackground});
   background-position: left;
   background-repeat: no-repeat;
@@ -22,21 +22,30 @@ const HeroContainer = styled.div`
 
   @media ${device.sm} {
     background-position: center;
-    min-height: 480px;
+    justify-content: flex-end;
+    align-items: end;
   }
 `
 
 const SplitViewContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width: 100%;
   max-width: 1115px;
+  margin: 0 auto;
+`
+
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: row;
 `
 
 const PrimaryViewContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: auto;
-
+  position: relative;
+  z-index: 100;
   @media ${device.sm} {
     width: 50%;
   }
@@ -48,9 +57,25 @@ const SecondaryViewContainer = styled.div`
   @media ${device.sm} {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     width: 50%;
     max-width: 50%;
-    align-items: center;
+  }
+`
+
+const ButtonContainer = styled.div`
+  margin-bottom: 40px;
+  padding-top: 20px;
+  position: relative;
+  top: 0;
+
+  @media ${device.sm} {
+    top: -140px;
+    margin-bottom: -120px;
+  }
+  @media ${device.lg} {
+    top: -80px;
+    margin-bottom: -80px;
   }
 `
 
@@ -62,8 +87,11 @@ const Title = styled.div`
   max-width: 300px;
 
   @media ${device.sm} {
-    font-size: 69px;
+    font-size: 56px;
     max-width: none;
+  }
+  @media ${device.lg} {
+    font-size: 69px;
   }
 `
 
@@ -141,7 +169,6 @@ const HeroImage = () => {
     // Clean up event listener
     return () => window.removeEventListener('resize', handleResize)
   }, [])
-  console.log({isMobile})
 
   return (
     <div style={{display: 'flex', justifyContent: isMobile ? 'center' : 'flex-start'}}>
@@ -158,17 +185,20 @@ const Hero = () => {
   return (
     <HeroContainer>
       <SplitViewContainer>
-        <PrimaryViewContainer>
-          <Title>The Trade Everything Engine</Title>
-          <Description>The Exotic Perps Dex</Description>
-          <HeroImage />
-          <Box style={{marginBottom: '40px'}}>
-            <RightArrowButton href={GENERAL_LINKS.LAUNCH_APP}>Start Trading</RightArrowButton>
-          </Box>
-        </PrimaryViewContainer>
-        <SecondaryViewContainer>
-          <MainImage src={OptimizedHeroChart} />
-        </SecondaryViewContainer>
+        <TitleContainer>
+          <PrimaryViewContainer>
+            <Title>The Trade Everything Engine</Title>
+            <Description>The Exotic Perps Dex</Description>
+          </PrimaryViewContainer>
+          <SecondaryViewContainer>
+            <MainImage src={OptimizedHeroChart} />
+          </SecondaryViewContainer>
+        </TitleContainer>
+
+        <MarketCardsCarousel />
+        <ButtonContainer>
+          <RightArrowButton href={GENERAL_LINKS.LAUNCH_APP}>Start Trading</RightArrowButton>
+        </ButtonContainer>
       </SplitViewContainer>
     </HeroContainer>
   )
