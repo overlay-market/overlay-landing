@@ -4,7 +4,6 @@ import {ExternalIcon} from '../Icon/Icon'
 import {ArrowRight} from 'react-feather'
 import {StyledCTAButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
-import ValuePropImage from '../../assets/images/value-proposition-image.png'
 import ValuePropositionAsset from '../../assets/images/value-proposition-image.png'
 
 const MainContainer = styled.div`
@@ -15,15 +14,22 @@ const MainContainer = styled.div`
 
 const DesktopSplitViewContainer = styled.div`
   display: flex;
+  align-items: center;
   margin: auto;
   width: 100%;
   max-width: 1100px;
+  @media ${device.sm} {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @media ${device.lg} {
+    flex-direction: row;
+  }
 `
 
 const PrimaryViewContainer = styled.div`
-  margin-top: auto;
-
-  @media ${device.sm} {
+  @media ${device.lg} {
     width: 40%;
   }
 `
@@ -33,8 +39,6 @@ const SecondaryViewContainer = styled.div`
 
   @media ${device.sm} {
     display: flex;
-    flex-direction: column;
-    align-items: end;
   }
 `
 
@@ -64,6 +68,9 @@ const Description = styled.div`
 const ImageContainer = styled.img`
   max-width: 600px;
   margin: auto;
+  @media (min-width: 1100px) {
+    max-width: 747px;
+  }
 `
 
 const ValueProposition = () => {
