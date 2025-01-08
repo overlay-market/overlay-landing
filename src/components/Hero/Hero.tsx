@@ -4,11 +4,11 @@ import {MEDIA_WIDTHS, device} from '../../theme/theme'
 import {RightArrowButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
 import HeroChart from '../../assets/images/hero-chart.png'
-import OptimizedHeroChart from '../../assets/images/hero-background-ai.jpg'
+import OptimizedHeroChart from '../../assets/images/hero-background-ai.png'
 import HeroImageDesktop from '../../assets/images/hero-image-desktop.png'
 import HeroImageMobile from '../../assets/images/hero-image-mobile.png'
 import OptimizedHeroBackground from '../../assets/images/optimized-hero-background.jpg'
-import { useEffect, useState } from 'react'
+import {useEffect, useState} from 'react'
 
 const HeroContainer = styled.div`
   display: flex;
@@ -125,43 +125,41 @@ const HeroStats = () => {
 }
 
 const HeroImage = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < MEDIA_WIDTHS.sm);
-    };
+      setIsMobile(window.innerWidth < MEDIA_WIDTHS.sm)
+    }
 
     // Set initial value
-    handleResize();
+    handleResize()
 
     // Add event listener
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize)
 
     // Clean up event listener
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
   console.log({isMobile})
 
   return (
-    <div style={{ display: 'flex', justifyContent: isMobile ? 'center' : 'flex-start' }}>
+    <div style={{display: 'flex', justifyContent: isMobile ? 'center' : 'flex-start'}}>
       <img
         src={isMobile ? HeroImageMobile : HeroImageDesktop}
         alt="Hero"
-        style={{ width: isMobile ? '375px' : '537px', paddingBottom: '25px' }}
+        style={{width: isMobile ? '375px' : '537px', paddingBottom: '25px'}}
       />
     </div>
-  );
-};
+  )
+}
 
 const Hero = () => {
   return (
     <HeroContainer>
       <SplitViewContainer>
         <PrimaryViewContainer>
-          <Title>
-            The Trade Everything Engine
-          </Title>
+          <Title>The Trade Everything Engine</Title>
           <Description>The Exotic Perps Dex</Description>
           <HeroImage />
           <Box style={{marginBottom: '40px'}}>
