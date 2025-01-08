@@ -35,7 +35,7 @@ export const RightArrowButton = ({children, href}: StyledCTAButtonProps) => {
     <StyledCTAButton href={href}>
       {children}
       <ExternalIcon margin={'0 0 0 4px'}>
-        <ArrowRight size={28} />
+        <ArrowRight size={20} />
       </ExternalIcon>
     </StyledCTAButton>
   )
