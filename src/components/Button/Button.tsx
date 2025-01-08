@@ -25,7 +25,9 @@ export const StyledCTAButton = ({children, href}: StyledCTAButtonProps) => {
 export const BlueCTAButton = ({children, href}: StyledCTAButtonProps) => {
   return (
     <StyledLink href={href} target="_blank" rel="noopener noreferrer">
-      <button className="cta-button linear-bg round">{children}</button>
+      <button className="cta-button linear-bg" style={{fontSize: '16px'}}>
+        {children}
+      </button>
     </StyledLink>
   )
 }
@@ -35,7 +37,7 @@ export const RightArrowButton = ({children, href}: StyledCTAButtonProps) => {
     <StyledCTAButton href={href}>
       {children}
       <ExternalIcon margin={'0 0 0 4px'}>
-        <ArrowRight size={28} />
+        <ArrowRight size={20} />
       </ExternalIcon>
     </StyledCTAButton>
   )
