@@ -18,6 +18,7 @@
     "@types/react-mailchimp-subscribe": "^2.1.0",
     "@types/styled-components": "^5.1.10",
     "amplitude-js": "^8.21.9",
+    "bignumber.js": "^9.1.2",
     "path": "^0.12.7",
     "react": "^17.0.2",
     "react-alert": "^7.0.3",
@@ -33,6 +34,7 @@
     "rebass": "^4.0.7",
     "redux-localstorage-simple": "^2.4.1",
     "styled-components": "^5.3.0",
+    "swiper": "^9.4.1",
     "typescript": "^4.3.2",
     "web-vitals": "^1.1.2"
   },
