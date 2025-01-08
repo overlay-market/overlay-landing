@@ -42,7 +42,7 @@ const Title = styled.div`
   font-family: 'Inter', sans-serif;
   font-size: 32px;
   font-weight: 600;
-  color: black;
+  color: #232323;
   max-width: 300px;
   line-height: 42px;
 
@@ -55,7 +55,7 @@ const Title = styled.div`
 const Description = styled.div`
   font-family: 'Inter', sans-serif;
   font-size: 18px;
-  color: #7b7b7b;
+  color: #232323;
   max-width: 400px;
   margin: 32px 0;
   line-height: 150%;
