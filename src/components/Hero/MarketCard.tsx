@@ -24,8 +24,6 @@ const CustomCard = styled.div`
 
   &:hover {
     transform: scale(1.02);
-    position: relative;
-    left: 2px;
   }
 `
 
@@ -71,7 +69,6 @@ const MarketCard = ({priceWithCurrency, title, id}: MarketCardProps) => {
         backgroundImage: `url(${MARKETS_FULL_LOGOS[id]})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        cursor: 'pointer',
         width: 150,
       }}
     >
