@@ -12,7 +12,7 @@ import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
 import {ReactComponent as DiscordIcon} from '../../assets/icons/discord.svg'
 import TelegramIcon from '../../assets/icons/telegram-icon.png'
 import {ReactComponent as TwitterIcon} from '../../assets/icons/twitter.svg'
-import {ReactComponent as MirrorIcon} from '../../assets/icons/mirror.svg'
+import {ReactComponent as MediumIcon} from '../../assets/icons/Medium-Icon-Black.svg'
 import {IconButton} from '@material-ui/core'
 
 export const HeaderContainer = styled.div`
@@ -162,9 +162,9 @@ const Header = () => {
 
       <ButtonsContainer>
         {/* <TokenFaucetButton>Get OV</TokenFaucetButton> */}
-        {/* <StyledIconButton href={GENERAL_LINKS.MIRROR} target="_blank">
-          <MirrorIcon />
-        </StyledIconButton> */}
+        <StyledIconButton href={GENERAL_LINKS.MEDIUM} target="_blank">
+          <MediumIcon />
+        </StyledIconButton>
         <StyledIconButton href={GENERAL_LINKS.DISCORD} target="_blank">
           <DiscordIcon />
         </StyledIconButton>
