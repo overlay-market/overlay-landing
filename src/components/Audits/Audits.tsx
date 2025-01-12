@@ -162,12 +162,6 @@ const Audits = () => {
           Overlay Protocol has gone through two rigorous audits with some of the best, and continues
           to have open bounties for smart contract security bugs.
         </Description>
-        <ArrowIconLink href={ImmunefiBountyLink}>
-          Explore bounties
-          <ExternalIcon margin="auto 8px">
-            <ArrowRight size={12} />
-          </ExternalIcon>
-        </ArrowIconLink>
 
         <AuditorsContainer>
           {auditorsList.map(current => (
