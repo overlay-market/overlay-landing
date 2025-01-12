@@ -159,8 +159,7 @@ const Audits = () => {
       <MainContainer>
         <Title>Security at the heart of production</Title>
         <Description>
-          Overlay Protocol has gone through two rigorous audits with some of the best, and continues
-          to have open bounties for smart contract security bugs.
+          Overlay Protocol has gone through three rigorous audits with some of the best.
         </Description>
 
         <AuditorsContainer>
