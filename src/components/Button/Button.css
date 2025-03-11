@@ -20,9 +20,9 @@
 }
 
 .linear-bg {
-  color: var(--Black-ovl-black, #0B0F1C);
+  color: #000;
   font-family: Inter;
-  font-size: 28px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 100%; /* 28px */
@@ -31,7 +31,7 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
-  border-radius: 10px;
+  border-radius: 12px;
   background: linear-gradient(271deg, #ECFF75 6.76%, rgba(255, 60, 235, 0.70) 98.96%), #FFF;
 }
 

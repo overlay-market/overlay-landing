@@ -10,13 +10,14 @@ import {enableLock, disableLock} from '../../utils/scrollLock'
 import MobileMenu from '../MobileMenu/MobileMenu'
 import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
 import {ReactComponent as DiscordIcon} from '../../assets/icons/discord.svg'
+import TelegramIcon from '../../assets/icons/telegram-icon.png'
 import {ReactComponent as TwitterIcon} from '../../assets/icons/twitter.svg'
-import {ReactComponent as MirrorIcon} from '../../assets/icons/mirror.svg'
+import {ReactComponent as MediumIcon} from '../../assets/icons/Medium-Icon-Black.svg'
 import {IconButton} from '@material-ui/core'
 
 export const HeaderContainer = styled.div`
   display: flex;
-  position: absolute;
+  // position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -150,9 +151,9 @@ const Header = () => {
           <StyledLink href={GENERAL_LINKS.DOCUMENTATION} target="_blank" rel="noopener noreferrer">
             Documentation
           </StyledLink>
-          <StyledLink href={GENERAL_LINKS.GOVERNANCE} target="_blank" rel="noopener noreferrer">
+          {/* <StyledLink href={GENERAL_LINKS.GOVERNANCE} target="_blank" rel="noopener noreferrer">
             Governance
-          </StyledLink>
+          </StyledLink> */}
           <StyledLink href={GENERAL_LINKS.WHITEPAPER_V1} target="_blank" rel="noopener noreferrer">
             White Paper
           </StyledLink>
@@ -164,11 +165,14 @@ const Header = () => {
 
       <ButtonsContainer>
         {/* <TokenFaucetButton>Get OV</TokenFaucetButton> */}
-        <StyledIconButton href={GENERAL_LINKS.MIRROR} target="_blank">
-          <MirrorIcon />
+        <StyledIconButton href={GENERAL_LINKS.MEDIUM} target="_blank">
+          <MediumIcon />
         </StyledIconButton>
         <StyledIconButton href={GENERAL_LINKS.DISCORD} target="_blank">
           <DiscordIcon />
+        </StyledIconButton>
+        <StyledIconButton href={GENERAL_LINKS.TELEGRAM} target="_blank">
+          <Icon src={TelegramIcon} alt="Telegram Logo" width={22} height={22} margin="" />
         </StyledIconButton>
         <StyledIconButton
           href={GENERAL_LINKS.TWITTER}
