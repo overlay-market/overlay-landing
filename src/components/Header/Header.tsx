@@ -17,7 +17,7 @@ import {IconButton} from '@material-ui/core'
 
 export const HeaderContainer = styled.div`
   display: flex;
-  position: absolute;
+  // position: absolute;
   top: 0;
   left: 0;
   right: 0;
