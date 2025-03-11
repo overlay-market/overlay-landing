@@ -15,7 +15,11 @@ const Wrapper = styled.div`
 const LegionBanner = () => {
   return (
     <Wrapper>
-      <a href="https://legion.cc/" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://legion.cc/access?ref=overlay_community"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <picture>
           <source media="(max-width: 768px)" srcSet={mobile} />
           <source media="(max-width: 1280px)" srcSet={tablet} />
