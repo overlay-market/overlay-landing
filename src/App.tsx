@@ -73,8 +73,8 @@ const App: React.FC = () => {
       </CookieConsent>
       <Switch>
         <Route path="/" exact>
-          <LegionBanner />
           <Nav />
+          <LegionBanner />
           <Hero />
           <Investors />
           <ValueProposition />
