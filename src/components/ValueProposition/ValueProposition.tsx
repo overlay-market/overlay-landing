@@ -4,7 +4,7 @@ import {ExternalIcon} from '../Icon/Icon'
 import {ArrowRight} from 'react-feather'
 import {StyledCTAButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
-import ValuePropositionAsset from '../../assets/images/value-proposition-image.png'
+import ValuePropositionAsset from '../../assets/images/value-proposition-image.webp'
 
 const MainContainer = styled.div`
   display: flex;

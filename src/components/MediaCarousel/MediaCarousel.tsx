@@ -3,8 +3,8 @@ import {Box} from 'rebass'
 import {TwitterTimelineEmbed} from 'react-twitter-embed'
 import {device} from '../../theme/theme'
 import {Icon} from '../Icon/Icon'
-import OptimizedHeroBackground from '../../assets/images/optimized-hero-background.jpg'
-import Star from '../../assets/images/star.png'
+import OptimizedHeroBackground from '../../assets/images/optimized-hero-background.webp'
+import Star from '../../assets/images/star.webp'
 
 const Wrapper = styled.div`
   background: url(${OptimizedHeroBackground});

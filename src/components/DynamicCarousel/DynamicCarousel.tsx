@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import PCD_Carousel from '../../assets/images/PCD-carousel.jpg'
+import PCD_Carousel from '../../assets/images/PCD-carousel.webp'
 
 const Container = styled.div<{height?: number}>`
   display: block;
