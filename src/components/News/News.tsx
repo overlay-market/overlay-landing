@@ -63,7 +63,7 @@ interface NewsPlatformLogoProps {
 const NewsPlatformLogo = ({src, alt, href}: NewsPlatformLogoProps) => {
   return (
     <LogoContainer href={href} target="_blank" rel="noopener noreferrer">
-      <Logo src={src} alt={alt} />
+      <Logo src={src} alt={alt} loading="lazy" />
     </LogoContainer>
   )
 }

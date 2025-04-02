@@ -56,6 +56,7 @@ const SecondaryViewContainer = styled.div`
     align-items: flex-end;
     width: 50%;
     max-width: 50%;
+    min-height: 426px;
   }
 `
 
@@ -119,7 +120,12 @@ const Hero = () => {
             <Description>The Exotic Perps Dex</Description>
           </PrimaryViewContainer>
           <SecondaryViewContainer>
-            <MainImage src={OptimizedHeroChart} />
+            <MainImage
+              src={OptimizedHeroChart}
+              loading="eager"
+              data-fetchpriority="high"
+              alt="hero chart"
+            />
           </SecondaryViewContainer>
         </TitleContainer>
 

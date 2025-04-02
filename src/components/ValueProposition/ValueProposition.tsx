@@ -91,7 +91,11 @@ const ValueProposition = () => {
           </StyledCTAButton>
         </PrimaryViewContainer>
         <SecondaryViewContainer>
-          <ImageContainer src={ValuePropositionAsset} />
+          <ImageContainer
+            src={ValuePropositionAsset}
+            loading="lazy"
+            alt="value proposition asset"
+          />
         </SecondaryViewContainer>
       </DesktopSplitViewContainer>
     </MainContainer>

@@ -73,7 +73,7 @@ const Contributing = () => {
     <Wrapper>
       <MainContainer>
         <ContributingImageContainer>
-          <img src={OverlayLogoHeartCatImg} alt="Contributing" />
+          <img src={OverlayLogoHeartCatImg} alt="Contributing" loading="lazy" />
         </ContributingImageContainer>
         <ContributingTextContainer>
           <Title>Overlay is run by cats, for real</Title>

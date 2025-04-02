@@ -27,7 +27,7 @@ interface DynamicCarouselProps {
 export const DynamicCarousel = ({height}: DynamicCarouselProps) => {
   return (
     <Container>
-      <Carousel src={PCD_Carousel} height={height} />
+      <Carousel src={PCD_Carousel} height={height} loading={'lazy'} alt="PCD_Carousel" />
     </Container>
   )
 }
