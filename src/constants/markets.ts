@@ -19,7 +19,7 @@ import ETHSOL from "../assets/markets-logos/eth-sol.webp";
 import INK from "../assets/markets-logos/ink.webp";
 import LanaDelRey from "../assets/markets-logos/lana-del-rey.webp";
 
-export const MARKETS_FULL_LOGOS: { [marketId: string]: string | undefined } = {
+export const MARKETS_FULL_LOGOS: { [marketId: string]: string } = {
   "Counter-Strike%202%20Skins": CS2Skins,
   "Rifles%20-%20CS2%20Skins": RiflesCS2Skins,
   "Knives%20-%20CS2%20Skins": KnivesCS2Skins,
