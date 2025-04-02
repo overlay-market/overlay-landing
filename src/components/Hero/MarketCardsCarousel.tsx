@@ -42,8 +42,8 @@ const MarketCardsCarousel = () => {
             slidesPerView={'auto'}
             loop={false}
             centeredSlides={false}
-            enabled={false}
-            mousewheel={false}
+            enabled={true}
+            mousewheel={true}
           >
             {[...Array(7)].map((_, index) => (
               <SwiperSlide key={index} style={{width: '150px'}}>
@@ -63,7 +63,7 @@ const MarketCardsCarousel = () => {
               slidesPerView={'auto'}
               loop={false}
               centeredSlides={false}
-              enabled={markets.length > 0}
+              enabled={true}
               mousewheel={true}
             >
               {markets
@@ -77,7 +77,9 @@ const MarketCardsCarousel = () => {
                       priceWithCurrency={formatPriceWithCurrency(
                         market.latestPrice ?? 0,
                         market.priceCurrency,
-                        3,
+                        Number(market.latestPrice) > 10000 && Number(market.latestPrice) < 1000000
+                          ? 5
+                          : 4,
                       )}
                       title={decodeURIComponent(market.marketId)}
                     />
