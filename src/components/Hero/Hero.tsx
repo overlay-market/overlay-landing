@@ -1,13 +1,9 @@
 import styled from 'styled-components'
-import {MEDIA_WIDTHS, device} from '../../theme/theme'
+import {device} from '../../theme/theme'
 import {RightArrowButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
-import HeroChart from '../../assets/images/hero-chart.png'
-import OptimizedHeroChart from '../../assets/images/hero-background-ai.png'
-import HeroImageDesktop from '../../assets/images/hero-image-desktop.png'
-import HeroImageMobile from '../../assets/images/hero-image-mobile.png'
-import OptimizedHeroBackground from '../../assets/images/optimized-hero-background.jpg'
-import {useEffect, useState} from 'react'
+import OptimizedHeroChart from '../../assets/images/hero-background-ai.webp'
+import OptimizedHeroBackground from '../../assets/images/optimized-hero-background.webp'
 import MarketCardsCarousel from './MarketCardsCarousel'
 
 const HeroContainer = styled.div`
@@ -60,6 +56,7 @@ const SecondaryViewContainer = styled.div`
     align-items: flex-end;
     width: 50%;
     max-width: 50%;
+    min-height: 426px;
   }
 `
 
@@ -109,77 +106,9 @@ const Description = styled.div`
   }
 `
 
-const HeroStatsContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 350px;
-`
-
-const StatContainer = styled.div`
-  display: flex;
-  align-items: center;
-`
-
-const StatNumber = styled.div`
-  font-size: 18px;
-  font-weight: bold;
-  margin-right: 8px;
-`
-
-const StatDescription = styled.div`
-  font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: 12px;
-  color: #7d7a76;
-`
-
 const MainImage = styled.img`
   max-width: 450px;
 `
-
-const HeroStats = () => {
-  return (
-    <HeroStatsContainer>
-      <StatContainer>
-        <StatNumber>1400+</StatNumber>
-        <StatDescription>Users Active</StatDescription>
-      </StatContainer>
-      |
-      <StatContainer>
-        <StatNumber>20+</StatNumber>
-        <StatDescription>Data Streams</StatDescription>
-      </StatContainer>
-    </HeroStatsContainer>
-  )
-}
-
-const HeroImage = () => {
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < MEDIA_WIDTHS.sm)
-    }
-
-    // Set initial value
-    handleResize()
-
-    // Add event listener
-    window.addEventListener('resize', handleResize)
-
-    // Clean up event listener
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
-  return (
-    <div style={{display: 'flex', justifyContent: isMobile ? 'center' : 'flex-start'}}>
-      <img
-        src={isMobile ? HeroImageMobile : HeroImageDesktop}
-        alt="Hero"
-        style={{width: isMobile ? '375px' : '537px', paddingBottom: '25px'}}
-      />
-    </div>
-  )
-}
 
 const Hero = () => {
   return (
@@ -191,7 +120,12 @@ const Hero = () => {
             <Description>The Exotic Perps Dex</Description>
           </PrimaryViewContainer>
           <SecondaryViewContainer>
-            <MainImage src={OptimizedHeroChart} />
+            <MainImage
+              src={OptimizedHeroChart}
+              loading="eager"
+              data-fetchpriority="high"
+              alt="hero chart"
+            />
           </SecondaryViewContainer>
         </TitleContainer>
 

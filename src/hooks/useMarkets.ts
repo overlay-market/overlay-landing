@@ -16,9 +16,10 @@ interface MarketData {
   priceCurrency: string;
 }
 
-export function useMarkets(marketIds: string[]): MarketData[] {
+export function useMarkets(marketIds: string[]): {marketsData: MarketData[], isLoading: boolean} {
   const [marketsData, setMarketsData] = useState<MarketData[]>([]);
   const [marketAddressMapping, setMarketAddressMapping] = useState<Record<string, string>>({});
+  const [isLoading, setIsLoading] = useState(true);
 
   const stableMarketIds = useMemo(() => marketIds, [marketIds]);
 
@@ -48,7 +49,11 @@ export function useMarkets(marketIds: string[]): MarketData[] {
   // Fetch marketsPricesOverview whenever marketIds or the mapping changes
   useEffect(() => {
     const fetchMarketsPricesOverview = async () => {
-      if (Object.keys(marketAddressMapping).length === 0 || stableMarketIds.length === 0) return;
+      setIsLoading(true);
+      if (Object.keys(marketAddressMapping).length === 0 || stableMarketIds.length === 0) {
+        setIsLoading(false);
+        return;
+      }
 
       try {
         const responseOverview = await fetch(
@@ -87,6 +92,8 @@ export function useMarkets(marketIds: string[]): MarketData[] {
         }
       } catch (error) {
         console.error("Error fetching market prices overview:", error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -95,7 +102,7 @@ export function useMarkets(marketIds: string[]): MarketData[] {
     const intervalId = setInterval(fetchMarketsPricesOverview, 300000); // 5 minutes interval
 
     return () => clearInterval(intervalId);
-  }, [marketAddressMapping, stableMarketIds]);
+  }, [marketAddressMapping]);
 
-  return marketsData;
+  return { marketsData, isLoading };
 }

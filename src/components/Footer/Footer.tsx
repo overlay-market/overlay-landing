@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import {device} from '../../theme/theme'
 import {Icon} from '../Icon/Icon'
-import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
+import OverlayLogo from '../../assets/images/updated-overlay-icon.webp'
 import {LINKS} from '../../constants/constants'
 import getCurrentYear from '../../hooks/getCurrentYear'
 

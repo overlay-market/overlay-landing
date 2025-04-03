@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import {device} from '../../theme/theme'
 import {ExternalIcon} from '../Icon/Icon'
 import {ExternalLink} from 'react-feather'
-import SpearbitDAOLogo from '../../assets/images/spearbit-dao-logo.png'
-import LeastAuthorityLogo from '../../assets/images/least-authority-logo.png'
+import SpearbitDAOLogo from '../../assets/images/spearbit-dao-logo.webp'
+import LeastAuthorityLogo from '../../assets/images/least-authority-logo.webp'
 // import ImmunefiLogo from '../../assets/images/immunefi-logo.png'
-import TrailofBits from '../../assets/images/trail-of-bit-logo.png'
+import TrailofBits from '../../assets/images/trail-of-bit-logo.webp'
 
 const Wrapper = styled.div`
   padding: 80px 0;

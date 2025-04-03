@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import {Box} from 'rebass'
-import Investor_PolychainCapital_Logo from '../../assets/images/polychain-capital-logo.png'
-import Investor_ParafiCapital_Logo from '../../assets/images/parafi-capital-logo.png'
-import Investor_1kx_Logo from '../../assets/images/1kx-logo.png'
-import Investor_TheLao_Logo from '../../assets/images/the-lao-logo.png'
-import Investor_Metacartel_Logo from '../../assets/images/metacartel-logo.png'
+import Investor_PolychainCapital_Logo from '../../assets/images/polychain-capital-logo.webp'
+import Investor_ParafiCapital_Logo from '../../assets/images/parafi-capital-logo.webp'
+import Investor_1kx_Logo from '../../assets/images/1kx-logo.webp'
+import Investor_TheLao_Logo from '../../assets/images/the-lao-logo.webp'
+import Investor_Metacartel_Logo from '../../assets/images/metacartel-logo.webp'
 
 const Wrapper = styled.div`
   padding: 45px 0 80px;

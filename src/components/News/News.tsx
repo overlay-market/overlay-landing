@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import {device} from '../../theme/theme'
-import MessariLogo from '../../assets/images/messari-brand-logo.png'
-import NewsBackground from '../../assets/images/news-background.jpg'
+import MessariLogo from '../../assets/images/messari-brand-logo.webp'
+import NewsBackground from '../../assets/images/news-background.webp'
 
 const MainContainer = styled.div`
   display: flex;
@@ -63,7 +63,7 @@ interface NewsPlatformLogoProps {
 const NewsPlatformLogo = ({src, alt, href}: NewsPlatformLogoProps) => {
   return (
     <LogoContainer href={href} target="_blank" rel="noopener noreferrer">
-      <Logo src={src} alt={alt} />
+      <Logo src={src} alt={alt} loading="lazy" />
     </LogoContainer>
   )
 }

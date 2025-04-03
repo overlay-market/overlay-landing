@@ -4,7 +4,7 @@ import {ExternalIcon} from '../Icon/Icon'
 import {ArrowRight} from 'react-feather'
 import {StyledCTAButton} from '../Button/Button'
 import {GENERAL_LINKS} from '../../constants/constants'
-import ValuePropositionAsset from '../../assets/images/value-proposition-image.png'
+import ValuePropositionAsset from '../../assets/images/value-proposition-image.webp'
 
 const MainContainer = styled.div`
   display: flex;
@@ -91,7 +91,11 @@ const ValueProposition = () => {
           </StyledCTAButton>
         </PrimaryViewContainer>
         <SecondaryViewContainer>
-          <ImageContainer src={ValuePropositionAsset} />
+          <ImageContainer
+            src={ValuePropositionAsset}
+            loading="lazy"
+            alt="value proposition asset"
+          />
         </SecondaryViewContainer>
       </DesktopSplitViewContainer>
     </MainContainer>

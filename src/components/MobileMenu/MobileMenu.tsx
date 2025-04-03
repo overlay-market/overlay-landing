@@ -4,7 +4,7 @@ import {bool} from 'prop-types'
 import {GENERAL_LINKS, LINKS, LinkAsset} from '../../constants/constants'
 import {ExternalIcon, Icon} from '../Icon/Icon'
 import {X} from 'react-feather'
-import OverlayLogo from '../../assets/images/updated-overlay-icon.png'
+import OverlayLogo from '../../assets/images/updated-overlay-icon.webp'
 import {BlueCTAButton} from '../Button/Button'
 
 const StyledMenu = styled.div<{open: boolean}>`
