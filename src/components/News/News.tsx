@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import {device} from '../../theme/theme'
-import MessariLogo from '../../assets/images/messari-brand-logo.webp'
 import NewsBackground from '../../assets/images/news-background.webp'
 
 const MainContainer = styled.div`
@@ -69,13 +68,13 @@ const NewsPlatformLogo = ({src, alt, href}: NewsPlatformLogoProps) => {
 }
 
 const News = () => {
-  const MessariLink = 'https://messari.io/report/overlay-an-exchange-for-unexplored-markets'
+  const Link = ''
 
   return (
     <MainContainer>
       <Title>Overlay in the news</Title>
       <NewsPlatformContainer>
-        <NewsPlatformLogo src={MessariLogo} alt="Messari Logo" href={MessariLink} />
+        <NewsPlatformLogo src={''} alt="Logo" href={Link} />
       </NewsPlatformContainer>
     </MainContainer>
   )
