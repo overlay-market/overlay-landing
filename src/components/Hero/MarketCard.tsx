@@ -63,13 +63,19 @@ const CardsTitle = styled.h2`
 `
 
 const MarketCard = ({priceWithCurrency, title, id}: MarketCardProps) => {
+  const handleClick = () => {
+    window.open(`https://app.overlay.market/trade?market=${id}`, '_blank')
+  }
+
   return (
     <CustomCard
+      onClick={handleClick}
       style={{
         backgroundImage: `url(${MARKETS_FULL_LOGOS[id]})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         width: 150,
+        cursor: 'pointer',
       }}
     >
       <CardContent>
