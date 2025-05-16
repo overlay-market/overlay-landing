@@ -10,19 +10,19 @@ import {BlueCTAButton} from '../Button/Button'
 const StyledMenu = styled.div<{open: boolean}>`
   display: flex;
   flex-direction: column;
-  background: transparent;
+  background: white;
   height: 100vh;
   text-align: left;
   width: 100%;
-  background: white;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   overflow: scroll;
   opacity: ${({open}) => (open ? 1 : 0)};
-  z-index: ${({open}) => (open ? 1 : -1)};
-  visibility: ${({open}) => (open ? 'default' : 'hidden')};
+  z-index: 999;
+  visibility: ${({open}) => (open ? 'visible' : 'hidden')};
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 `
 
 const TopBarContainer = styled.div`
