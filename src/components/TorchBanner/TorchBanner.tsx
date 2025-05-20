@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 120px;
   img {
     width: 100%;
   }
