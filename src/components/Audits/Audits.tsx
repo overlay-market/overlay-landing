@@ -76,7 +76,10 @@ const AuditorLogo = styled.div<{src: string}>`
   margin-bottom: 10px;
 `
 
-const AuditorLink = styled.a`
+const AuditorLink = styled.a.attrs({
+  target: '_blank',
+  rel: 'noopener noreferrer'
+})`
   font-family: 'Be Vietnam Pro', sans-serif;
   font-weight: 600;
   display: flex;
