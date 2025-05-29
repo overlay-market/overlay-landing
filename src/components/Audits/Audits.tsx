@@ -6,6 +6,7 @@ import SpearbitDAOLogo from '../../assets/images/spearbit-dao-logo.webp'
 import LeastAuthorityLogo from '../../assets/images/least-authority-logo.webp'
 // import ImmunefiLogo from '../../assets/images/immunefi-logo.png'
 import TrailofBits from '../../assets/images/trail-of-bit-logo.webp'
+import NethermindLogo from '../../assets/images/nethermind-logo.png'
 
 const Wrapper = styled.div`
   padding: 80px 0;
@@ -129,6 +130,12 @@ const auditorsList: Array<AuditorAsset> = [
     logoUrl: `${TrailofBits}`,
     completedAuditHref: `https://github.com/overlay-market/v1-core/blob/main/audits/trailofbits/audit.pdf`,
     externalLinkText: 'Trail of Bits Audit',
+  },
+  {
+    name: 'Nethermind',
+    logoUrl: `${NethermindLogo}`,
+    completedAuditHref: `https://github.com/overlay-market/v1-shiva/blob/main/audits/nethermind/audit.pdf`,
+    externalLinkText: 'Nethermind Audit',
   },
   // {
   //   name: 'Immunefi',
