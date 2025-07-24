@@ -12,7 +12,6 @@ import Footer from './components/Footer/Footer'
 import {cookie3Analytics} from '@cookie3/analytics'
 import {useEffect} from 'react'
 import CookieConsent from 'react-cookie-consent'
-import TorchBanner from './components/TorchBanner/TorchBanner'
 
 const App: React.FC = () => {
   const location = useLocation()
@@ -74,7 +73,6 @@ const App: React.FC = () => {
       <Switch>
         <Route path="/" exact>
           <Nav />
-          <TorchBanner />
           <Hero />
           <Investors />
           <ValueProposition />
