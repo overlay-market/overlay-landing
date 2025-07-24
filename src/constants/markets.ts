@@ -52,7 +52,7 @@ export const MARKETS_FULL_LOGOS: { [marketId: string]: string } = {
   "Layer%201%20Index": L1,
   "HoneyComb%20and%20Jars%20NFT%20Index": HoneryJar,
   "Defi%20Index": DeFi,
-}
+};
 
 export const MARKETS_ORDER = [
   "Counter-Strike%202%20Skins",
@@ -110,7 +110,7 @@ export const MARKETS_PRICE_CURRENCIES: { [marketId: string]: string } = {
   "Layer%201%20Index": "$",
   "HoneyComb%20and%20Jars%20NFT%20Index": "Ξ",
   "Defi%20Index": "$",
-}
+};
 
 export enum MARKET_CHART_URL {
   SEPOLIA = "https://api.overlay.market/bsc-testnet-charts",
