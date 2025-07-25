@@ -33,7 +33,7 @@ export function useMarkets(marketIds: string[]): {marketsData: MarketData[], isL
         
         const mapping: Record<string, string> = {};
         const data = await response.json();
-        data[421614].forEach((item: { marketId: string; chains: { deploymentAddress: string }[] }) => {
+        data[97].forEach((item: { marketId: string; chains: { deploymentAddress: string }[] }) => {
           mapping[item.marketId] = item.chains[0]?.deploymentAddress.toLowerCase();
         });
 
@@ -57,14 +57,16 @@ export function useMarkets(marketIds: string[]): {marketsData: MarketData[], isL
 
       try {
         const responseOverview = await fetch(
-          `${MARKET_CHART_URL.SEPOLIA}/marketsPricesOverview`
+          `${MARKET_CHART_URL.BSC_TESTNET}/marketsPricesOverview`
         );
         const chartDataArray: MarketDataPoint[] = await responseOverview.json()
 
-        const updatedMarketsData: MarketData[] = stableMarketIds.map((marketId) => {
-          try {
-            const marketAddressSepolia = marketAddressMapping[marketId];
-            const chartData = chartDataArray.find((item) => item.marketAddress === marketAddressSepolia);
+        const updatedMarketsData: MarketData[] = stableMarketIds
+          .filter(marketId => marketAddressMapping[marketId])
+          .map((marketId) => {
+            try {
+              const marketAddressBscTestnet = marketAddressMapping[marketId];
+              const chartData = chartDataArray.find((item) => item.marketAddress === marketAddressBscTestnet);
 
             if (!chartData) {
               throw new Error(`No chart data available for ${marketId}`);
