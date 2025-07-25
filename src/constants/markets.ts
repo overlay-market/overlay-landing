@@ -113,5 +113,5 @@ export const MARKETS_PRICE_CURRENCIES: { [marketId: string]: string } = {
 };
 
 export enum MARKET_CHART_URL {
-  SEPOLIA = "https://api.overlay.market/sepolia-charts/v1/charts",
+  BSC_TESTNET = "https://api.overlay.market/bsc-testnet-charts/v1/charts",
 }
