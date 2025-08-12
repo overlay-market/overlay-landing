@@ -5,6 +5,8 @@ import BncPreTgeBackground from '../../assets/images/bnc_pre_TGE.png'
 import OverlayFullLogo from '../../assets/images/overlay-full-logo.png'
 import BscMainnetLogo from '../../assets/images/bsc-mainnet-logo.png'
 
+const TGE_DATE = new Date('2025-08-14T07:30:00Z')
+
 const BannerContainer = styled.div`
   background: url(${BncPreTgeBackground});
   background-size: cover;
@@ -177,37 +179,37 @@ interface TimeLeft {
 
 const CountdownBanner: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
-    days: 1,
-    hours: 23,
-    minutes: 48,
-    seconds: 34,
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
   })
   const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        let {days, hours, minutes, seconds} = prev
+    const calculateTimeLeft = () => {
+      const difference = +TGE_DATE - +new Date()
 
-        if (seconds > 0) {
-          seconds--
-        } else if (minutes > 0) {
-          minutes--
-          seconds = 59
-        } else if (hours > 0) {
-          hours--
-          minutes = 59
-          seconds = 59
-        } else if (days > 0) {
-          days--
-          hours = 23
-          minutes = 59
-          seconds = 59
-        }
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        })
+      } else {
+        // Countdown has ended
+        setTimeLeft({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0,
+        })
+      }
+    }
 
-        return {days, hours, minutes, seconds}
-      })
-    }, 1000)
+    calculateTimeLeft()
+    const timer = setInterval(calculateTimeLeft, 1000)
 
     return () => clearInterval(timer)
   }, [])
