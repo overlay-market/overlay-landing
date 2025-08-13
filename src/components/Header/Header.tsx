@@ -161,7 +161,7 @@ const Header = () => {
       </FlexRow>
 
       <ButtonsContainer>
-        {/* <TokenFaucetButton>Get OV</TokenFaucetButton> */}
+        {/* <TokenFaucetButton>Get OVL</TokenFaucetButton> */}
         <StyledIconButton href={GENERAL_LINKS.MEDIUM} target="_blank">
           <MediumIcon />
         </StyledIconButton>
