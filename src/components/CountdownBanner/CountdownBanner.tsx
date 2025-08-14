@@ -5,7 +5,7 @@ import BncPreTgeBackground from '../../assets/images/bnc_pre_TGE.png'
 import OverlayFullLogo from '../../assets/images/overlay-full-logo.png'
 import BscMainnetLogo from '../../assets/images/bsc-mainnet-logo.png'
 
-const TGE_DATE = new Date('2025-08-14T07:30:00Z')
+const TGE_DATE = new Date('2025-08-14T08:30:00Z')
 
 const BannerContainer = styled.div`
   background: url(${BncPreTgeBackground});
