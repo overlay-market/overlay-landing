@@ -1,6 +1,6 @@
 import {Route, Switch, useLocation} from 'react-router-dom'
 import {TermsOfService, AccessDenied} from './pages'
-import {Nav, CountdownBanner} from './components'
+import {Nav} from './components'
 import Hero from './components/Hero/Hero'
 import Investors from './components/Investors/Investors'
 import ValueProposition from './components/ValueProposition/ValueProposition'
@@ -73,7 +73,6 @@ const App: React.FC = () => {
       <Switch>
         <Route path="/" exact>
           <Nav />
-          <CountdownBanner />
           <Hero />
           <Investors />
           <ValueProposition />
