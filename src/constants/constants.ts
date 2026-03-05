@@ -15,6 +15,7 @@ export const GENERAL_LINKS = {
   CLAIM: 'https://app.overlay.market/claim',
   TELEGRAM: 'https://t.me/overlay_protocol',
   MEDIUM: 'https://overlayprotocol.medium.com',
+  LISTING_APPLICATION: 'https://forms.gle/aWcpf49GaoVPMomg7',
 }
 
 export interface LinkAsset {
@@ -28,6 +29,7 @@ export const LINKS = {
     {label: 'Documentation', href: GENERAL_LINKS.DOCUMENTATION},
     // {label: 'Governance', href: GENERAL_LINKS.GOVERNANCE},
     {label: 'White Paper V1', href: GENERAL_LINKS.WHITEPAPER_V1},
+    {label: 'Listing Application', href: GENERAL_LINKS.LISTING_APPLICATION},
   ] as Array<LinkAsset>,
   connect: [
     {label: 'Discord', href: GENERAL_LINKS.DISCORD},

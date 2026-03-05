@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import {device} from '../../theme/theme'
-import {RightArrowButton} from '../Button/Button'
-import {GENERAL_LINKS} from '../../constants/constants'
+import { device } from '../../theme/theme'
+import { RightArrowButton } from '../Button/Button'
+import { GENERAL_LINKS } from '../../constants/constants'
 import OptimizedHeroChart from '../../assets/images/hero-background-ai.webp'
 import OptimizedHeroBackground from '../../assets/images/optimized-hero-background.webp'
 import MarketCardsCarousel from './MarketCardsCarousel'
@@ -76,6 +76,38 @@ const ButtonContainer = styled.div`
   }
 `
 
+const ButtonActions = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+`
+
+const ListingApplicationLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+`
+
+const ListingApplicationButton = styled.button`
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #111;
+  border-radius: 12px;
+  padding: 16px 24px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: #111;
+    color: #fff;
+  }
+`
+
 const Title = styled.div`
   font-family: 'Inter', san-serif;
   font-weight: 600;
@@ -131,7 +163,16 @@ const Hero = () => {
 
         <MarketCardsCarousel />
         <ButtonContainer>
-          <RightArrowButton href={GENERAL_LINKS.LAUNCH_APP}>Start Trading</RightArrowButton>
+          <ButtonActions>
+            <RightArrowButton href={GENERAL_LINKS.LAUNCH_APP}>Start Trading</RightArrowButton>
+            <ListingApplicationLink
+              href={GENERAL_LINKS.LISTING_APPLICATION}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ListingApplicationButton>Listing Application</ListingApplicationButton>
+            </ListingApplicationLink>
+          </ButtonActions>
         </ButtonContainer>
       </SplitViewContainer>
     </HeroContainer>

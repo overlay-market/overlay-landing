@@ -1,19 +1,19 @@
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import {device} from '../../theme/theme'
-import {ExternalIcon, Icon} from '../Icon/Icon'
-import {Menu} from 'react-feather'
-import {BlueCTAButton} from '../Button/Button'
-import {GENERAL_LINKS} from '../../constants/constants'
-import {useLocation} from 'react-router-dom'
-import {enableLock, disableLock} from '../../utils/scrollLock'
+import { device } from '../../theme/theme'
+import { ExternalIcon, Icon } from '../Icon/Icon'
+import { Menu } from 'react-feather'
+import { BlueCTAButton } from '../Button/Button'
+import { GENERAL_LINKS } from '../../constants/constants'
+import { useLocation } from 'react-router-dom'
+import { enableLock, disableLock } from '../../utils/scrollLock'
 import MobileMenu from '../MobileMenu/MobileMenu'
 import OverlayLogo from '../../assets/images/updated-overlay-icon.webp'
-import {ReactComponent as DiscordIcon} from '../../assets/icons/discord.svg'
+import { ReactComponent as DiscordIcon } from '../../assets/icons/discord.svg'
 import TelegramIcon from '../../assets/icons/telegram-icon.webp'
-import {ReactComponent as TwitterIcon} from '../../assets/icons/twitter.svg'
-import {ReactComponent as MediumIcon} from '../../assets/icons/Medium-Icon-Black.svg'
-import {IconButton} from '@material-ui/core'
+import { ReactComponent as TwitterIcon } from '../../assets/icons/twitter.svg'
+import { ReactComponent as MediumIcon } from '../../assets/icons/Medium-Icon-Black.svg'
+import { IconButton } from '@material-ui/core'
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -157,6 +157,13 @@ const Header = () => {
           <StyledLink href={GENERAL_LINKS.WHITEPAPER_V1} target="_blank" rel="noopener noreferrer">
             White Paper
           </StyledLink>
+          <StyledLink
+            href={GENERAL_LINKS.LISTING_APPLICATION}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Listing Application
+          </StyledLink>
         </LinksContainer>
       </FlexRow>
 
@@ -195,7 +202,7 @@ interface MobileMenuButtonProps {
   setOpen: Function
 }
 
-const MobileMenuButton = ({open, setOpen}: MobileMenuButtonProps) => {
+const MobileMenuButton = ({ open, setOpen }: MobileMenuButtonProps) => {
   return (
     <MobileOnly>
       <ExternalIcon margin="auto" width={40} center={true}>

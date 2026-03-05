@@ -36,6 +36,10 @@ const LogoContainer = styled.div`
 `
 
 const LaunchButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
   padding-left: 2rem;
 `
 
@@ -134,6 +138,7 @@ const MobileMenu = ({open, setOpen, ...props}: {open: boolean; setOpen: Function
 
       <LaunchButtonContainer>
         <BlueCTAButton href={GENERAL_LINKS.LAUNCH_APP}>Launch App</BlueCTAButton>
+        <BlueCTAButton href={GENERAL_LINKS.LISTING_APPLICATION}>Listing Application</BlueCTAButton>
       </LaunchButtonContainer>
 
       <Content>
