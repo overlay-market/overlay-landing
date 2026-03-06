@@ -42,12 +42,6 @@ const LogoContainer = styled.div`
   margin-bottom: 12px;
 `
 
-const LogoDescription = styled.div`
-  width: 280px;
-  color: #d0d0d0;
-  font-size: 12px;
-`
-
 const LinksContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -130,10 +124,6 @@ const Footer = () => {
             <LogoContainer>
               <Icon src={OverlayLogo} alt="Overlay Logo" width={200} margin="0" />
             </LogoContainer>
-            {/* <LogoDescription>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh in maecenas posuere at
-                congue.
-              </LogoDescription> */}
           </BrandContainer>
 
           <LinksContainer>

@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import {NavLink} from 'react-router-dom'
-import {bool} from 'prop-types'
 import {GENERAL_LINKS, LINKS, LinkAsset} from '../../constants/constants'
 import {ExternalIcon, Icon} from '../Icon/Icon'
 import {X} from 'react-feather'
@@ -41,29 +39,6 @@ const LaunchButtonContainer = styled.div`
   align-items: flex-start;
   gap: 12px;
   padding-left: 2rem;
-`
-
-const StyledInternalLink = styled(NavLink)`
-  color: #f7f7f7;
-  font-size: 32px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 700;
-  margin: 16px 0;
-  border: none !important;
-
-  :focus {
-    outline: none;
-    text-decoration: none;
-  }
-  :hover {
-    outline: none;
-    text-decoration: none;
-  }
-  :active {
-    outline: none;
-    text-decoration: none;
-  }
 `
 
 const StyledExternalLink = styled.a.attrs(props => ({
@@ -148,10 +123,6 @@ const MobileMenu = ({open, setOpen, ...props}: {open: boolean; setOpen: Function
       </Content>
     </StyledMenu>
   )
-}
-
-MobileMenu.propTypes = {
-  open: bool.isRequired,
 }
 
 export default MobileMenu

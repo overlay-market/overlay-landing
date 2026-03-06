@@ -108,27 +108,13 @@ const MobileOnly = styled.div`
   }
 `
 
-const TokenFaucetButton = styled.button`
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  padding: 8px 16px;
-  margin-right: 48px;
-  font-weight: bold;
-  cursor: pointer;
-`
-
 const Header = () => {
   const [open, setOpen] = useState(false)
   const location = useLocation().pathname
 
   // close menu when at new route
   useEffect(() => {
-    if (open) {
-      setOpen(open => false)
-    }
+    setOpen(false)
   }, [location])
 
   // disable scroll when mobile menu open
@@ -168,7 +154,6 @@ const Header = () => {
       </FlexRow>
 
       <ButtonsContainer>
-        {/* <TokenFaucetButton>Get OVL</TokenFaucetButton> */}
         <StyledIconButton href={GENERAL_LINKS.MEDIUM} target="_blank">
           <MediumIcon />
         </StyledIconButton>

@@ -1,110 +1,107 @@
-import { useState, useEffect, useMemo } from "react";
-import { MARKET_CHART_URL, MARKETS_PRICE_CURRENCIES } from "../constants/markets";
+import {useState, useEffect, useMemo} from 'react'
+import {MARKET_CHART_URL, MARKETS_PRICE_CURRENCIES} from '../constants/markets'
 
 interface MarketDataPoint {
-  latestPrice: number;
-  marketAddress: string;
-  priceOneDayAgo: number;
-  priceOneHourAgo: number;
-  priceSevenDaysAgo: number;
-  prices: number[];
+  latestPrice: number
+  marketAddress: string
+  priceOneDayAgo: number
+  priceOneHourAgo: number
+  priceSevenDaysAgo: number
+  prices: number[]
 }
 
 interface MarketData {
-  marketId: string;
-  latestPrice: number;
-  priceCurrency: string;
+  marketId: string
+  latestPrice: number
+  priceCurrency: string
 }
 
 export function useMarkets(marketIds: string[]): {marketsData: MarketData[], isLoading: boolean} {
-  const [marketsData, setMarketsData] = useState<MarketData[]>([]);
-  const [marketAddressMapping, setMarketAddressMapping] = useState<Record<string, string>>({});
-  const [isLoading, setIsLoading] = useState(true);
+  const [marketsData, setMarketsData] = useState<MarketData[]>([])
+  const [marketAddressMapping, setMarketAddressMapping] = useState<Record<string, string>>({})
+  const [isLoading, setIsLoading] = useState(true)
 
-  const stableMarketIds = useMemo(() => marketIds, [marketIds]);
+  const marketIdsKey = marketIds.join('|')
+  const stableMarketIds = useMemo(() => (marketIdsKey ? marketIdsKey.split('|') : []), [marketIdsKey])
 
   // Fetch the market address mapping once
   useEffect(() => {
     const fetchMarketAddressMapping = async () => {
       try {
-        const response = await fetch(
-          "https://api.overlay.market/data/api/markets"
-        );
-        
-        const mapping: Record<string, string> = {};
-        const data = await response.json();
+        const response = await fetch('https://api.overlay.market/data/api/markets')
+
+        const mapping: Record<string, string> = {}
+        const data = await response.json()
         data[97].forEach((item: { marketId: string; chains: { deploymentAddress: string }[] }) => {
-          mapping[item.marketId] = item.chains[0]?.deploymentAddress.toLowerCase();
-        });
+          mapping[item.marketId] = item.chains[0]?.deploymentAddress.toLowerCase()
+        })
 
-        setMarketAddressMapping(mapping);
+        setMarketAddressMapping(mapping)
       } catch (error) {
-        console.error("Error fetching response data:", error);
+        console.error('Error fetching response data:', error)
       }
-    };
+    }
 
-    fetchMarketAddressMapping();
-  }, []);
+    fetchMarketAddressMapping()
+  }, [])
 
   // Fetch marketsPricesOverview whenever marketIds or the mapping changes
   useEffect(() => {
     const fetchMarketsPricesOverview = async () => {
-      setIsLoading(true);
+      setIsLoading(true)
       if (Object.keys(marketAddressMapping).length === 0 || stableMarketIds.length === 0) {
-        setIsLoading(false);
-        return;
+        setIsLoading(false)
+        return
       }
 
       try {
-        const responseOverview = await fetch(
-          `${MARKET_CHART_URL.BSC_TESTNET}/marketsPricesOverview`
-        );
+        const responseOverview = await fetch(`${MARKET_CHART_URL.BSC_TESTNET}/marketsPricesOverview`)
         const chartDataArray: MarketDataPoint[] = await responseOverview.json()
 
         const updatedMarketsData: MarketData[] = stableMarketIds
           .filter(marketId => marketAddressMapping[marketId])
-          .map((marketId) => {
+          .map(marketId => {
             try {
-              const marketAddressBscTestnet = marketAddressMapping[marketId];
-              const chartData = chartDataArray.find((item) => item.marketAddress === marketAddressBscTestnet);
+              const marketAddressBscTestnet = marketAddressMapping[marketId]
+              const chartData = chartDataArray.find(item => item.marketAddress === marketAddressBscTestnet)
 
-            if (!chartData) {
-              throw new Error(`No chart data available for ${marketId}`);
-            }
+              if (!chartData) {
+                throw new Error(`No chart data available for ${marketId}`)
+              }
 
-            return {
-              marketId,
-              latestPrice: chartData.latestPrice,
-              priceCurrency: MARKETS_PRICE_CURRENCIES[marketId],
+              return {
+                marketId,
+                latestPrice: chartData.latestPrice,
+                priceCurrency: MARKETS_PRICE_CURRENCIES[marketId],
+              }
+            } catch (err) {
+              console.error(`Error processing market data for ${marketId}:`, err)
+              return {
+                marketId,
+                latestPrice: 0,
+                priceCurrency: MARKETS_PRICE_CURRENCIES[marketId],
+              }
             };
-          } catch (err) {
-            console.error(`Error processing market data for ${marketId}:`, err);
-            return {
-              marketId,
-              latestPrice: 0,
-              priceCurrency: MARKETS_PRICE_CURRENCIES[marketId]
-            };
-          }
-        });
+          })
 
         if (updatedMarketsData.length > 0) {
-          setMarketsData((prevMarketsData) =>
+          setMarketsData(prevMarketsData =>
             JSON.stringify(prevMarketsData) !== JSON.stringify(updatedMarketsData) ? updatedMarketsData : prevMarketsData
-          );
+          )
         }
       } catch (error) {
-        console.error("Error fetching market prices overview:", error);
+        console.error('Error fetching market prices overview:', error)
       } finally {
-        setIsLoading(false);
+        setIsLoading(false)
       }
-    };
+    }
 
-    fetchMarketsPricesOverview();
+    fetchMarketsPricesOverview()
 
-    const intervalId = setInterval(fetchMarketsPricesOverview, 300000); // 5 minutes interval
+    const intervalId = setInterval(fetchMarketsPricesOverview, 300000) // 5 minutes interval
 
-    return () => clearInterval(intervalId);
-  }, [marketAddressMapping]);
+    return () => clearInterval(intervalId)
+  }, [marketAddressMapping, stableMarketIds])
 
-  return { marketsData, isLoading };
+  return {marketsData, isLoading}
 }
