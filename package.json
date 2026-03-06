@@ -2,6 +2,9 @@
   "name": "overlay-landing",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "dependencies": {
     "@cookie3/analytics": "^0.6.0",
     "@material-ui/core": "^4.11.4",
@@ -63,11 +66,12 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/amplitude-js": "^8.16.4",
     "@types/react-alert": "^5.2.0",
     "@types/react-router-dom": "^5.3.3",
     "@types/rebass": "^4.0.9",
     "babel-plugin-styled-components": "^1.12.0",
-    "node-sass": "^8.0.0"
+    "sass": "^1.97.3"
   }
 }
